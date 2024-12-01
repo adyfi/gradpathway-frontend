@@ -18,7 +18,9 @@ export const login = async (email, password) => {
 
   try {
     const response = await axios.request(config);
+    const accessToken = response.data.tokens.access
     console.log(JSON.stringify(response.data));
+    return accessToken;
   } catch (error) {
     console.error(error);
   }
@@ -34,6 +36,7 @@ export const fetchBlogPosts = async (AUTH_TOKEN) => {
   try {
     const response = await axios.request(config);
     console.log(JSON.stringify(response.data));
+    return response.data
   } catch (error) {
     console.error(error);
   }
@@ -49,6 +52,7 @@ export const fetchBlogPostById = async (AUTH_TOKEN, blogId) => {
   try { 
     const response = await axios.request(config); 
     console.log(JSON.stringify(response.data)); 
+    return response.data
   } catch (error) {
     console.error(error); 
   }
