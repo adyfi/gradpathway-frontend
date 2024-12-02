@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 // import grandpathwayLogo from './img/grandpathway-logo.svg';
 // import home.svg from './img/home.svg';
 const UnprotectedHeader = () => 
@@ -6,28 +7,32 @@ const UnprotectedHeader = () =>
             {/* <!-- main menu section HTML  --> */}
             <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#">
+      <Link to={"/"} className="navbar-brand">
           <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" />
-        </a>
+      </Link>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
-                    alt="" /></i>Home</a>
+              <Link to={"/"} className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
+                    alt="" /></i>Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
-                    alt="" /></i>Services</a>
+              <Link to={"services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
+                    alt="" /></i>
+                    Services
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>About us</a>
+              <Link to={"about"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
+                About us
+              </Link>
             </li>
-
             <li className="nav-item">
-              <a className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>Blogs</a>
+              <Link to={"blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
+                Blogs
+              </Link>
             </li>
-
           </ul>
 
         </div>

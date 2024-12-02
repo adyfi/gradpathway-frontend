@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Homepage from './components/Homepage';
+import Login from './pages/non-subcriber/Login.jsx';
+import Homepage from './pages/non-subcriber/Homepage.jsx';
 
-import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-import Blogs from './components/Blogs';
-import Country from './components/Country';
-import Faq from './components/Faq';
-import Dashboard from './components/Dashboard';
-import AdminDashboard from './components/AdminDashboard';
-import UserDashboard from './components/UserDashboard';
+import AboutUs from './pages/non-subcriber/AboutUs.jsx';
+import Services from './pages/non-subcriber/Services.jsx';
+import Blogs from './pages/non-subcriber/Blogs.jsx';
+import Country from './pages/non-subcriber/Country.jsx';
+import Faq from './pages/non-subcriber/Faq.jsx';
+import Dashboard from './pages/non-subcriber/Dashboard.jsx';
+import AdminDashboard from './pages/non-subcriber/AdminDashboard.jsx';
+import UserDashboard from './pages/non-subcriber/UserDashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute';
 import UnprotectedLayout from './layouts/UnprotectedLayout.jsx';
 import ProtectedLayout from './layouts/ProtectedLayout.jsx';
-import ContactUs from './components/ContactUs.jsx';
+import ContactUs from './pages/non-subcriber/ContactUs.jsx';
 
 function App() {
   return (
@@ -25,8 +25,6 @@ function App() {
         {/* protected homepage */}
         {/* <Route path="/" element={<ProtectedRoute allowedRoles={['admin', 'user']}><Homepage /></ProtectedRoute>} /> */}
         <Route path="/" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
-
-        {/* inner pages */}
         <Route path="/aboutus" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
         <Route path="/blogs" element={<UnprotectedLayout><Blogs /></UnprotectedLayout>} />

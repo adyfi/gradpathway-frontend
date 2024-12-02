@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { fetchBlogPosts } from '../api';
+import { fetchBlogPosts } from '../api/api';
 
-const useFetchBlogPosts = (token) => {
+const useFetchBlogPosts = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,7 +11,7 @@ const useFetchBlogPosts = (token) => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetchBlogPosts(token);
+        const response = await fetchBlogPosts();
         setPosts(response);
       } catch (err) {
         setError(err.message);
@@ -20,10 +20,8 @@ const useFetchBlogPosts = (token) => {
       }
     };
 
-    if (token) {
-      getBlogPosts();
-    }
-  }, [token]);
+    getBlogPosts();
+  }, []);
 
   return { posts, loading, error };
 };

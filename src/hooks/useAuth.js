@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { login } from '../api';
+import { login } from '../api/api';
 
 const useAuth = () => {
   const [token, setToken] = useState(null);
