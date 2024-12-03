@@ -106,6 +106,9 @@ const Mentors = () => {
                                     </label>
                                     </div>
                                 </div>
+                                <div className="col-12">
+                                    <button className='btn btn-primary'>Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
