@@ -16,6 +16,8 @@ import UnprotectedLayout from './layouts/UnprotectedLayout.jsx';
 import ProtectedLayout from './layouts/ProtectedLayout.jsx';
 import ContactUs from './pages/non-subcriber/ContactUs.jsx';
 import AssesmentForm from './pages/non-subcriber/AssesmentForm.jsx';
+import Mentors from './pages/non-subcriber/Mentors.jsx';
+
 function App() {
   return (
     <Router>
@@ -32,9 +34,8 @@ function App() {
         <Route path="/country" element={<UnprotectedLayout><Country /></UnprotectedLayout>} />
         <Route path="/login" element={<UnprotectedLayout><Login /></UnprotectedLayout>} />
         <Route path="/faq" element={<UnprotectedLayout><Faq /></UnprotectedLayout>} />
-
         <Route path="/assesmentform" element={<UnprotectedLayout><AssesmentForm /></UnprotectedLayout>} />
-
+        <Route path="/mentors" element={<UnprotectedLayout><Mentors /></UnprotectedLayout>} />
         <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="/dashboard/user" element={<ProtectedRoute allowedRoles={['user']}><ProtectedLayout><UserDashboard /></ProtectedLayout></ProtectedRoute>} />
