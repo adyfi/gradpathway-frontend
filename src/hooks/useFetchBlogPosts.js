@@ -12,7 +12,7 @@ const useFetchBlogPosts = () => {
       setError(null);
       try {
         const response = await fetchBlogPosts();
-        setPosts(response);
+        setPosts(response.results);
       } catch (err) {
         setError(err.message);
       } finally {
