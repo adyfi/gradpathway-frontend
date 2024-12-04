@@ -1,6 +1,6 @@
 import React from 'react';
 import MentorForm from '../../components/MentorForm';
-
+import { Link } from 'react-router-dom';
 const Mentors = () => {
   return <div>
   <div className="inner-page-wrapper"> 
@@ -120,7 +120,7 @@ const Mentors = () => {
             <div className="opportunities-content">
               <h2>Unlock new career opportunities 
                 with us</h2>
-                <a href="#" className="btn btn-secondary">Get In Touch</a>
+                <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
             </div>
           </section>
     

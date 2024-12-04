@@ -14,22 +14,22 @@ const UnprotectedHeader = () =>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
+              <Link to={"/home"} className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
                     alt="" /></i>Home</Link>
             </li>
             <li className="nav-item">
-              <Link to={"services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
+              <Link to={"/services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
                     alt="" /></i>
                     Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"about"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
+              <Link to={"/aboutus"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
                 About us
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
+              <Link to={"/blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
                 Blogs
               </Link>
             </li>
@@ -37,8 +37,9 @@ const UnprotectedHeader = () =>
 
         </div>
         <div className="getintouch-nav">
-          <a href="#" className="login">Login</a>
-          <a href="#" className="getintouch"><i><img src="/img/user.svg" alt="" /></i>Get in Touch</a>
+          <Link to={"/login"} className="login" href="#">Login</Link>
+          <Link to={"/contactus"} className="getintouch" href="#"><i><img src="/img/user.svg" alt="" /></i>Get in Touch</Link>
+          
         </div>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

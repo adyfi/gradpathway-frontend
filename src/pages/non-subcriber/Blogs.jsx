@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useFetchBlogPosts from '../../hooks/useFetchBlogPosts';
 
 function formatIsoDateCustom(isoDate) {
@@ -96,7 +97,7 @@ const Blogs = () => {
                 <div className="opportunities-content">
                     <h2>Unlock new career opportunities
                         with us</h2>
-                    <a href="#" className="btn btn-secondary">Get In Touch</a>
+                    <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
                 </div>
             </section>
 

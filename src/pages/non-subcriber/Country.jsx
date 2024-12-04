@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // const position = [51.505, -0.09];
 // const mapStyle = { height: "90vh" };
 
@@ -67,7 +67,7 @@ const ContactUs = () => {
                 <div className="opportunities-content">
                     <h2>Unlock new career opportunities
                         with us</h2>
-                    <a href="#" className="btn btn-secondary">Get In Touch</a>
+                        <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
                 </div>
             </section>
 
