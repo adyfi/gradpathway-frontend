@@ -88,7 +88,7 @@ const Homepage = () => {
       <section className="our-services-list-wrapper">
             <div className="out-services-list-content">
                 <div className="container">
-                <h2>Our Services</h2>
+                <h2 className="text-center mb-5">Our Services</h2>
                     <div className="row">
                         <div className="col-md-6 mb-4">
                             <div className="service-box">
@@ -266,7 +266,7 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="our-services-btn">
+                    <div className="our-services-btn text-center">
                     <Link to={"/services"} className="btn btn-primary">
                       Explore Services
                     </Link>
