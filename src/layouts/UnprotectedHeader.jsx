@@ -18,18 +18,18 @@ const UnprotectedHeader = () =>
                     alt="" /></i>Home</Link>
             </li>
             <li className="nav-item">
-              <Link to={"services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
+              <Link to={"/services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
                     alt="" /></i>
                     Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"about"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
+              <Link to={"/aboutus"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
                 About us
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
+              <Link to={"/blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
                 Blogs
               </Link>
             </li>

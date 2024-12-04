@@ -79,3 +79,22 @@ export const createMentor = async (data) => {
     throw error;
   }
 };
+
+export const sendRecommendationRequest = async (data) => {
+  const config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8000/assessments/recommendation/',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+
+  try {
+    const response = await axios.request(config);
+    console.log("Response Data:", response);
+  } catch (error) {
+    console.error("Error:", error.response ? error.response.data : error.message);
+  }
+}
