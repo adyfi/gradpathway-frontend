@@ -42,7 +42,7 @@ const Login = () => {
                    <div className="col-md-5 m-auto login-content">
                     <h1>Login</h1>
                     <div className="contact-form">
-                        <div className="mb-3">
+                          <div className="mb-3">
                             <label for="formGroupExampleInput" className="form-label">Full Name</label>
                             <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
                           </div>
