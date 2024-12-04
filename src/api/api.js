@@ -59,3 +59,23 @@ export const fetchBlogPostById = async (blogId) => {
     console.error(error); 
   }
 };
+
+export const createMentor = async (data) => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  const config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: `${baseURL}/users/mentors/`,
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data: JSON.stringify(data),
+  };
+
+  try {
+    const response = await axios.request(config);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};

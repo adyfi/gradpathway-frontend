@@ -16,7 +16,7 @@ body {
     padding: 10px 40px;
     transition: all .5s ease
 }
-
+ 
 .btn.btn-primary {
     background-color: #2265b0
 }
@@ -1388,7 +1388,7 @@ body {
     form{
         background-color: #fbfeff;
         padding: 50px 0;
-        box-shadow: 0 0 15px #0000001a;
+        /* box-shadow: 0 0 15px #0000001a; */
     }
 }
 

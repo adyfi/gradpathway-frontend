@@ -26,12 +26,12 @@ function App() {
         {/* <Route path="/" element={<Homepage />} /> */}
         {/* protected homepage */}
         {/* <Route path="/" element={<ProtectedRoute allowedRoles={['admin', 'user']}><Homepage /></ProtectedRoute>} /> */}
-        <Route path="/" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
+        <Route path="/" element={<UnprotectedLayout><Country /></UnprotectedLayout>} />
+        <Route path="/home" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
         <Route path="/aboutus" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
         <Route path="/blogs" element={<UnprotectedLayout><Blogs /></UnprotectedLayout>} />
         <Route path="/contactus" element={<UnprotectedLayout><ContactUs /></UnprotectedLayout>} />
-        <Route path="/country" element={<UnprotectedLayout><Country /></UnprotectedLayout>} />
         <Route path="/login" element={<UnprotectedLayout><Login /></UnprotectedLayout>} />
         <Route path="/faq" element={<UnprotectedLayout><Faq /></UnprotectedLayout>} />
         <Route path="/assesmentform" element={<UnprotectedLayout><AssesmentForm /></UnprotectedLayout>} />

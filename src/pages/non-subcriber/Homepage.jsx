@@ -11,14 +11,14 @@ const Homepage = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
           <div className="banner-button">
-            <a href="#" className="btn btn-primary">Take Assessment</a>
-            <a href="#" className="btn btn-primary">Free Job Search</a>
+            <a href="/assesmentform" className="btn btn-primary">Take Assessment</a>
+            <a href="/contactus" className="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>
       <div className="col-md-7 col-lg-6">
         <div className="banner-image">
-          <img src="/img/banner-img.webp" alt="" className="img-fluid" />
+          <img src="/img/dkp.png" alt="" className="img-fluid" />
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import MentorForm from '../../components/MentorForm';
 
 const Mentors = () => {
   return <div>
@@ -32,9 +33,8 @@ const Mentors = () => {
 
         <div className='mentors-form'>
             <div className='container'>
-                <form>
-                    <div className='row'>
-                        <div className='col-md-8 mx-auto'>
+                    <div className='row border my-5 shadow-sm'>
+                        {/* <div className='col-md-10 mx-auto'>
                             <div className="row g-4">
                                 <div className="col-12"><h4>Personal Details:</h4></div>
                                 <div className="col-md-6">
@@ -110,9 +110,9 @@ const Mentors = () => {
                                     <button className='btn btn-primary'>Submit</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <MentorForm />
                     </div>
-                </form>
             </div>
         </div>
 

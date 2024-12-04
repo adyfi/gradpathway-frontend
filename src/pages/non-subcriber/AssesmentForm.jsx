@@ -6,7 +6,7 @@ const AssesmentForm = () => {
         <div className="container">
             <div className="assesment-form-wrapper">
                 <div className="form-heading">
-                    <h1>Assesment</h1>
+                    <h1>Assessment</h1>
                 </div>
                 <form>
                     <div className="row g-4">
@@ -180,7 +180,7 @@ const AssesmentForm = () => {
                         </div>
                     </div>
                 </form>
-
+{/* 
                 <div className="tips">
                     <h2>Package Name for £149: Advanced Package</h2>
                     <p><b>Reasoning:</b></p>
@@ -205,7 +205,7 @@ const AssesmentForm = () => {
                             Stay consistent in your job search efforts and make use of resources like professional networking sites to expand your opportunities.
                         </li>
                     </ul>
-                </div>
+                </div> */}
                 {/* <div className="chart-wrapper">
                     <h4>Likelihood Assessment:</h4>
                     <div className="chart-canvas">

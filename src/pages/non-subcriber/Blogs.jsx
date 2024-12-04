@@ -1,22 +1,21 @@
 import React from 'react';
 import useFetchBlogPosts from '../../hooks/useFetchBlogPosts';
 
+function formatIsoDateCustom(isoDate) {
+    const date = new Date(isoDate);
+    const day = date.getDate();
+    const month = date.toLocaleString('en-US', { month: 'long' });
+    const year = date.getFullYear();
+
+    return `${day} ${month} ${year}`;
+}
+
+
 const Blogs = () => {
     const { posts, loading, error } = useFetchBlogPosts();
+
     return <div>
         <div className="inner-page-wrapper">
-            <div>
-                <h2>Blog Posts</h2>
-                {loading && <p>Loading posts...</p>}
-                {error && <p>Error: {error}</p>}
-                {!loading && !error && posts && (
-                    <ul>
-                        {posts.map(post => (
-                            <li key={post.id}>{post.title}</li>
-                        ))}
-                    </ul>
-                )}
-            </div>
             <div className="inner-text-image-banner">
                 <div className="image-wrapper">
                     <img src="/img/books-with.webp" alt="" />
@@ -27,10 +26,10 @@ const Blogs = () => {
                 </div>
             </div>
 
-            <div className="blog-details-wrapper">
+            <div className="blog-details-wrapper pt-5">
 
                 <div className="container">
-                    <div className="map-search-box">
+                    {/* <div className="map-search-box">
                         <div className="input-group">
                             <input className="form-control border-end-0 border rounded-pill" type="search" value="search" id="example-search-input" />
                             <span className="input-group-append">
@@ -39,9 +38,9 @@ const Blogs = () => {
                                 </button>
                             </span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
-                <div className="main-blog">
+                {/* <div className="main-blog">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-5">
@@ -61,65 +60,38 @@ const Blogs = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                {loading && <p>Loading blogs...</p>}
+                {error && <p>Error: {error}</p>}
 
-                <div className="blog-list-wrapper">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <div className="blog-box">
-                                    <div className="image-wrapper">
-                                        <img src="/img/manager-women-working.webp" alt="" className="img-fluid" />
-                                    </div>
-                                    <div className="text-wrapper">
-                                        <h3>How to make resume very strong?</h3>
-                                        <div className="timeing">
-                                            <span>1 Nov 2024</span>
-                                            <span>10min ago</span>
+                {!loading && !error && posts && (
+                    <div className="blog-list-wrapper">
+                        <div className="container">
+                            <div className="row">
+                                {posts.map(post => (
+                                    <div className="col-md-4">
+                                        <div className="blog-box">
+                                            <div className="image-wrapper">
+                                                <img src="/img/manager-women-working.webp" alt="" className="img-fluid" />
+                                            </div>
+                                            <div className="text-wrapper">
+                                                <h3>{post.title}</h3>
+                                                <div className="timeing">
+                                                    <span>{formatIsoDateCustom(post.created_at)}</span>
+                                                    {/* <span>10min ago</span> */}
+                                                </div>
+                                                <p>
+                                                    {post.subtitle ? post.subtitle : "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="col-md-4">
-                                <div className="blog-box">
-                                    <div className="image-wrapper">
-                                        <img src="/img/manager-women-working.webp" alt="" className="img-fluid" />
-                                    </div>
-                                    <div className="text-wrapper">
-                                        <h3>How to make resume very strong?</h3>
-                                        <div className="timeing">
-                                            <span>1 Nov 2024</span>
-                                            <span>10min ago</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-md-4">
-                                <div className="blog-box">
-                                    <div className="image-wrapper">
-                                        <img src="/img/manager-women-working.webp" alt="" className="img-fluid" />
-                                    </div>
-                                    <div className="text-wrapper">
-                                        <h3>How to make resume very strong?</h3>
-                                        <div className="timeing">
-                                            <span>1 Nov 2024</span>
-                                            <span>10min ago</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
-
-
-
             <section className="opportunities-wrapper">
                 <div className="opportunities-content">
                     <h2>Unlock new career opportunities
