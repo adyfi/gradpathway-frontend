@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #000;
-    font-size: 14px;
+    /* font-size: 14px; */
     line-height: 1.5
 }
 
@@ -547,11 +547,19 @@ body {
     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, .2509803922);
     background: #edf7fa;
     border-radius: 30px;
-    padding: 20px
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.our-services-list-wrapper .service-box .btn-box{
+    flex: 1 0 0;
+    display: flex;
+    align-items: flex-end;
 }
 
 .our-services-list-wrapper .service-box h3 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     color: #2265b0
 }
@@ -563,14 +571,14 @@ body {
 }
 
 .our-services-list-wrapper .service-box .price-tag {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid #00000017;
+    border-bottom: 1px solid #00000017;
     margin-bottom: 20px
 }
 
 .our-services-list-wrapper .service-box .price-tag .price {
-    font-size: 40px;
-    font-weight: 800;
+    font-size: 30px;
+    font-weight: 700;
     color: #2265b0
 }
 
@@ -584,28 +592,33 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #000;
-    margin-bottom: 20px
+    margin-bottom: 10px
 }
 
 .our-services-list-wrapper .service-box ul {
     list-style: none;
     padding: 0;
-    margin: 0
+    margin: 0 0 30px;
 }
 
 .our-services-list-wrapper .service-box ul li {
     font-size: 16px;
     font-weight: 400;
     color: #2265b0;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px
+    margin-bottom: 10px;
 }
 
 .our-services-list-wrapper .service-box ul li i {
     margin-right: 10px
 }
 
+.our-services-list-wrapper .service-box ul li ul{
+    padding: 0 0 0 45px;
+    list-style: disc;
+}
+.our-services-list-wrapper .service-box ul li ul li{
+    margin-bottom: 5px;
+}
 .our-services-list-wrapper .service-box .btn-gradient {
     padding: 15px 10px;
     width: 100%
@@ -649,7 +662,7 @@ body {
 }
 
 .assesment-wrapper {
-    padding-top: 120px;
+    padding-top: 78px;
     padding-bottom: 50px;
     background-color: #f1f1f1
 }
@@ -847,7 +860,7 @@ body {
 }
 
 .home-banner h2 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
     color: #4babc9;
     margin: 0;
@@ -1165,7 +1178,7 @@ body {
 }
 
 .why-choose-wrapper .right-arrows-wrapper li a {
-    background: url("/assets/img/arrow-bg-color.png") no-repeat;
+    background: url("assets/img/arrow-bg-color.png") no-repeat;
     color: #fff;
     display: flex;
     align-items: center;
@@ -1177,7 +1190,7 @@ body {
 
 .why-choose-wrapper .right-arrows-wrapper li a.active,
 .why-choose-wrapper .right-arrows-wrapper li a:hover {
-    background: url("/assets/img/arrow-bg-trasn.png") no-repeat;
+    background: url("assets/img/arrow-bg-trasn.png") no-repeat;
     color: #2265b0;
     background-size: 100% 100%
 }
@@ -1390,6 +1403,14 @@ body {
         padding: 50px 0;
         /* box-shadow: 0 0 15px #0000001a; */
     }
+}
+.why-choose h2 {
+    font-size: 36px;
+    color: #2265b0;
+    font-weight: 600;
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 0 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

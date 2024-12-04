@@ -69,6 +69,15 @@ const AssesmentForm = () => {
 
     return <div>
         <div className="assesment-wrapper">
+            <div className="inner-text-image-banner">
+                <div className="image-wrapper">
+                    <img src="/img/books-with.webp" alt="" />
+                </div>
+                <div className="text-banner-content">
+                    <h2>Assessment</h2>
+                    <p>Your Next Step Starts Here – Take the Assessment!</p>
+                </div>
+            </div>
             <div className="container">
                 <div className="assesment-form-wrapper">
                     <div className="form-heading">
