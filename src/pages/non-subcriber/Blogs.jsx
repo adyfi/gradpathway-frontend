@@ -62,7 +62,7 @@ const Blogs = () => {
                     <div className="blog-list-wrapper mb-5">
                         <div className="container">
                             <div className="row">
-                                {posts.map(post => (
+                                {posts && posts.length > 0 && posts?.map(post => (
                                     <div className="col-md-4 p-3" key={post.slug}>
                                         <Link to={`/blogs/${post.id}`}>
                                             <div className="blog-box">
