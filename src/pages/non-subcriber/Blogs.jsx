@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useFetchBlogPosts from '../../hooks/useFetchBlogPosts';
+import AOS from 'aos';
 
 function formatIsoDateCustom(isoDate) {
     const date = new Date(isoDate);
@@ -13,10 +14,16 @@ function formatIsoDateCustom(isoDate) {
 
 const Blogs = () => {
     const { posts, loading, error } = useFetchBlogPosts();
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
 
     return <div>
         <div className="inner-page-wrapper" style={{ marginTop: "20vh" }}>
-            <h1 className='text-center fw-bolder display-4'>Our <span className='text-primary'>Blogs</span></h1>
+            <h1 className='text-center fw-bolder display-4'>Our <span className='text-primary-2'>Blogs</span></h1>
             <p className='col-md-6 offset-md-3 text-center'>
                 Explore insightful articles, tips, and resources designed to guide you on your career and education journey. Stay informed, inspired, and ahead in the competitive global landscape.
             </p>
@@ -63,14 +70,14 @@ const Blogs = () => {
                         <div className="container">
                             <div className="row">
                                 {posts && posts.length > 0 && posts?.map(post => (
-                                    <div className="col-md-4 p-3" key={post.slug}>
+                                    <div className="col-md-4 p-3" key={post.slug} data-aos="fade-up">
                                         <Link className='isLink' to={`/blogs/${post.id}`}>
                                             <div className="blog-box">
                                                 <div className="image-wrapper">
                                                     <img src="/img/manager-women-working.webp" alt="" className="img-fluid rounded" />
                                                 </div>
                                                 <div className="text-wrapper pt-3">
-                                                    <h5 className='text-primary fw-bold'>{post.title}</h5>
+                                                    <h5 className='text-primary-2 fw-bold'>{post.title}</h5>
                                                     <small className='text-dark'>
                                                         {post.overview ? post.overview : ""}
                                                     </small>

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
 
 export const HomeHero = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
+      
     return (
         <div className="container" style={{ paddingTop: "10vh", paddingBottom: "10vh" }}>
             <div className="row align-items-center px-2">
