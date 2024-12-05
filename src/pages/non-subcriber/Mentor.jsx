@@ -12,7 +12,7 @@ export const Mentor = () => {
                 <div className="col-12 col-md-7 col-lg-6 mt-4 pt-5">
                     <div className="lc-block mb-4"> 
                         <div editable="rich">
-                            <h1 className="text-primary display-5 fw-bolder">The Ultimate Monetization Platform for Mentors</h1>
+                            <h1 className="text-primary-2 display-5 fw-bolder">The Ultimate Monetization Platform for Mentors</h1>
                             <p>
                                 Unlock the full potential of your expertise with gradpathway, the all-in-one tool designed to help mentors build and grow their revenue streams. Seamlessly connect 1:1 with your followers to provide personalized guidance, host interactive webinars to engage larger audiences, or sell your expertly crafted guides to share your knowledge at scale.
                                 <br /> <br />
@@ -22,17 +22,17 @@ export const Mentor = () => {
                     </div>
                     <div className="lc-block d-flex mb-5">
                         <div className="pe-3">
-                            <h3 className="h2 mb-0 text-primary" editable="inline">100%</h3>
+                            <h3 className="h2 mb-0 text-primary-2" editable="inline">100%</h3>
                             <span editable="inline" className="mb-0 text-muted"> Satisfaction </span>
                         </div>
                         <div className="border-start"></div>
                         <div className="px-3">
-                            <h3 className="h2 mb-0 text-primary" editable="inline">24/7</h3>
+                            <h3 className="h2 mb-0 text-primary-2" editable="inline">24/7</h3>
                             <span editable="inline" className="mb-0 text-muted"> Support </span>
                         </div>
                         <div className="border-start"></div>
                         <div className="ps-3">
-                            <h3 className="h2 mb-0 text-primary" editable="inline">1500+</h3>
+                            <h3 className="h2 mb-0 text-primary-2" editable="inline">1500+</h3>
                             <span editable="inline" className="mb-0 text-muted">Happy Clients</span>
                         </div>
                     </div>

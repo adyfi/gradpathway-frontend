@@ -25,6 +25,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'aos/dist/aos.css';
 import { NotFound } from './pages/non-subcriber/NotFound.jsx';
+import BlogPost from './pages/non-subcriber/BlogsPost.jsx';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/about" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
         <Route path="/blogs" element={<UnprotectedLayout><Blogs /></UnprotectedLayout>} />
+        <Route path="/blogs/:slug" element={<UnprotectedLayout><BlogPost /></UnprotectedLayout>} />
         <Route path="/contact" element={<UnprotectedLayout><ContactUs /></UnprotectedLayout>} />
         <Route path="/login" element={<UnprotectedLayout><Login /></UnprotectedLayout>} />
         <Route path="/faq" element={<UnprotectedLayout><Faq /></UnprotectedLayout>} />

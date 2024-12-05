@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Faq = () => {
   return <div>
     <div className="inner-page-wrapper" style={{ marginTop: "20vh" }}>
-      <h1 className='text-center fw-bolder display-4'><span className='text-primary'>FAQ</span></h1>
+      <h1 className='text-center fw-bolder display-4'><span className='text-primary-2'>FAQ</span></h1>
       <p className='col-md-6 offset-md-3 text-center'>
         Find answers to common questions about our services, packages, and processes. Get the clarity you need to make the most of your journey with us.
       </p>

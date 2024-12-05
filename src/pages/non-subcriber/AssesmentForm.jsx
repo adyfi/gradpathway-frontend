@@ -122,7 +122,7 @@ const AssesmentForm = () => {
     return <>
 
         <div className="container-fluid g-0 pt-4">
-            <img style={{ maxHeight: "500px", objectFit: "cover" }} className="img-fluid w-100 min-vh-25 min-vh-md-50 mb-n7 mt-5" src={"./assessment2.jpg"} srcset="" sizes="" width="" height="" alt="Photo by Irene Dávila" />
+            <img style={{ maxHeight: "500px", objectFit: "cover" }} className="img-fluid w-100 min-vh-25 min-vh-md-50 mb-n7 mt-5" src={"./assessment2.jpg"} srcSet="" sizes="" width="" height="" alt="Photo by Irene Dávila" />
         </div>
 
         <div className="col-md-10 shadow-sm border mb-5 offset-md-1 p-5 bg-body mt-md-n6 position-relative rounded" style={{ marginTop: '-100px' }}>
@@ -518,49 +518,51 @@ const AssesmentForm = () => {
             </div>
         </div>
 
+        {
+            recommendedPackage &&
+            <div className="col-md-10 offset-md-1 shadow-sm p-5 border mb-5">
+                <div className="row">
+                    <div className="col-12">
+                        <h2 className="text-left text-primary fw-bold">Assessment Results</h2>
+                        <hr />
+                    </div>
+                    <div className="col-md-7">
+                        <h2>Job Search Improvement Tips:</h2>
+                        <ul>
+                            {improvementTips?.map((tip, index) => (
+                                <li key={index}>{tip}</li>
+                            ))}
+                        </ul>
+                        <hr />
+                        <h4 className='mt-2'>Recommended Package: {recommendedPackage}</h4>
+                        <p>{reasoning}</p>
 
-        <div className="col-md-10 offset-md-1 shadow-sm p-5 border mb-5">
-            <div className="row">
-                <div className="col-12">
-                    <h2 className="text-left text-primary fw-bold">Assessment Results</h2>
-                    <hr />
-                </div>
-                <div className="col-md-7">
-                    <h2>Job Search Improvement Tips:</h2>
-                    <ul>
-                        {improvementTips.map((tip, index) => (
-                            <li key={index}>{tip}</li>
-                        ))}
-                    </ul>
-                    <hr />
-                    <h4 className='mt-2'>Recommended Package: {recommendedPackage}</h4>
-                    <p>{reasoning}</p>
-
-                    <div className="d-md-flex mt-4">
-                        <a className="btn btn-outline-primary px-4 rounded-pill mt-3 me-2" href="#">Send Email</a>
-                        <a className="btn btn-primary px-4 rounded-pill mt-3" href="#">Checkout</a>
+                        <div className="d-md-flex mt-4">
+                            <a className="btn btn-outline-primary px-4 rounded-pill mt-3 me-2" href="#">Send Email</a>
+                            <a className="btn btn-primary px-4 rounded-pill mt-3" href="#">Checkout</a>
+                        </div>
+                    </div>
+                    <div className="col-md-5 py-5">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <PieChart width={500} height={500}>
+                                <Pie
+                                    dataKey="value"
+                                    isAnimationActive={false}
+                                    data={data01}
+                                    cx="50%"
+                                    cy="50%"
+                                    outerRadius={80}
+                                    fill="#8884d8"
+                                    label
+                                />
+                                {/* <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#82ca9d" /> */}
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
-                <div className="col-md-5 py-5">
-                    <ResponsiveContainer width="100%" height="100%">
-                        <PieChart width={500} height={500}>
-                            <Pie
-                                dataKey="value"
-                                isAnimationActive={false}
-                                data={data01}
-                                cx="50%"
-                                cy="50%"
-                                outerRadius={80}
-                                fill="#8884d8"
-                                label
-                            />
-                            {/* <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#82ca9d" /> */}
-                            <Tooltip />
-                        </PieChart>
-                    </ResponsiveContainer>
-                </div>
             </div>
-        </div>
+        }
 
     </>
 };
