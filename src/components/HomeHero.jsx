@@ -7,7 +7,7 @@ export const HomeHero = () => {
                 <div className="col-12 col-md-7 col-lg-6">
                     <div className="lc-block mb-4">
                         <div editable="rich">
-                            <h1 className="display-5 fw-bolder text-primary-2">Welcome to GradPathway</h1>
+                            <h1 className="display-5 fw-bolder text-primary-2 mt-5">Welcome to GradPathway</h1>
                             <p>
                                 Your trusted partner in bridging the gap between academic success and career achievement
                                 <br /> <br />
