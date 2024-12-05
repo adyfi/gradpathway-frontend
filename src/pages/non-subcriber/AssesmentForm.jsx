@@ -18,10 +18,10 @@ const data02 = [
 
 const AssesmentForm = () => {
     const [formData, setFormData] = useState({
-        name: "Saurabh Dhakne",
-        email: "saurabh.dhakne@example.com",
+        name: "Enter Name",
+        email: "example.email@gmail.com",
         phone_number: "+44 1234567890",
-        linkedin_profile: "https://linkedin.com/in/saurabh-dhakne",
+        linkedin_profile: "https://linkedin.com/",
         current_course: "Master's in Computer Science",
         highest_education: "Bachelor's in IT",
         work_experience_home_country: "2 years in software development",
@@ -536,8 +536,8 @@ const AssesmentForm = () => {
                     <h4 className='mt-2'>Recommended Package: {recommendedPackage}</h4>
                     <p>{reasoning}</p>
 
-                    <div className="d-flex mt-4">
-                        <a className="btn btn-outline-primary px-4 rounded-pill mt-3 me-2" href="#">Download/Send Email</a>
+                    <div className="d-md-flex mt-4">
+                        <a className="btn btn-outline-primary px-4 rounded-pill mt-3 me-2" href="#">Send Email</a>
                         <a className="btn btn-primary px-4 rounded-pill mt-3" href="#">Checkout</a>
                     </div>
                 </div>
