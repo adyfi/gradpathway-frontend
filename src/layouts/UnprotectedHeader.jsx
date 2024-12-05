@@ -45,7 +45,7 @@ const UnprotectedHeader = () =>{
       </div>
 
       <div className="container-fluid mt-4">
-        <a className="navbar-brand" href="https://library.livecanvas.com/sections/">
+        <a className="navbar-brand" href="/">
           <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height={"50px"} />
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_lc" aria-controls="nav_lc" aria-expanded="false" aria-label="Toggle navigation">
