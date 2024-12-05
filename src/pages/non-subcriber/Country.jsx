@@ -10,7 +10,7 @@ const ContactUs = () => {
 
     return <>
         <div className="container-fluid mt-5 pt-5">
-            <h1 className="text-center text-primary mt-4">Which Country Are you planning for ?</h1>
+            <h1 className="text-center text-primary-2 mt-4">Which Country Are you planning for ?</h1>
             <div className="d-flex justify-content-center my-4">
                 <div className="dropdown">
                     <button className="btn btn-primary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
