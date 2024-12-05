@@ -99,9 +99,9 @@ const Mentors = () => {
 
                                 <div className="col-12"><h4>Agreement:</h4></div>
                                 <div className="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                                    <label class="form-check-label" for="flexCheckChecked">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                                    <label className="form-check-label" for="flexCheckChecked">
                                         Terms and conditions and privacy policy. 
                                     </label>
                                     </div>

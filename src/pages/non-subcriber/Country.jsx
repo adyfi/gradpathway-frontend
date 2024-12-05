@@ -1,92 +1,54 @@
-import React from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { Link } from 'react-router-dom';
-// const position = [51.505, -0.09];
-// const mapStyle = { height: "90vh" };
-const position = [51.505, -0.09]
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+    const navigate = useNavigate();
 
-    // let markers;
+    const handleCountryClick = (country) => {
+        console.log(`Selected country: ${country}`);
+        navigate("/home");
+    };
 
-    // const addMarkers = () => {
-    //   markers = [];
-    //   for (let i = 0; i < 10000; i++) {
-    //     markers.push({
-    //       position: {
-    //         lng: -122.673447 + Math.random() * 200.0,
-    //         lat: 45.5225581 - 60 + Math.random() * 80
-    //       }
-    //     });
-    //   }
-    // };
-
-    // addMarkers();
-
-    return <div>
-        <div className="inner-page-wrapper">
-
-            <div className="inner-text-banner">
-                <div className="text-banner-content">
-                    <h2>GradPathWay</h2>
-                    <p>We help students achieve desired careers by innovating their skills</p>
-                </div>
-            </div>
-
-            <div className="map-wrapper">
-                <div className="map-html-code">
-                    <h2>Choose a country based on your preferences</h2>
-                    <div className="map-container" style={{ width: '400px', height: '500px' }}>
-                        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-                            <TileLayer
-                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            />
-                            <Marker position={position}>
-                                <Popup>
-                                    A pretty CSS3 popup. <br /> Easily customizable.
-                                </Popup>
-                            </Marker>
-                        </MapContainer>
-                    </div>
-                    {/* <div className="map-search-box"> */}
-
-                        {/* <div className="input-group">
-                        <input className="form-control border-end-0 border rounded-pill" type="search" value="search" id="example-search-input" />
-                        <span className="input-group-append">
-                            <button className="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
-                                <i className="fa fa-search"></i>
+    return <>
+        <div className="container-fluid mt-5 pt-5">
+            <h1 className="text-center text-primary mt-4">Which Country Are you planning for ?</h1>
+            <div className="d-flex justify-content-center my-4">
+                <div className="dropdown">
+                    <button className="btn btn-primary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Country
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li>
+                            <button
+                                className="dropdown-item"
+                                onClick={() => handleCountryClick("India")}
+                            >
+                                India
                             </button>
-                        </span>
-                    </div> */}
-                    {/* </div> */}
-
-                    {/* <div className="mapouter"> */}
-                    {/* <Map center={position} zoom={2} style={mapStyle} maxZoom={20}>
-        <TileLayer
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <MarkerCluster markers={markers} addMarkers={addMarkers} />
-      </Map> */}
-                    {/* <div className="gmap_canvas">
-                        <iframe className="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                        <a href="https://sprunkin.com/">Sprunki Incredibox</a>
-                    </div>
-                    <style>{'.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}'}</style> */}
-                    {/* </div> */}
+                        </li>
+                        <li>
+                            <button
+                                className="dropdown-item"
+                                onClick={() => handleCountryClick("UAE")}
+                            >
+                                UAE
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="dropdown-item"
+                                onClick={() => handleCountryClick("UK")}
+                            >
+                                UK
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <section className="opportunities-wrapper">
-                <div className="opportunities-content">
-                    <h2>Unlock new career opportunities
-                        with us</h2>
-                    <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
-                </div>
-            </section>
-
         </div>
-    </div>
+        <div className="d-flex justify-content-center">
+            <img src={"./world-map-big.jpg"} width={"80%"} />
+        </div>
+    </>
 };
 
 export default ContactUs;

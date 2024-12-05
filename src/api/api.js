@@ -80,6 +80,26 @@ export const createMentor = async (data) => {
   }
 };
 
+export const createRecruiter = async (data) => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  const config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: `${baseURL}users/recruiters/`,
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data: JSON.stringify(data),
+  };
+
+  try {
+    const response = await axios.request(config);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const sendRecommendationRequest = async (data) => {
   const config = {
     method: 'post',
@@ -94,6 +114,7 @@ export const sendRecommendationRequest = async (data) => {
   try {
     const response = await axios.request(config);
     console.log("Response Data:", response);
+    return response;
   } catch (error) {
     console.error("Error:", error.response ? error.response.data : error.message);
   }

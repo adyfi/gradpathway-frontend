@@ -18,6 +18,9 @@ import ContactUs from './pages/non-subcriber/ContactUs.jsx';
 import AssesmentForm from './pages/non-subcriber/AssesmentForm.jsx';
 import Mentors from './pages/non-subcriber/Mentors.jsx';
 import Recruiter from './pages/non-subcriber/Recruiter.jsx';
+import { Mentor } from './pages/non-subcriber/Mentor.jsx';
+import MentorForm from './components/MentorForm.jsx';
+import MentorRegistration from './pages/non-subcriber/MentorRegistration.jsx';
 function App() {
   return (
     <Router>
@@ -28,14 +31,15 @@ function App() {
         {/* <Route path="/" element={<ProtectedRoute allowedRoles={['admin', 'user']}><Homepage /></ProtectedRoute>} /> */}
         <Route path="/" element={<UnprotectedLayout><Country /></UnprotectedLayout>} />
         <Route path="/home" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
-        <Route path="/aboutus" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
+        <Route path="/about" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
         <Route path="/blogs" element={<UnprotectedLayout><Blogs /></UnprotectedLayout>} />
-        <Route path="/contactus" element={<UnprotectedLayout><ContactUs /></UnprotectedLayout>} />
+        <Route path="/contact" element={<UnprotectedLayout><ContactUs /></UnprotectedLayout>} />
         <Route path="/login" element={<UnprotectedLayout><Login /></UnprotectedLayout>} />
         <Route path="/faq" element={<UnprotectedLayout><Faq /></UnprotectedLayout>} />
-        <Route path="/assesmentform" element={<UnprotectedLayout><AssesmentForm /></UnprotectedLayout>} />
-        <Route path="/mentors" element={<UnprotectedLayout><Mentors /></UnprotectedLayout>} />
+        <Route path="/assesment" element={<UnprotectedLayout><AssesmentForm /></UnprotectedLayout>} />
+        <Route path="/mentor" element={<UnprotectedLayout><Mentor /></UnprotectedLayout>} />
+        <Route path="/mentor-registration" element={<UnprotectedLayout><MentorRegistration /></UnprotectedLayout>} />
         <Route path="/recruiter" element={<UnprotectedLayout><Recruiter /></UnprotectedLayout>} />
         <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} />

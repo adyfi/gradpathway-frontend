@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import RecruiterForm from '../../components/RecruiterForm';
 
 const Recruiter = () => {
     return <>
@@ -11,7 +13,7 @@ const Recruiter = () => {
                     <p className='text-secondary mt-3' style={{ fontSize: '1.4rem' }}>
                         Why wait weeks to hire? Access skilled, pre-vetted tech talent ready to contribute from day one in just hours.
                     </p>
-                    <div className="banner-button">
+                    <div className="banner-button my-2">
                         <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
                     </div>
                 </div>
@@ -27,16 +29,19 @@ const Recruiter = () => {
                 </h1>
 
                 <div className="col-md-12 d-flex justify-content-center flex-wrap gap-2 mt-3 mb-5">
-                    <button className="btn btn-info text-white"> Business Analyst</button>
-                    <button className="btn btn-info text-white"> Backend Developer</button>
-                    <button className="btn btn-info text-white"> Frontend Developer</button>
-                    <button className="btn btn-info text-white"> Tech Lead</button>
-                    <button className="btn btn-info text-white"> Data Analyst</button>
-                    <button className="btn btn-info text-white"> Gen AI Developer</button>
-                    <button className="btn btn-info text-white"> ReactJS Develoepr</button>
-                    <button className="btn btn-info text-white"> Python Developer</button>
-                    <button className="btn btn-info text-white"> SDTE</button>
-                    <button className="btn btn-info text-white"> .NET Developer</button>
+                    <button className="btn btn-outline-primary btn-lg"> Business Analyst</button>
+                    <button className="btn btn-outline-primary btn-lg"> Backend Developer</button>
+                    <button className="btn btn-outline-primary btn-lg"> Frontend Developer</button>
+                    <button className="btn btn-outline-primary btn-lg"> Tech Lead</button>
+                    <button className="btn btn-outline-primary btn-lg"> Data Analyst</button>
+                    <button className="btn btn-outline-primary btn-lg"> Gen AI Developer</button>
+                    <button className="btn btn-outline-primary btn-lg"> ReactJS Develoepr</button>
+                    <button className="btn btn-outline-primary btn-lg"> Python Developer</button>
+                    <button className="btn btn-outline-primary btn-lg"> SDTE</button>
+                    <button className="btn btn-outline-primary btn-lg"> SEO</button>
+                    <button className="btn btn-outline-primary btn-lg"> Marketing</button>
+                    <button className="btn btn-outline-primary btn-lg"> QA/Tester</button>
+                    <button className="btn btn-outline-primary btn-lg"> .NET Developer</button>
                 </div>
                 <div className="banner-button text-center mb-5">
                         <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
@@ -53,31 +58,10 @@ const Recruiter = () => {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <div className='registernow-form'>
-                            <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Location <span className='asterisk'>*</span></label>
-                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Location" />
-                            </div>
-                            <div className="mb-3">
-                                <label for="formGroupExampleInput" className="form-label">Full Name <span className='asterisk'>*</span></label>
-                                <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
-                            </div>
-                            <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Company <span className='asterisk'>*</span></label>
-                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Company Name" />
-                            </div>
-                            <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Email Id <span className='asterisk'>*</span></label>
-                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com" />
-                            </div>
-                            <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Phone Number <span className='asterisk'>*</span></label>
-                                <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Phone Number" />
-                            </div>
-                        </div>
+                       <RecruiterForm />
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary">Submit</button>
+                    <button type="button" className="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
