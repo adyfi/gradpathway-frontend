@@ -101,10 +101,11 @@ export const createRecruiter = async (data) => {
 };
 
 export const sendRecommendationRequest = async (data) => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
   const config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'http://localhost:8000/assessments/recommendation/',
+    url: `${baseURL}assessments/recommendation/`,
     headers: {
       'Content-Type': 'application/json'
     },
