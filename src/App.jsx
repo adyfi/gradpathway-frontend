@@ -24,6 +24,7 @@ import MentorRegistration from './pages/non-subcriber/MentorRegistration.jsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'aos/dist/aos.css';
+import { NotFound } from './pages/non-subcriber/NotFound.jsx';
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
         <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="/dashboard/user" element={<ProtectedRoute allowedRoles={['user']}><ProtectedLayout><UserDashboard /></ProtectedLayout></ProtectedRoute>} />
+        <Route path="*" element={<UnprotectedLayout><NotFound /></UnprotectedLayout>} />
+
       </Routes>
     </Router>
   );

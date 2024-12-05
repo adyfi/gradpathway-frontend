@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHandPointRight } from 'react-icons/fa';
 import { TiTick } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 const ToggleSwitch = ({ planToggle, setPlanToggle }) => (
     <label className={"switch round"}>
@@ -19,6 +20,13 @@ const CalculatePrice = (planToggle, price) => {
 
 const Services = () => {
     const [planToggle, setPlanToggle] = useState(false)
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
+
     return <>
 
         <div className="container" style={{ paddingTop: "10vh", paddingBottom: "10vh" }}>
@@ -26,12 +34,12 @@ const Services = () => {
                 <div className="col-12 col-md-7 col-lg-6 pt-5">
                     <div className="lc-block mb-4">
                         <div editable="rich">
-                            <h1 className="text-primary display-3 fw-bolder">Our Services</h1>
-                            <p>
+                            <h1 className="text-primary display-3 fw-bolder" data-aos="fade-up">Our Services</h1>
+                            <p data-aos="fade-up">
                                 At GradPathWay, we offer tailored packages to empower your career journey. From refining your CV, cover letter, and LinkedIn profile in the Foundation Package, to comprehensive job search resources and interview preparation in the Advanced Package, we have you covered. For a deeper focus, the Professional Package provides mentorship, project-based experience, and mock interviews in specific streams, while the Ultimate Career Package ensures hands-on internships, certifications, and industry-aligned opportunities. Choose the plan that fits your ambitions and take the next step toward a rewarding career!!
                             </p>
-                            <a href='#plans' className='btn btn-primary rounded-pill mb-2 px-4 py-2 p-0 m-0 text-white'>Explore Our Plans</a>
-                            <ul className='d-flex gap-4 style-non p-0'>
+                            <a href='#plans' className='btn btn-primary rounded-pill mb-2 px-4 py-2 p-0 m-0 text-white' data-aos="fade-up">Explore Our Plans</a>
+                            <ul className='d-flex gap-4 style-non p-0' data-aos="fade-up">
                                 <img height={"20px"} src="/img/paypal.webp" alt="" />
                                 <img height={"20px"} src="/img/sezzle.webp" alt="" />
                                 <img height={"20px"} src="/img/shoppay.webp" alt="" />
@@ -39,15 +47,15 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-md-5 col-lg-6">
-                    <div className="lc-block"><img alt="banner" className="img-fluid mx-auto d-block" src={"/about-card.png"} loading="lazy" /></div>
+                <div className="col-12 col-md-5 col-lg-6 mt-5">
+                    <div className="lc-block" data-aos="fade-left"><img alt="banner" className="img-fluid mx-auto d-block" src={"/about-card.png"} loading="lazy" /></div>
                 </div>
             </div>
         </div>
 
         <div className="container pb-5" id='plans'>
             <div className="row">
-                <div className="col-md-12 text-center">
+                <div className="col-md-12 text-center" data-aos="fade-up">
                     <div className="lc-block mb-4"><span editable="inline" className="small mt-4 d-block">Affordable Plans</span>
                         <h2 editable="inline" className="display-2 mb-0 fw-bolder text-primary"><b>Pricing</b></h2>
                         <p editable="inline" className='col-md-6 offset-md-3'> Choose from our tailored packages designed to meet your career goals. Whether you're starting out or aiming for advanced opportunities, we have the right plan for you.</p>
@@ -55,12 +63,12 @@ const Services = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center align-items-center gap-3">
-                <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Monthly</span>
-                <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle} />
-                <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Yearly</span>
+                <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`} data-aos="fade-left">Monthly</span>
+                <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle}  data-aos="fade-up" />
+                <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`} data-aos="fade-right">Yearly</span>
             </div>
             <div className="row mt-4 text-center">
-                <div className="col-lg-3 col-md-6 text-dark my-2">
+                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
                     <div className="card">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Foundation Package</h4>
@@ -110,7 +118,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2">
+                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
                     <div className="card">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Advance Package</h4>
@@ -173,7 +181,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2">
+                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
                     <div className="card">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Professional Package</h4>
@@ -237,7 +245,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2">
+                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
                     <div className="card">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Ultimate Career Package</h4>

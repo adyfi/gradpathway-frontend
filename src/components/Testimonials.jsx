@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
 
 export const Testimonials = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
 
     return (
         <div className="container-fluid bg-light">
@@ -8,13 +15,13 @@ export const Testimonials = () => {
                 <div className="row mb-4">
                     <div className="col-md-12 text-center">
                         <div className="lc-block mb-4">
-                            <h2 editable="inline" className="rfs-25 fw-bolder display-2 text-primary">Testimonials</h2>
-                            <p editable="inline"> Explore the experiences and success stories of students who have transformed their careers with the support of GradPathWay’s innovative platform and resources.</p>
+                            <h2 editable="inline" className="rfs-25 fw-bolder display-2 text-primary-2" data-aos="fade-up">Testimonials</h2>
+                            <p editable="inline" data-aos="fade-up"> Explore the experiences and success stories of students who have transformed their careers with the support of GradPathWay’s innovative platform and resources.</p>
                         </div>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-right">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">
@@ -49,7 +56,7 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-up">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">
@@ -86,7 +93,7 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-left">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">
@@ -124,7 +131,7 @@ export const Testimonials = () => {
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-right">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">
@@ -161,7 +168,7 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-up">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">
@@ -199,7 +206,7 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-8 col-lg-4 mb-4">
+                    <div className="col-md-8 col-lg-4 mb-4" data-aos="fade-left">
                         <div className="card border-0 shadow">
                             <div className="card-body py-4">
                                 <div className="d-flex">

@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Testimonials } from '../../components/Testimonials';
+import AOS from 'aos';
+
 const AboutUs = () => {
+    useEffect(() => {
+		AOS.init({
+		  duration: 1000, 
+		  once: true, 
+		});
+	  }, []);
     return <>
     
     <div className="container mt-5 pt-5">
         <div className="row align-items-md-center mb-5">
-            <div className="col-md-12">
+            <div className="col-md-12" data-aos="fade-up">
                 <div className="lc-block text-center"><span className="small mt-4 d-block">About us</span>
-                    <h2 className="display-2 mb-0 text-primary fw-bolder"><b>About GradPathWay </b></h2>
+                    <h2 className="display-2 mb-0 text-primary-2 fw-bolder"><b>About GradPathWay </b></h2>
                     <p> We help students achieve desired careers by innovating their skills</p>
                 </div>
             </div>
         </div>
         <div className="row align-items-md-center mb-5">
-            <div className="col-lg-6 pr-5">
+            <div className="col-lg-6 pr-5" data-aos="fade-right">
                 <div className="lc-block py-1">
                     <span className="badge bg-primary">GradPathWay</span>
                 </div>
@@ -62,7 +70,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-sm-6 col-lg-3 ">
+            <div className="col-sm-6 col-lg-3" data-aos="fade-left">
                 <div className="lc-block mb-4">
                     <div className="card shadow-sm border-light">
                         <img src="https://images.unsplash.com/photo-1525296143957-b62256c593bf?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Featured image 1" className="card-img-top" loading="lazy" />
@@ -84,7 +92,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-sm-6 col-lg-3 mt-4 mt-sm-0 align-self-center">
+            <div className="col-sm-6 col-lg-3 mt-4 mt-sm-0 align-self-center" data-aos="fade-left">
                 <div className="lc-block">
                     <div className="card shadow-sm border-light">
                         <img src="https://images.unsplash.com/photo-1507831228884-93d43e81a99d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=632&amp;q=80" alt="Featured image 3" className="card-img-top" loading="lazy" />

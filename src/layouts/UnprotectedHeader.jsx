@@ -30,7 +30,7 @@ const UnprotectedHeader = () =>{
 
   return ( <>
     <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
-      <div className="col-12 bg-primary p-1 position-fixed top-0 text-white text-center">
+      <div className="col-12 bg-primary-2 p-1 position-fixed top-0 text-white text-center">
         <small>📝 Unlock Your Potential with a Free Career Assessment!</small>
         {/* <div className="carousel-inner p-0 bg-danger col-12 m-0">
           <div className="carousel-item active">

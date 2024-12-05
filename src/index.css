@@ -12,6 +12,10 @@ a, .isLink{
     color: #2265B0 !important;
 }
 
+.bg-primary-2 {
+    background: #2265B0 !important;
+}
+
 .bg-primary {
     background: #2265B0 !important;
 }
@@ -85,6 +89,17 @@ a, .isLink{
     background: #2265B0;
     border-color: #2265B0;
     color: #fff;
+}
+
+.btn-outline-primary-2 {
+    border: 2px solid #2265B0 !important;
+    color: #2265B0 !important;
+}
+
+.btn-outline-primary-2:hover {
+    background: #2265B0 !important;
+    border-color: #2265B0 !important;
+    color: #fff !important;
 }
 
 .btn-outline-primary:focus {
