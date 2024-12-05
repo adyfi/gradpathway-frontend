@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UnprotectedFooter = () =>
   <>
@@ -54,13 +55,11 @@ const UnprotectedFooter = () =>
               </div>
             </div>
             <div className="lc-block small">
-              <div editable="rich">
-                <p>Assessment</p>
-                <p>Tutor
-                  <br />
-                </p>
-                <p>Recruiter</p>
-                <p>Services </p>
+              <div editable="rich d-flex">
+                <p> <Link className='text-white isLink' to={"assessment"}> Assessment</Link></p>
+                <p> <Link className='text-white isLink' to={"/mentor"}> Tuttor </Link></p>
+                <p> <Link className='text-white isLink' to={"/recruiter"}> Recruiter</Link></p>
+                <p> <Link className='text-white isLink' to={"/services"}> Services </Link></p>
               </div>
             </div>
           </div>
@@ -72,10 +71,10 @@ const UnprotectedFooter = () =>
             </div>
             <div className="lc-block small">
               <div editable="rich">
-                <p>About Gradpathway</p>
-                <p>Success Stories</p>  
-                <p>Contact</p>
-                <p>Blog</p>
+                <p> <Link className='text-white isLink' to={"/about"}> About Gradpathway</Link></p>
+                <p> <Link className='text-white isLink' to={"/success-stories"}> Success Stories</Link></p>  
+                <p> <Link className='text-white isLink' to={"/contact"}> Contact</Link></p>
+                <p> <Link className='text-white isLink' to={"/blogs"}> Blog</Link></p>
               </div>
             </div>
           </div>
@@ -87,10 +86,10 @@ const UnprotectedFooter = () =>
             </div>
             <div className="lc-block small">
               <div editable="rich">
-                <p>Career Counsulting</p>
-                <p>Resume Revision</p>
-                <p>Job Search Startegy</p>
-                <p>Interview Preperation</p>
+                <p> <Link className='text-white isLink' to={"/services"}> Career Counsulting </Link></p>
+                <p> <Link className='text-white isLink' to={"/services"}> Resume Revision </Link></p>
+                <p> <Link className='text-white isLink' to={"/services"}> Job Search Startegy </Link></p>
+                <p> <Link className='text-white isLink' to={"/services"}> Interview Preperation </Link></p>
               </div>
             </div>
           </div>
