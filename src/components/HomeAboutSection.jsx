@@ -17,7 +17,7 @@ export const HomeAboutSection = () => {
 						</div>
 					</div>
 					<div className="lc-block text-center">
-						<div editable="rich" data-aos="fade-up">
+						<div editable="rich">
 							<p className="">Navigating today's global job market is complex, especially for international students who need support aligning their skills with employer expectations. GradPathway is more than just an ed-tech platform - we're a career catalyst. Our approach combines advanced AI tools and a powerful ROI calculator to help you measure and maximize the impact of your academic investment. By focusing on project-based learning, tailored career services, and digital skill-building, we're committed to your long-term success.</p>
 						</div>
 					</div>

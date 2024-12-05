@@ -31,9 +31,7 @@ const ContactUs = () => {
                 </div>
                 <div class="lc-block">
                   <div editable="rich">
-
                     <p class="lead">49 Featherstone Street <br /> London TN - ABCD<br />Zip 123 456</p>
-
                   </div>
                 </div>
               </div>

@@ -14,11 +14,11 @@ const Recruiter = () => {
                         Why wait weeks to hire? Access skilled, pre-vetted tech talent ready to contribute from day one in just hours.
                     </p>
                     <div className="banner-button my-2">
-                        <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
+                        <a href="#" className="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
                     </div>
                 </div>
-                <div className="col-md-5 d-flex justify-content-center">
-                    <img src="ab-banner.png" width={"90%"} alt="" className="img-fluid" />
+                <div className="col-md-5 d-flex justify-content-center mt-5">
+                    <img src="ab-banner.png" width={"90%"} alt="img" className="img-fluid" />
                 </div>
             </div>
 

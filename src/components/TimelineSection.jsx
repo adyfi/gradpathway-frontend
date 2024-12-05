@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const TimelineSection = () => {
     return (
@@ -59,6 +60,10 @@ export const TimelineSection = () => {
                 </div>
             </div>
         </div>
+        <div className="d-flex pt-4 pb-2 justify-content-center">
+            <Link className="btn btn-primary px-5 py-3 rounded-pill" to={"/assesment"}> <h3 className="m-0 p-0"> Take Free Assessment</h3></Link>
+        </div>
+            <p className='text-center col-md-6 offset-md-3'>Take the first step toward achieving your career goals with our free, personalized assessment. Discover how our services can help you stand out in the competitive job market and unlock your full potential.</p>
         </>
     )
 }

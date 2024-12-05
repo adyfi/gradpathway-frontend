@@ -9,7 +9,7 @@ export const Mentor = () => {
                 <div className="col-12 col-md-5 col-lg-6">
                     <div className="lc-block"><img alt="banner" className="img-fluid mx-auto d-block" src={"/about-card.png"} loading="lazy" /></div>
                 </div>
-                <div className="col-12 col-md-7 col-lg-6 pt-5">
+                <div className="col-12 col-md-7 col-lg-6 mt-4 pt-5">
                     <div className="lc-block mb-4"> 
                         <div editable="rich">
                             <h1 className="text-primary display-5 fw-bolder">The Ultimate Monetization Platform for Mentors</h1>

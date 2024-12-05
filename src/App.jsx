@@ -21,6 +21,9 @@ import Recruiter from './pages/non-subcriber/Recruiter.jsx';
 import { Mentor } from './pages/non-subcriber/Mentor.jsx';
 import MentorForm from './components/MentorForm.jsx';
 import MentorRegistration from './pages/non-subcriber/MentorRegistration.jsx';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 function App() {
   return (
     <Router>

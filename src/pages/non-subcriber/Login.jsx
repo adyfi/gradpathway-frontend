@@ -35,34 +35,34 @@ const Login = () => {
     //   <button onClick={handleLogin}>Login</button>
     //   {error && <p style={{ color: 'red' }}>{error}</p>}
     // </div>
-    <div className="inner-page-wrapper">
-    <section className="login-wrapper">
-            <div className="container">
-                <div className="row">
-                   <div className="col-md-5 m-auto login-content">
-                    <h1>Login</h1>
-                    <div className="contact-form">
-                          <div className="mb-3">
-                            <label for="formGroupExampleInput" className="form-label">Full Name</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
-                          </div>
-                          <div className="mb-3">
-                            <label for="formGroupExampleInput2" className="form-label">Email Id</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com" />
-                          </div>
-                          <div className="mb-5">
-                            <label for="formGroupExampleInput2" className="form-label">Password</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="9876543210" />
-                          </div>
-                          <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Login</button>
-                          </div>
-                    </div>
-                   </div>
+    <div className="inner-page-wrapper" style={{margin:"20vh 0 5vh 0"}}>
+      <section className="login-wrapper">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5 m-auto login-content shadow-sm p-4 rounded border">
+              <h1 className='text-primary'>User Login</h1>
+              <div className="contact-form">
+                <div className="mb-3">  
+                  <label for="formGroupExampleInput" className="form-label">Full Name</label>
+                  <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
                 </div>
+                <div className="mb-3">
+                  <label for="formGroupExampleInput2" className="form-label">Email Id</label>
+                  <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com" />
+                </div>
+                <div className="mb-3">
+                  <label for="formGroupExampleInput2" className="form-label">Password</label>
+                  <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="9876543210" />
+                </div>
+                <div className="col-12">
+                  <button type="submit" className="btn btn-primary px-5">Login</button>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
         </div>
+      </section>
+    </div>
   );
 };
 
