@@ -85,7 +85,7 @@ export const createRecruiter = async (data) => {
   const config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: `${baseURL}users/recruiters/`,
+    url: `${baseURL}/users/recruiters/`,
     headers: { 
       'Content-Type': 'application/json'
     },
@@ -105,7 +105,7 @@ export const sendRecommendationRequest = async (data) => {
   const config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: `${baseURL}assessments/recommendation/`,
+    url: `${baseURL}/assessments/recommendation/`,
     headers: {
       'Content-Type': 'application/json'
     },
