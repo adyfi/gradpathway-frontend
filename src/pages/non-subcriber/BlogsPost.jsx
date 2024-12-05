@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchBlogPostById } from '../../api/api';
+import { useParams } from 'react-router-dom';
 
 function formatIsoDateCustom(isoDate) {
     const date = new Date(isoDate);
@@ -10,7 +11,7 @@ function formatIsoDateCustom(isoDate) {
 }
 
 const BlogPost = () => {
-    const { slug } = useParams(); 
+    const { slug } = useParams();
     const [blogPost, setBlogPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ const BlogPost = () => {
     useEffect(() => {
         const fetchBlogPost = async () => {
             try {
-                const data = await fetchBlogPostById(slug); 
+                const data = await fetchBlogPostById(slug);
                 setBlogPost(data);
             } catch (err) {
                 setError('Failed to load the blog post.');
@@ -43,7 +44,13 @@ const BlogPost = () => {
     }
 
     return <div className='container'>
-        <div className="inner-page-wrapper bg-white p-4" style={{ marginTop: "20vh" }}>
+        <div className="d-flex justify-content-center">
+            <div className="inner-page-wrapper bg-white p-4 shadow-sm border mb-5 rounded" style={{ maxWidth: "750px", marginTop: "20vh" }}>
+                <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                />
+            </div>
         </div>
     </div>
 };

@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaBlackTie, FaBookReader } from 'react-icons/fa'
 import { GrResources } from 'react-icons/gr'
 import { MdOutlineSupport } from 'react-icons/md'
 import { PiTargetBold } from 'react-icons/pi'
+import AOS from 'aos';
 
 export const MentorWhySection = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
 	return (
 
 		<div className="container py-5 py-md-6">
@@ -12,18 +19,18 @@ export const MentorWhySection = () => {
 				<div className="col-md-12">
 					<div className="lc-block text-center mb-2">
 						<div editable="rich">
-							<h2 className="display-5 text-primary-2 fw-bolder">Why Should Mentors Choose GradPathWay?&nbsp;</h2>
+							<h2 className="display-5 text-primary-2 fw-bolder" data-aos="fade-up">Why Should Mentors Choose GradPathWay?&nbsp;</h2>
 						</div>
 					</div>
 					<div className="lc-block text-center">
 						<div editable="rich">
-							<p className="">Navigating today's global job market is complex, especially for international students who need support aligning their skills with employer expectations. GradPathway is more than just an ed-tech platform - we're a career catalyst. Our approach combines advanced AI tools and a powerful ROI calculator to help you measure and maximize the impact of your academic investment. By focusing on project-based learning, tailored career services, and digital skill-building, we're committed to your long-term success.</p>
+							<p className="" data-aos="fade-up">Navigating today's global job market is complex, especially for international students who need support aligning their skills with employer expectations. GradPathway is more than just an ed-tech platform - we're a career catalyst. Our approach combines advanced AI tools and a powerful ROI calculator to help you measure and maximize the impact of your academic investment. By focusing on project-based learning, tailored career services, and digital skill-building, we're committed to your long-term success.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="row mt-5">
-				<div className="col-12 col-md-6 col-xl-4 mb-4">
+				<div className="col-12 col-md-6 col-xl-4 mb-4" data-aos="fade-right">
 					<div className="lc-block shadow-sm border border-primary p-3 rounded text-center ">
 						<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2">
 							{/* <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16" style="" lc-helper="svg-icon" className="text-primary">
@@ -39,7 +46,7 @@ export const MentorWhySection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-12 col-md-6 col-xl-4 mb-4">
+				<div className="col-12 col-md-6 col-xl-4 mb-4" data-aos="fade-up">
 					<div className="lc-block shadow-sm border border-primary p-3 rounded text-center ">
 						<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
 							{/* <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" className="text-success" viewBox="0 0 16 16" style="" lc-helper="svg-icon">
@@ -55,7 +62,7 @@ export const MentorWhySection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-12 col-md-6 col-xl-4 mb-4">
+				<div className="col-12 col-md-6 col-xl-4 mb-4" data-aos="fade-left">
 					<div className="lc-block shadow-sm border border-primary p-3 rounded text-center ">
 						<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
 							{/* <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" className="text-danger" viewBox="0 0 16 16" style="" lc-helper="svg-icon">

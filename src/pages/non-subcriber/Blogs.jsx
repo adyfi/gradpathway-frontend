@@ -64,7 +64,7 @@ const Blogs = () => {
                             <div className="row">
                                 {posts.map(post => (
                                     <div className="col-md-4 p-3" key={post.slug}>
-                                        <Link to={`/blogs/${post.slug}`}>
+                                        <Link to={`/blogs/${post.id}`}>
                                             <div className="blog-box">
                                                 <div className="image-wrapper">
                                                     <img src="/img/manager-women-working.webp" alt="" className="img-fluid rounded" />
