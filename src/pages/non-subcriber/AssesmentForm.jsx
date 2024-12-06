@@ -72,7 +72,7 @@ const AssesmentForm = () => {
                     setRecommendation(recommendationData);
                     setRecommendedPackage(recommendationData.recommended_package);
                     setReasoning(recommendationData.reasoning);
-                    setImprovementTips(recommendationData['Job Search Improvement Tips']);
+                    setImprovementTips(recommendationData['job_search_improvement_tips']);
                     console.log("recommendationData")
                     console.log(recommendationData.likelihoods)
                     const chartData = Object.entries(recommendationData.likelihoods).map(([name, value]) => ({
