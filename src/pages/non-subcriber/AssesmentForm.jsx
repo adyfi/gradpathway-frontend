@@ -1,20 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { sendRecommendationRequest } from '../../api/api';
-import { Pie, PieChart, ResponsiveContainer } from 'recharts';
-import { Tooltip } from 'bootstrap';
-const data01 = [
-    { name: 'Foundation Package', value: 20 },
-    { name: 'Professional Package', value: 30 },
-    { name: 'Advance Package', value: 40 },
-    { name: 'Ultimate Package', value: 10 },
-];
-
-const data02 = [
-    { name: 'Foundation Package', value: 20 },
-    { name: 'Professional Package', value: 30 },
-    { name: 'Advance Package', value: 40 },
-    { name: 'Ultimate Package', value: 10 },
-];
+import { AssessmentAnalytics } from './AssessmentAnalytics';
 
 const AssesmentForm = () => {
     const [formData, setFormData] = useState({
@@ -53,6 +39,7 @@ const AssesmentForm = () => {
     const [reasoning, setReasoning] = useState('');
     const [likelihoods, setLikelihoods] = useState();
     const [improvementTips, setImprovementTips] = useState([]);
+    const [showAnalytics, setShowAnalytics] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -87,23 +74,14 @@ const AssesmentForm = () => {
                     setReasoning(recommendationData.reasoning);
                     setImprovementTips(recommendationData['Job Search Improvement Tips']);
                     console.log("recommendationData")
-                    // console.log(recommendationData)
-                    // setLikelihoods([{name:"Advanced Package",value:recommendationData.likelihoods["Advanced Package"]}])
+                    console.log(recommendationData.likelihoods)
+                    const chartData = Object.entries(recommendationData.likelihoods).map(([name, value]) => ({
+                        name,
+                        value: parseFloat(value.replace("%", "")), // Convert "10%" to 10
+                    }));
+                    setLikelihoods(chartData)
+                    setShowAnalytics(true)
 
-                    // if (recommendationData?.likelihoods) {
-                    //     setLikelihoods([recommendationData.likelihoods["Foundation Package"]]);
-                    // } else {
-                    //     setLikelihoods([]);  // Set to an empty array if no likelihood data is available
-                    // }
-
-                    // console.log("recommendationData.likelihoods")
-                    // const likelihoodArray = Object.keys(recommendationData.likelihoods).map((key) => ({
-                    //     name: key,
-                    //     value: likelihood[key]
-                    // }));
-                    // console.log("likelihoodArray")
-                    // console.dir(likelihoodArray)
-                    // Set the recommendation state
                 } else {
                     setError('Unexpected response format. Please try again later.');
                 }
@@ -118,8 +96,30 @@ const AssesmentForm = () => {
     };
 
 
+    useEffect(() => {
+        console.log("Updated likelihoods state:", likelihoods);
+    }, [likelihoods]);
 
-    return <>
+    useEffect(() => {
+        console.log("{ showAnalytics, likelihoods, recommendedPackage, reasoning, improvementTips }");
+        console.log({ showAnalytics, likelihoods, recommendedPackage, reasoning, improvementTips });
+    }, [showAnalytics])
+
+    if (showAnalytics) {
+        console.log("{ likelihoods, recommendedPackage, reasoning, improvementTips }");
+        console.log({ likelihoods, recommendedPackage, reasoning, improvementTips });
+        return (
+            <AssessmentAnalytics
+                likelihoods={likelihoods}
+                recommendedPackage={recommendedPackage}
+                reasoning={reasoning}
+                improvementTips={improvementTips}
+                setShowAnalytics={setShowAnalytics}
+            />
+        )
+    }
+
+    return (<>
 
         <div className="container-fluid g-0 pt-4">
             <img style={{ maxHeight: "500px", objectFit: "cover" }} className="img-fluid w-100 min-vh-25 min-vh-md-50 mb-n7 mt-5" src={"./assessment2.jpg"} srcSet="" sizes="" width="" height="" alt="Photo by Irene Dávila" />
@@ -510,6 +510,12 @@ const AssesmentForm = () => {
                         <button className='btn btn-primary px-4' type="submit" disabled={loading}>
                             {loading ? 'Submitting...' : success ? 'Re-Take' : 'Submit'}
                         </button>
+                        {
+                            likelihoods && likelihoods?.length > 0 &&
+                            <button className='btn btn-primary px-4 ms-4' type="button" onClick={()=> setShowAnalytics(true)}>
+                                Show Analytics
+                            </button>
+                        }
                     </div>
                     {error && <div className="alert alert-danger mt-3">Error: {error}</div>}
                     {success && <div className="alert alert-success mt-3">Assessment submitted successfully!</div>}
@@ -518,53 +524,8 @@ const AssesmentForm = () => {
             </div>
         </div>
 
-        {
-            recommendedPackage &&
-            <div className="col-md-10 offset-md-1 shadow-sm p-5 border mb-5">
-                <div className="row">
-                    <div className="col-12">
-                        <h2 className="text-left text-primary fw-bold">Assessment Results</h2>
-                        <hr />
-                    </div>
-                    <div className="col-md-7">
-                        <h2>Job Search Improvement Tips:</h2>
-                        <ul>
-                            {improvementTips?.map((tip, index) => (
-                                <li key={index}>{tip}</li>
-                            ))}
-                        </ul>
-                        <hr />
-                        <h4 className='mt-2'>Recommended Package: {recommendedPackage}</h4>
-                        <p>{reasoning}</p>
 
-                        <div className="d-md-flex mt-4">
-                            <a className="btn btn-outline-primary px-4 rounded-pill mt-3 me-2" href="#">Send Email</a>
-                            <a className="btn btn-primary px-4 rounded-pill mt-3" href="#">Checkout</a>
-                        </div>
-                    </div>
-                    <div className="col-md-5 py-5">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <PieChart width={500} height={500}>
-                                <Pie
-                                    dataKey="value"
-                                    isAnimationActive={false}
-                                    data={data01}
-                                    cx="50%"
-                                    cy="50%"
-                                    outerRadius={80}
-                                    fill="#8884d8"
-                                    label
-                                />
-                                {/* <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#82ca9d" /> */}
-                                <Tooltip />
-                            </PieChart>
-                        </ResponsiveContainer>
-                    </div>
-                </div>
-            </div>
-        }
-
-    </>
+    </>)
 };
 
 export default AssesmentForm;
