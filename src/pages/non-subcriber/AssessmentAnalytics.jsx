@@ -20,7 +20,7 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
             reasoning,
             improvementTips,
         });
-        return <p>Invalid data provided for analytics. Please check the console for more details.</p>;
+        return <p className='text-center' style={{marginTop:'20vh'}}>Invalid data provided for analytics. Please check after sometime.</p>;
     }
 
 
@@ -48,7 +48,7 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
                         <button className="btn btn-primary px-4 rounded-pill mt-3" onClick={handleShowAnalytics}>Re-Take assessment</button>
                     </div>
                 </div>
-                <div className="col-md-5 py-2">
+                <div className="col-md-5 py-2 d-flex bg-danger justify-content-center">
                 <h4 className="text-left mb-3">Package Suitability</h4>
 
                     {
