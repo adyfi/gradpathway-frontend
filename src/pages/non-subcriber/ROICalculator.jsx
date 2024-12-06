@@ -1,24 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const calculateROI = (totalCost, annualIncome, expensesPerYear, jobDuration) => {
+    console.log("totalCost:",totalCost)
+    console.log("annualIncome:",annualIncome)
+    console.log("expensesPerYear:",expensesPerYear)
+    console.log("jobDuration:",jobDuration)
+    // Total earnings from the job
+    const totalIncome = annualIncome * jobDuration;
+    console.log("totalIncome:", totalIncome)
+
+    // Total expenses during the job
+    const totalExpenses = parseInt(expensesPerYear * jobDuration) + parseInt(totalCost) ;
+    console.log("totalExpenses:",totalExpenses)
+
+    // console.log("totalExpenses:",totalExpenses)
+    // console.log("totalIncome:",totalExpenses)
+    // Net earnings
+    const netEarnings = totalIncome - totalExpenses;
+    console.log("netEarnings:", netEarnings)
+
+    // ROI calculation
+    const roi = (netEarnings / totalExpenses) * 100;
+
+    return roi;
+};
+
+
 const ROICalculator = () => {
     const [educationCost, setEducationCost] = useState(50000);
     const [loanInterest, setLoanInterest] = useState(10);
-    const [expectedSalary, setExpectedSalary] = useState(3000);
+    const [expectedSalary, setExpectedSalary] = useState(30000);
     const [jobSearchDuration, setJobSearchDuration] = useState(12);
-    const [courseDuration, setCouseDuration] = useState(2);
+    const [courseDuration, setCouseDuration] = useState(1);
+    const [jobDuration, setJobDuration] = useState(1);
+    const [expenses, setExpenses] = useState(1000)
 
     // Calculate Loss per Month (LPM)
-    const lossPerMonth = (expectedSalary/12).toFixed(2) ;
+    const lossPerMonth = (expectedSalary / 12).toFixed(2);
 
     // Calculate Total Loss Due to Unemployment (JSD * LPM)
-    const totalLossDueToUnemployment = (expectedSalary/12) * jobSearchDuration;
+    const totalLossDueToUnemployment = (expectedSalary / 12) * jobSearchDuration;
 
     // Calculate Total Costs (TC)
-    const totalCosts = educationCost +( (educationCost * loanInterest) / 100);
+    // const totalCosts = educationCost +( (educationCost * loanInterest) / 100);
+    const totalCosts = (educationCost * Math.pow((1 + loanInterest / 100), courseDuration)).toFixed(2);
+
 
     // Handle zero salary case to prevent division by zero
-    const recoveryTime = expectedSalary > 0 ? (totalCosts/12) / (expectedSalary/12) : 0;
+    const recoveryTime = expectedSalary > 0 ? totalCosts / expectedSalary : 0;
 
     // Calculate Total Salary Earned in Recovery Time
     const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * recoveryTime).toFixed(2));
@@ -37,93 +67,110 @@ const ROICalculator = () => {
     return (
         <div className="container" style={{ marginTop: '20vh' }}>
             <div className="row border shadow-sm p-4 rounded mb-5">
-                <div className="col-md-6">
+                <div className="col-md-6 p-4">
                     <h3 className='text-primary-2 m-0'>GradPathway Smart ROI Tool</h3>
                     <small>ROI Calculator for Higher Studies and Work</small>
 
                     <div className="container mt-5">
 
-                        <div className="form-group">
-                            <label htmlFor="educationCost" className="form-label">Education Cost (EC) - ${educationCost}</label>
-                            <input
-                                type="range"
-                                className="form-range"
-                                id="educationCost"
-                                min="0"
-                                max="100000"
-                                step="1000"
-                                value={educationCost}
-                                onChange={(e) => setEducationCost(parseInt(e.target.value))}
-                            />
-                        </div>
+                        <div className="col-md-12">
+                            <div className="form-group">
+                                <label htmlFor="courseDuration" className="form-label">Course Duration - {courseDuration} year{courseDuration > 1 && 's'}</label>
+                                <input
+                                    type="range"
+                                    className="form-range"
+                                    id="courseDuration"
+                                    min="1"
+                                    max="10"
+                                    step="1"
+                                    value={courseDuration}
+                                    onChange={(e) => setCouseDuration(parseInt(e.target.value))}
+                                />
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="loanInterest" className="form-label">Loan Interest (LI) - {loanInterest}% per year</label>
-                            <input
-                                type="range"
-                                className="form-range"
-                                id="loanInterest"
-                                min="0"
-                                max="100"
-                                step="1"
-                                value={loanInterest}
-                                onChange={(e) => setLoanInterest(parseInt(e.target.value))}
-                            />
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="educationCost" className="form-label">Education Cost (EC) - ${educationCost}</label>
+                                <input
+                                    type="range"
+                                    className="form-range"
+                                    id="educationCost"
+                                    min="0"
+                                    max="100000"
+                                    step="1000"
+                                    value={educationCost}
+                                    onChange={(e) => setEducationCost(parseInt(e.target.value))}
+                                />
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - ${expectedSalary} per year</label>
-                            <input
-                                type="range"
-                                className="form-range"
-                                id="expectedSalary"
-                                min="1000"
-                                max="50000"
-                                step="500"
-                                value={expectedSalary}
-                                onChange={(e) => setExpectedSalary(parseInt(e.target.value))}
-                            />
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="loanInterest" className="form-label">Loan Interest (LI) - {loanInterest}% per year</label>
+                                <input
+                                    type="range"
+                                    className="form-range"
+                                    id="loanInterest"
+                                    min="0"
+                                    max="100"
+                                    step="1"
+                                    value={loanInterest}
+                                    onChange={(e) => setLoanInterest(parseInt(e.target.value))}
+                                />
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} months</label>
-                            <input
-                                type="range"
-                                className="form-range"
-                                id="jobSearchDuration"
-                                min="1"
-                                max="120"
-                                step="1"
-                                value={jobSearchDuration}
-                                onChange={(e) => setJobSearchDuration(parseInt(e.target.value))}
-                            />
-                        </div>
+                            <p className='mb-5 mt-3'>
+                                <td>Total Costs (TC):</td>
+                                <td>{totalCosts} USD</td>
+                            </p>
 
-                        <div className="results mt-4">
-                            <h4>Calculated Results</h4>
-                            <table className="table">
-                                <tbody>
-                                    <tr >
-                                        <td>Loss per Month (LPM):</td>
-                                        <td className='text-danger'>{lossPerMonth} USD Per month</td>
-                                    </tr>
-                                    <tr >
-                                        <td>Total Loss Due to Unemployment:</td>
-                                        <td className='text-danger'>{totalLossDueToUnemployment} USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total Costs (TC):</td>
-                                        <td>{totalCosts} USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Recovery Time (RT):</td>
-                                        <td>{recoveryTime > 0 ? recoveryTime.toFixed(1) : 'N/A'} year</td>
-                                    </tr>
-                                    <tr>
+                            <div className="form-group">
+                                <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - ${expectedSalary} per year</label>
+                                <input
+                                    type="range"
+                                    className="form-range"
+                                    id="expectedSalary"
+                                    min="1000"
+                                    max="50000"
+                                    step="500"
+                                    value={expectedSalary}
+                                    onChange={(e) => setExpectedSalary(parseInt(e.target.value))}
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} months</label>
+                                <input
+                                    type="range"
+                                    className="form-range"
+                                    id="jobSearchDuration"
+                                    min="1"
+                                    max="120"
+                                    step="1"
+                                    value={jobSearchDuration}
+                                    onChange={(e) => setJobSearchDuration(parseInt(e.target.value))}
+                                />
+                            </div>
+
+                            <div className="results mt-4">
+                                <h4>Calculated Results</h4>
+                                <table className="table">
+                                    <tbody>
+                                        <tr >
+                                            <td>Loss per Month (LPM):</td>
+                                            <td className='text-danger'>{lossPerMonth} USD Per month</td>
+                                        </tr>
+                                        <tr >
+                                            <td>Total Loss Due to Unemployment:</td>
+                                            <td className='text-danger'>{totalLossDueToUnemployment} USD</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Recovery Time (RT):</td>
+                                            <td>{recoveryTime > 0 ? recoveryTime.toFixed(1) : 'N/A'} year</td>
+                                        </tr>
+                                        {/* <tr>
                                         <td>Total Salary Earned in Recovery Time:</td>
                                         <td>{totalSalaryEarnedInRecoveryTime} USD</td>
-                                    </tr>
-                                    {/* <tr>
+                                    </tr> */}
+                                        {/* <tr>
                                         <td>ROI (Percentage):</td>
                                         <td>{roiPercentage.toFixed(2)}%</td>
                                     </tr>
@@ -131,10 +178,46 @@ const ROICalculator = () => {
                                         <td>ROI (USD per month):</td>
                                         <td>${roiDollarsPerMonth.toFixed(2)} Per Month</td>
                                     </tr> */}
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+
+                </div>
+                <div className="col-md-6">
+                    <h3 className='text-primary-2 m-0 mt-3'>ROI Considering Your Total Expenses and Education Cost</h3>
+                    <small></small>
+
+                    <div className="form-group mt-5">
+                        <label htmlFor="jobDuration" className="form-label">Job Duration - {jobDuration} year{jobDuration > 1 && 's'}</label>
+                        <input
+                            type="range"
+                            className="form-range"
+                            id="jobDuration"
+                            min="1"
+                            max="10"
+                            step="1"
+                            value={jobDuration}
+                            onChange={(e) => setJobDuration(parseInt(e.target.value))}
+                        />
+                    </div>
+
+                    <div className="form-group mt-5">
+                        <label htmlFor="expenses" className="form-label">Expenses - {expenses} per month</label>
+                        <input
+                            type="range"
+                            className="form-range"
+                            id="expenses"
+                            min="1000"
+                            max="100000"
+                            step="1000"
+                            value={expenses}
+                            onChange={(e) => setExpenses(parseInt(e.target.value))}
+                        />
+                    </div>
+
+                    <p>ROI : {calculateROI(totalCosts, expectedSalary, expenses*12, jobDuration)}</p>
 
                 </div>
             </div>
