@@ -38,7 +38,7 @@ const AboutUs = () => {
                         </div>
                         <div className="col-6">
                             <div className="lc-block mb-4">
-                                    <p className="h1 m-0">27/7</p>
+                                    <p className="h1 m-0">24/7</p>
                                     <p className="small text-uppercase">Assistant</p>
                             </div>
                         </div>
