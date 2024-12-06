@@ -3,24 +3,25 @@ import { Link } from 'react-router-dom';
 
 const ROICalculator = () => {
     const [educationCost, setEducationCost] = useState(50000);
-    const [loanInterest, setLoanInterest] = useState(10000);
+    const [loanInterest, setLoanInterest] = useState(10);
     const [expectedSalary, setExpectedSalary] = useState(3000);
     const [jobSearchDuration, setJobSearchDuration] = useState(12);
+    const [courseDuration, setCouseDuration] = useState(2);
 
     // Calculate Loss per Month (LPM)
-    const lossPerMonth = expectedSalary;
+    const lossPerMonth = (expectedSalary/12).toFixed(2) ;
 
     // Calculate Total Loss Due to Unemployment (JSD * LPM)
-    const totalLossDueToUnemployment = jobSearchDuration * lossPerMonth;
+    const totalLossDueToUnemployment = (expectedSalary/12) * jobSearchDuration;
 
     // Calculate Total Costs (TC)
-    const totalCosts = educationCost + loanInterest;
+    const totalCosts = educationCost +( (educationCost * loanInterest) / 100);
 
     // Handle zero salary case to prevent division by zero
-    const recoveryTime = expectedSalary > 0 ? totalCosts / expectedSalary : 0;
+    const recoveryTime = expectedSalary > 0 ? (totalCosts/12) / (expectedSalary/12) : 0;
 
     // Calculate Total Salary Earned in Recovery Time
-    const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * jobSearchDuration).toFixed(2));
+    const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * recoveryTime).toFixed(2));
 
     // Calculate ROI in Percentage
     const roiPercentage = expectedSalary > 0
@@ -57,21 +58,21 @@ const ROICalculator = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="loanInterest" className="form-label">Loan Interest (LI) - ${loanInterest}</label>
+                            <label htmlFor="loanInterest" className="form-label">Loan Interest (LI) - {loanInterest}% per year</label>
                             <input
                                 type="range"
                                 className="form-range"
                                 id="loanInterest"
                                 min="0"
-                                max="50000"
-                                step="500"
+                                max="100"
+                                step="1"
                                 value={loanInterest}
                                 onChange={(e) => setLoanInterest(parseInt(e.target.value))}
                             />
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - ${expectedSalary}</label>
+                            <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - ${expectedSalary} per year</label>
                             <input
                                 type="range"
                                 className="form-range"
@@ -102,13 +103,13 @@ const ROICalculator = () => {
                             <h4>Calculated Results</h4>
                             <table className="table">
                                 <tbody>
-                                    <tr>
+                                    <tr >
                                         <td>Loss per Month (LPM):</td>
-                                        <td>{lossPerMonth} USD Per month</td>
+                                        <td className='text-danger'>{lossPerMonth} USD Per month</td>
                                     </tr>
-                                    <tr>
+                                    <tr >
                                         <td>Total Loss Due to Unemployment:</td>
-                                        <td>{totalLossDueToUnemployment} USD</td>
+                                        <td className='text-danger'>{totalLossDueToUnemployment} USD</td>
                                     </tr>
                                     <tr>
                                         <td>Total Costs (TC):</td>
@@ -116,20 +117,20 @@ const ROICalculator = () => {
                                     </tr>
                                     <tr>
                                         <td>Recovery Time (RT):</td>
-                                        <td>{recoveryTime > 0 ? recoveryTime.toFixed(2) : 'N/A'} Months</td>
+                                        <td>{recoveryTime > 0 ? recoveryTime.toFixed(1) : 'N/A'} year</td>
                                     </tr>
                                     <tr>
                                         <td>Total Salary Earned in Recovery Time:</td>
                                         <td>{totalSalaryEarnedInRecoveryTime} USD</td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                         <td>ROI (Percentage):</td>
                                         <td>{roiPercentage.toFixed(2)}%</td>
                                     </tr>
                                     <tr>
                                         <td>ROI (USD per month):</td>
                                         <td>${roiDollarsPerMonth.toFixed(2)} Per Month</td>
-                                    </tr>
+                                    </tr> */}
                                 </tbody>
                             </table>
                         </div>
