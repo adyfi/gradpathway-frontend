@@ -3,7 +3,7 @@ import { Tooltip, Cell, Legend, Pie, PieChart, ResponsiveContainer } from 'recha
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 
-export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning, improvementTips, setShowAnalytics }) => {
+export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning, improvementTips= [], setShowAnalytics }) => {
 
     const handleShowAnalytics = () => setShowAnalytics(false);
 
