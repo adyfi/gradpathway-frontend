@@ -104,23 +104,23 @@ const ROICalculator = () => {
                                 <tbody>
                                     <tr>
                                         <td>Loss per Month (LPM):</td>
-                                        <td>{lossPerMonth}</td>
+                                        <td>{lossPerMonth} USD Per month</td>
                                     </tr>
                                     <tr>
                                         <td>Total Loss Due to Unemployment:</td>
-                                        <td>{totalLossDueToUnemployment}</td>
+                                        <td>{totalLossDueToUnemployment} USD</td>
                                     </tr>
                                     <tr>
                                         <td>Total Costs (TC):</td>
-                                        <td>{totalCosts}</td>
+                                        <td>{totalCosts} USD</td>
                                     </tr>
                                     <tr>
                                         <td>Recovery Time (RT):</td>
-                                        <td>{recoveryTime > 0 ? recoveryTime.toFixed(2) : 'N/A'}</td>
+                                        <td>{recoveryTime > 0 ? recoveryTime.toFixed(2) : 'N/A'} Months</td>
                                     </tr>
                                     <tr>
                                         <td>Total Salary Earned in Recovery Time:</td>
-                                        <td>{totalSalaryEarnedInRecoveryTime}</td>
+                                        <td>{totalSalaryEarnedInRecoveryTime} USD</td>
                                     </tr>
                                     <tr>
                                         <td>ROI (Percentage):</td>
@@ -128,7 +128,7 @@ const ROICalculator = () => {
                                     </tr>
                                     <tr>
                                         <td>ROI (USD per month):</td>
-                                        <td>${roiDollarsPerMonth.toFixed(2)} per month</td>
+                                        <td>${roiDollarsPerMonth.toFixed(2)} Per Month</td>
                                     </tr>
                                 </tbody>
                             </table>
