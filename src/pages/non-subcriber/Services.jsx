@@ -67,8 +67,8 @@ const Services = () => {
                 <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle} />
                 <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Yearly</span>
             </div>
-            <div className="d-flex gap-3 mt-4 text-center align-items-stretch">
-                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
+            <div className="d-flex flex-col gap-3 mt-4 text-center align-items-stretch" style={{width:"100%", overflowX:"scroll"}}>
+                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-right">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Foundation Package</h4>
@@ -118,7 +118,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
+                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-right">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Advance Package</h4>
@@ -181,7 +181,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
+                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-left">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Professional Package</h4>
@@ -245,7 +245,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
+                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-left">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Ultimate Career Package</h4>
