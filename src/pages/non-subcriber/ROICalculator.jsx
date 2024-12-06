@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ROICalculator = () => {
-    const [educationCost, setEducationCost] = useState(50000);  // Set a default value
-    const [loanInterest, setLoanInterest] = useState(10000);  // Set a default value
-    const [expectedSalary, setExpectedSalary] = useState(3000);  // Set a default value
-    const [jobSearchDuration, setJobSearchDuration] = useState(12);  // Set a default value
+    const [educationCost, setEducationCost] = useState(50000);
+    const [loanInterest, setLoanInterest] = useState(10000);
+    const [expectedSalary, setExpectedSalary] = useState(3000);
+    const [jobSearchDuration, setJobSearchDuration] = useState(12);
 
     // Calculate Loss per Month (LPM)
     const lossPerMonth = expectedSalary;
@@ -22,10 +22,16 @@ const ROICalculator = () => {
     // Calculate Total Salary Earned in Recovery Time
     const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * jobSearchDuration).toFixed(2));
 
-    // Handle ROI calculation: prevent negative or infinite ROI values
-    const roi = expectedSalary > 0 
-        ? ((totalSalaryEarnedInRecoveryTime - totalCosts) / totalCosts)
+    // Calculate ROI in Percentage
+    const roiPercentage = expectedSalary > 0
+        ? ((totalSalaryEarnedInRecoveryTime - totalCosts) / totalCosts) * 100
         : 0;
+
+    // Calculate ROI in USD per month
+    const roiDollarsPerMonth = recoveryTime > 0
+        ? (totalSalaryEarnedInRecoveryTime - totalCosts) / recoveryTime
+        : 0;
+
 
     return (
         <div className="container" style={{ marginTop: '20vh' }}>
@@ -71,7 +77,7 @@ const ROICalculator = () => {
                                 className="form-range"
                                 id="expectedSalary"
                                 min="1000"
-                                max="10000"
+                                max="50000"
                                 step="500"
                                 value={expectedSalary}
                                 onChange={(e) => setExpectedSalary(parseInt(e.target.value))}
@@ -85,7 +91,7 @@ const ROICalculator = () => {
                                 className="form-range"
                                 id="jobSearchDuration"
                                 min="1"
-                                max="24"
+                                max="120"
                                 step="1"
                                 value={jobSearchDuration}
                                 onChange={(e) => setJobSearchDuration(parseInt(e.target.value))}
@@ -117,8 +123,12 @@ const ROICalculator = () => {
                                         <td>{totalSalaryEarnedInRecoveryTime}</td>
                                     </tr>
                                     <tr>
-                                        <td>ROI:</td>
-                                        <td>{roi > 0 ? roi.toFixed(2) : '0'}</td>
+                                        <td>ROI (Percentage):</td>
+                                        <td>{roiPercentage.toFixed(2)}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ROI (USD per month):</td>
+                                        <td>${roiDollarsPerMonth.toFixed(2)} per month</td>
                                     </tr>
                                 </tbody>
                             </table>
