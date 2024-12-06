@@ -77,7 +77,7 @@ const AssesmentForm = () => {
                     console.log(recommendationData.likelihoods)
                     const chartData = Object.entries(recommendationData.likelihoods).map(([name, value]) => ({
                         name,
-                        value: parseFloat(value.replace("%", "")), // Remove "%" and convert to number
+                        value: parseFloat(value.replace("%", "")),
                     }));
                     setLikelihoods(chartData)
                     setShowAnalytics(true)
@@ -89,7 +89,7 @@ const AssesmentForm = () => {
                 setError('Internal Server Error. Try again later.');
             }
         } catch (err) {
-            setError(err); // Display error message
+            setError(err); 
         } finally {
             setLoading(false);
         }

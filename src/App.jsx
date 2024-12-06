@@ -27,6 +27,7 @@ import 'aos/dist/aos.css';
 import { NotFound } from './pages/non-subcriber/NotFound.jsx';
 import BlogPost from './pages/non-subcriber/BlogsPost.jsx';
 import SuccessStories from './pages/non-subcriber/SuccessStories.jsx';
+import ROICalculator from './pages/non-subcriber/ROICalculator.jsx';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/login" element={<UnprotectedLayout><Login /></UnprotectedLayout>} />
         <Route path="/success-stories" element={<UnprotectedLayout><SuccessStories /></UnprotectedLayout>} />
         <Route path="/faq" element={<UnprotectedLayout><Faq /></UnprotectedLayout>} />
+        <Route path="/roi" element={<UnprotectedLayout><ROICalculator /></UnprotectedLayout>} />
         <Route path="/assesment" element={<UnprotectedLayout><AssesmentForm /></UnprotectedLayout>} />
         <Route path="/mentor" element={<UnprotectedLayout><Mentor /></UnprotectedLayout>} />
         <Route path="/mentor-registration" element={<UnprotectedLayout><MentorRegistration /></UnprotectedLayout>} />
