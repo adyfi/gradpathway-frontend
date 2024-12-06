@@ -77,7 +77,7 @@ const AssesmentForm = () => {
                     console.log(recommendationData.likelihoods)
                     const chartData = Object.entries(recommendationData.likelihoods).map(([name, value]) => ({
                         name,
-                        value: parseFloat(value.replace("%", "")), // Convert "10%" to 10
+                        value: parseFloat(value.replace("%", "")), // Remove "%" and convert to number
                     }));
                     setLikelihoods(chartData)
                     setShowAnalytics(true)
@@ -512,7 +512,7 @@ const AssesmentForm = () => {
                         </button>
                         {
                             likelihoods && likelihoods?.length > 0 &&
-                            <button className='btn btn-primary px-4 ms-4' type="button" onClick={()=> setShowAnalytics(true)}>
+                            <button className='btn btn-primary px-4 ms-4' type="button" onClick={() => setShowAnalytics(true)}>
                                 Show Analytics
                             </button>
                         }

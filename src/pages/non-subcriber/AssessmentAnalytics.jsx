@@ -35,7 +35,7 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
                     <h3>Job Search Improvement Tips:</h3>
                     <ul>
                         {improvementTips?.map((tip, index) => (
-                            <li key={index}>{tip}</li>
+                            <li key={index}><strong>{tip.title}</strong>: {tip.description}</li>
                         ))}
                     </ul>
                     <hr />
