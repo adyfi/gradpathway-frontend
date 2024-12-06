@@ -62,18 +62,18 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center gap-3">
-                <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`} data-aos="fade-left">Monthly</span>
-                <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle}  data-aos="fade-up" />
-                <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`} data-aos="fade-right">Yearly</span>
+            <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
+                <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Monthly</span>
+                <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle} />
+                <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Yearly</span>
             </div>
-            <div className="row mt-4 text-center">
+            <div className="d-flex gap-3 mt-4 text-center align-items-stretch">
                 <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
-                    <div className="card">
+                    <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Foundation Package</h4>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body d-flex flex-column">
                             <h5 className="card-title"><span className="display-4" editable="inline"><b>£{CalculatePrice(planToggle, 99)}</b></span><span editable="inline" className="lead">{planToggle ? '/year' : '/month'}</span></h5>
 
                             <div className="card-text my-4 lc-block">
@@ -112,18 +112,18 @@ const Services = () => {
 
                                 </div>
                             </div>
-                            <div className="d-grid lc-block">
-                                <a href="#" className="btn btn-lg  btn-outline-primary">Get Started</a>
+                            <div className="d-grid lc-block mt-auto">
+                                <a href="#" className="btn btn-lg  btn-outline-primary-2">Get Started</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-right">
-                    <div className="card">
+                    <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Advance Package</h4>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body d-flex flex-column">
                             <h5 className="card-title"><span className="display-4" editable="inline"><b>£{CalculatePrice(planToggle, 149)}</b></span><span editable="inline" className="lead">{planToggle ? '/year' : '/month'}</span></h5>
 
                             <div className="card-text my-4 lc-block">
@@ -175,18 +175,18 @@ const Services = () => {
 
                                 </div>
                             </div>
-                            <div className="d-grid lc-block">
+                            <div className="d-grid lc-block mt-auto">
                                 <a href="#checkout" className="btn btn-lg  btn-primary">Get Started</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
-                    <div className="card">
+                    <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Professional Package</h4>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body d-flex flex-column">
                             <h5 className="card-title"><span className="display-4" editable="inline"><b>£{CalculatePrice(planToggle, 249)}</b></span><span editable="inline" className="lead">{planToggle ? '/year' : '/month'}</span></h5>
 
                             <div className="card-text my-4 lc-block">
@@ -239,18 +239,18 @@ const Services = () => {
 
                                 </div>
                             </div>
-                            <div className="d-grid lc-block">
+                            <div className="d-grid lc-block mt-auto">
                                 <a href="#checkout" className="btn btn-lg  btn-primary">Get Started</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 text-dark my-2" data-aos="fade-left">
-                    <div className="card">
+                    <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Ultimate Career Package</h4>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body d-flex flex-column">
                             <h5 className="card-title"><span className="display-4" editable="inline"><b>£{CalculatePrice(planToggle, 399)}</b></span><span editable="inline" className="lead">{planToggle ? '/year' : '/month'}</span></h5>
 
                             <div className="card-text my-4 lc-block">
@@ -294,7 +294,7 @@ const Services = () => {
 
                                 </div>
                             </div>
-                            <div className="d-grid lc-block">
+                            <div className="d-grid lc-block mt-auto">
                                 <a href="#checkout" className="btn btn-lg  btn-primary">Get Started</a>
                             </div>
                         </div>
