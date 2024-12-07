@@ -66,6 +66,15 @@ const UnprotectedHeader = () =>{
                 <li><a className="dropdown-item" href="/success-stories">Success Stories</a></li>
               </ul>
             </li>
+            <li className="nav-item dropdown me-4">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tools
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a className="dropdown-item" href="/roi">ROI Calculator</a></li>
+                <li><a className="dropdown-item" href="/assesment">AI Asssesment</a></li>
+              </ul>
+            </li>
             <li className="nav-item me-4"><Link className="nav-link" to={"/contact"}>Contact</Link></li>
             <li className="nav-item me-4"><Link className="nav-link" to={"/services"}>Services</Link></li>
             <li className="nav-item me-4"><Link className="nav-link" to={"/blogs"}>Blogs</Link></li>
@@ -85,7 +94,7 @@ const UnprotectedHeader = () =>{
           </ul>
           <div className="ms-lg-auto">
             <Link className="btn btn-outline-primary me-2" to={"/login"}>Log In</Link>
-            <Link className="btn btn-primary" to={"/assesment"}>Take Free Assessment</Link>
+            {/* <Link className="btn btn-primary" to={"/assesment"}>Take Free Assessment</Link> */}
           </div>
         </div>
       </div>
