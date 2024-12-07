@@ -19,7 +19,7 @@ const CountryHome = () => {
 
     return <>
         <div className="container-fluid mt-5 pt-5">
-            <h1 className="text-center text-primary-2 mt-4">Which Country Are you planning for ?</h1>
+            {/* <h1 className="text-center text-primary-2 mt-4">Which Country Are you planning for ?</h1> */}
             <div className="d-flex justify-content-center my-4">
                 <div className="dropdown">
                     <button className="btn btn-primary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,7 +63,7 @@ const CountryHome = () => {
             </div>
         </div>
         <div className="d-flex justify-content-center">
-            <img src={"./world-map-big.jpg"} width={"80%"} />
+            <img src={"./world-map-big.jpg"} width={"60%"} />
         </div>
 
         <div className="containeer-fluid mt-5 p-2 py-5 bg-edf7fa">
@@ -71,10 +71,15 @@ const CountryHome = () => {
                 <div className="row">
                     <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <h1 className="text-primary-2 fw-bolder">
-                            Why Project Controls Expo?
+                            Why Choose GradPathway?
                         </h1>
                         <p className="text-secondary">
-                            Join the most comprehensive project controls event of the year and gain a competitive edge with the latest insights, best practices, and strategies for successful project delivery. Connect with like-minded professionals, network with industry leaders, and explore innovative tools and solutions that will help you drive project success. Don't miss out on this opportunity to enhance your skills, boost your career, and take your projects to the next level.
+                            Navigating today's global job market is complex, especially for international students who need
+                            support aligning their skills with employer expectations. GradPathway is more than just an
+                            ed-tech platform - we're a career catalyst. Our approach combines advanced AI tools and a
+                            powerful ROI calculator to help you measure and maximize the impact of your academic
+                            investment. By focusing on project-based learning, tailored career services, and digital
+                            skill-building, we're committed to your long-term success. Join GradPathway and unlock your
                         </p>
                     </div>
                     <div className="col-md-6 text-center" data-aos="fade-left">
@@ -86,25 +91,14 @@ const CountryHome = () => {
 
         <div className="containeer-fluid mt-5 p-2 py-5 px-md-5 px-2">
             <div className="container mb-5">
-                <h1 className="text-primary-2 col-md-8 offset-md-2 text-center fw-bolder mb-5 display-5" data-aos="fade-up">Connecting the Project Controls Community with its Global Presence.</h1>
-            </div>
-            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
-                <div className="col-md-5">
-                    <img src="./expo/usa.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
-                </div>
-                <div className="col-md-7 ps-4 py-3">
-                    <h1 className="text-primary-2 fw-bolder">Project Controls Expo USA</h1>
-                    <p className="h4">Nationals Park, Washington DC</p>
-                    <p className="h4">7-9 October 2024</p>
-                    <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
-                </div>
+                <h1 className="text-primary-2 col-md-8 offset-md-2 text-center fw-bolder mb-5 display-5" data-aos="fade-up">Connecting Potentials to Professionals</h1>
             </div>
             <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
-                    <h1 className="text-primary-2 fw-bolder">Project Controls Expo UK</h1>
-                    <p className="h4">Wembley Stadium, London</p>
-                    <p className="h4">5-6 November 2024</p>
-                    <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay UK</h1>
+                    <p className="h4">London</p>
+                    {/* <p className="h4">5-6 November 2024</p> */}
+                    <a href="/home" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
                 </div>
                 <div className="col-md-5">
                     <img src="./expo/uk.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
@@ -112,30 +106,42 @@ const CountryHome = () => {
             </div>
             <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
                 <div className="col-md-5">
-                    <img src="./expo/aus.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                    <img src="./expo/usa.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
                 </div>
                 <div className="col-md-7 ps-4 py-3">
-                    <h1 className="text-primary-2 fw-bolder">Project Controls Expo AUS</h1>
-                    <p className="h4">Melbourne Cricket Ground</p>
-                    <p className="h4">26-27 November 2024</p>
-                    <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay USA</h1>
+                    <p className="h4">Washington DC</p>
+                    {/* <p className="h4">7-9 October 2024</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
                 </div>
             </div>
             <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
-                    <h1 className="text-primary-2 fw-bolder">Project Controls Expo UAE</h1>
-                    <p className="h4">Jafza One Convention Centre</p>
-                    <p className="h4">18-19 February 2025</p>
-                    <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay UAE</h1>
+                    <p className="h4">Dubai</p>
+                    {/* <p className="h4">18-19 February 2025</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
                 </div>
                 <div className="col-md-5">
                     <img src="./expo/uae.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
                 </div>
             </div>
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
+                <div className="col-md-5">
+                    <img src="./expo/aus.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                </div>
+                <div className="col-md-7 ps-4 py-3">
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay Australia</h1>
+                    <p className="h4">Melbourne</p>
+                    {/* <p className="h4">26-27 November 2024</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                </div>
+            </div>
+           
             <div className="row py-5 border bg-light">
                 <h1 className="text-primary-2 text-center display-3 fw-bolder">Need more information?</h1>
                 <div className="text-center">
-                    <button className="px-5 btn btn-primary rounded-pill shadow-sm">Click here</button>
+                    <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Click here</a>
                 </div>
             </div>
         </div>

@@ -75,7 +75,7 @@ const ROICalculator = () => {
         <div className="container" style={{ marginTop: '20vh' }}>
             <div className="row border shadow-sm p-4 rounded mb-5">
                 <div className="col-md-6 p-4">
-                    <h3 className='text-primary-2 m-0'>GradPathway Smart ROI Tool</h3>
+                    <h3 className='text-primary-2 m-0'>EDU Calculator</h3>
                     <small>ROI Calculator for Higher Studies and Work</small>
 
                     <div className="container mt-5">
@@ -270,7 +270,7 @@ const ROICalculator = () => {
                                 cy="50%"
                                 outerRadius={150}
                                 fill="#8884d8"
-                                label={({ name, value }) => `${name}: ${value.toFixed(2)}%`}
+                                label={({ name, value }) => `${name}: ${value.toFixed(2)}`}
                             >
                                 {pieData.map((entry, index) => (
                                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -281,6 +281,10 @@ const ROICalculator = () => {
                     </div>
                 </div>
             </div>
+            <div className="d-flex text-center justify-content-center mb-5">
+                <a href="/services" className='btn btn-primary'>Explore Our Services</a>
+                <a href="/assesment" className='btn btn-outline-primary-2 ms-2 '>Take a Free AI Profile Evaluation</a>
+            </div>                         
         </div>
     );
 };
