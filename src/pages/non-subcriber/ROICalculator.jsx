@@ -30,7 +30,7 @@ const calculateROI = (totalCost, annualIncome, expensesPerYear, jobDuration) => 
     // ROI calculation
     const roi = (netEarnings / totalExpenses) * 100;
 
-    return roi.toFixed(2);
+    return parseInt(roi);
 };
 
 
@@ -64,6 +64,7 @@ const ROICalculator = () => {
     const totalIncome = totalCosts * jobDuration;
     const totalExpenses = parseInt(expenses * 12 * jobDuration) + parseInt(totalCosts);
     const netEarnings = totalIncome - totalExpenses;
+    const finalRoiInPercent = calculateROI(totalCosts, expectedSalary, expenses * 12, jobDuration)
 
     const pieData = [
         { name: 'Net Earnings', value: netEarnings },
@@ -99,7 +100,7 @@ const ROICalculator = () => {
                             </div>
 
                             <div className="form-group  mb-4">
-                                <label htmlFor="educationCost" className="form-label">Education Cost (EC) - ${educationCost}</label>
+                                <label htmlFor="educationCost" className="form-label">Education Cost (EC) - £{educationCost}/-</label>
                                 <input
                                     type="range"
                                     className="custome-range"
@@ -140,7 +141,7 @@ const ROICalculator = () => {
                             </p>
 
                             <div className="form-group  mb-4">
-                                <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - ${expectedSalary} per year</label>
+                                <label htmlFor="expectedSalary" className="form-label">Expected Salary (ES) - £{expectedSalary}/- per year</label>
                                 <input
                                     type="range"
                                     className="custome-range"
@@ -158,7 +159,7 @@ const ROICalculator = () => {
                             </div>
 
                             <div className="form-group  mb-4">
-                                <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} months</label>
+                                <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} month{jobSearchDuration>1?'s':''}</label>
                                 <input
                                     type="range"
                                     className="custome-range"
@@ -240,7 +241,7 @@ const ROICalculator = () => {
                         </div>
 
                         <div className="form-group  mb-4">
-                            <label htmlFor="expenses" className="form-label">Expenses - {expenses} per month</label>
+                            <label htmlFor="expenses" className="form-label">Expenses - £ {expenses}/- per month</label>
                             <input
                                 type="range"
                                 className="custome-range"
@@ -257,7 +258,7 @@ const ROICalculator = () => {
                             />
                         </div>
 
-                        <p>ROI : {calculateROI(totalCosts, expectedSalary, expenses * 12, jobDuration)}</p>
+                        <h3 className='text-primary-2 d-flex justify-content-between p-2 border rounded bg-light'> <span>ROI :</span> <span className={`${finalRoiInPercent > 0 ? 'text-success': 'text-danger'} fw-bolder`}>{finalRoiInPercent}%</span></h3>
                     </div>
                     <h3 className='col-12 mt-5 mb-4 text-primary-2'>ROI Breakdown: Net Earnings vs Total Expenses</h3>
                     <div className="col-md-12 d-flex justify-content-center align-items-center flex-row">
