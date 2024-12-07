@@ -178,7 +178,8 @@ const ROICalculator = () => {
 
                             <p className='d-flex justify-content-between mb-3 h5'>
                                 <span className='text-secondary'>Loss per Month (LPM): </span>
-                                <span className='fw-bolder text-danger'>{lossPerMonth} /month</span>
+                                <span className='fw-bolder text-danger'>{lossPerMonth} </span>
+                                <span className='fw-bolder'>/month</span>
                             </p>
 
                             <p className='d-flex justify-content-between mb-3 h5'>
