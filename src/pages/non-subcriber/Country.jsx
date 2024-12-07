@@ -88,7 +88,7 @@ const CountryHome = () => {
             <div className="container mb-5">
                 <h1 className="text-primary-2 col-md-8 offset-md-2 text-center fw-bolder mb-5 display-5" data-aos="fade-up">Connecting the Project Controls Community with its Global Presence.</h1>
             </div>
-            <div className="row my-5" data-aos="fade-right" data-aos-delay="500">
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
                 <div className="col-md-5">
                     <img src="./expo/usa.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
                 </div>
@@ -99,7 +99,7 @@ const CountryHome = () => {
                     <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
                 </div>
             </div>
-            <div className="row my-5" data-aos="fade-left" data-aos-delay="500">
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">Project Controls Expo UK</h1>
                     <p className="h4">Wembley Stadium, London</p>
@@ -110,7 +110,7 @@ const CountryHome = () => {
                     <img src="./expo/uk.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
                 </div>
             </div>
-            <div className="row my-5" data-aos="fade-right" data-aos-delay="500">
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
                 <div className="col-md-5">
                     <img src="./expo/aus.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
                 </div>
@@ -121,7 +121,7 @@ const CountryHome = () => {
                     <button className="btn btn-primary rounded-pill mt-4 px-5">Explore</button>
                 </div>
             </div>
-            <div className="row my-5" data-aos="fade-left" data-aos-delay="500">
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">Project Controls Expo UAE</h1>
                     <p className="h4">Jafza One Convention Centre</p>
@@ -135,7 +135,7 @@ const CountryHome = () => {
             <div className="row py-5 border bg-light">
                 <h1 className="text-primary-2 text-center display-3 fw-bolder">Need more information?</h1>
                 <div className="text-center">
-                <button className="px-5 btn btn-primary rounded-pill shadow-sm">Click here</button>
+                    <button className="px-5 btn btn-primary rounded-pill shadow-sm">Click here</button>
                 </div>
             </div>
         </div>
