@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { PieChart, Pie, Cell, Tooltip } from 'recharts';
+const COLORS = ['#0088FE', '#00C49F'];
 
 const calculateSliderBackground = (value, min, max) => {
     const percentage = ((value - min) / (max - min)) * 100;
@@ -28,7 +30,7 @@ const calculateROI = (totalCost, annualIncome, expensesPerYear, jobDuration) => 
     // ROI calculation
     const roi = (netEarnings / totalExpenses) * 100;
 
-    return roi;
+    return roi.toFixed(2);
 };
 
 
@@ -38,7 +40,7 @@ const ROICalculator = () => {
     const [expectedSalary, setExpectedSalary] = useState(30000);
     const [jobSearchDuration, setJobSearchDuration] = useState(12);
     const [courseDuration, setCouseDuration] = useState(1);
-    const [jobDuration, setJobDuration] = useState(1);
+    const [jobDuration, setJobDuration] = useState(5);
     const [expenses, setExpenses] = useState(1000)
 
     // Calculate Loss per Month (LPM)
@@ -57,6 +59,16 @@ const ROICalculator = () => {
 
     // Calculate Total Salary Earned in Recovery Time
     const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * recoveryTime).toFixed(2));
+    
+    // const roi = calculateROI(educationCost, expectedSalary, expenses, jobDuration);
+    const totalIncome = totalCosts * jobDuration;
+    const totalExpenses = parseInt(expenses * 12 * jobDuration) + parseInt(totalCosts);
+    const netEarnings = totalIncome - totalExpenses;
+
+    const pieData = [
+        { name: 'Net Earnings', value: netEarnings },
+        { name: 'Total Expenses', value: totalExpenses },
+    ];
 
     return (
         <div className="container" style={{ marginTop: '20vh' }}>
@@ -246,6 +258,25 @@ const ROICalculator = () => {
                         </div>
 
                         <p>ROI : {calculateROI(totalCosts, expectedSalary, expenses * 12, jobDuration)}</p>
+                    </div>
+                    <h3 className='col-12 mt-5 mb-4 text-primary-2'>ROI Breakdown: Net Earnings vs Total Expenses</h3>
+                    <div className="col-md-12 d-flex justify-content-center align-items-center flex-row">
+                        <PieChart width={500} height={400}>
+                            <Pie
+                                data={pieData}
+                                dataKey="value"
+                                cx="50%"
+                                cy="50%"
+                                outerRadius={150}
+                                fill="#8884d8"
+                                label={({ name, value }) => `${name}: ${value.toFixed(2)}%`}
+                            >
+                                {pieData.map((entry, index) => (
+                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                ))}
+                            </Pie>
+                            <Tooltip />
+                        </PieChart>
                     </div>
                 </div>
             </div>
