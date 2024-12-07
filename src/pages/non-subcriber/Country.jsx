@@ -5,7 +5,7 @@ const ContactUs = () => {
 
     const handleCountryClick = (country) => {
         console.log(`Selected country: ${country}`);
-        navigate("/home");
+        country === "UK" ? navigate("/home") : navigate("/launching");
     };
 
     return <>
@@ -20,17 +20,25 @@ const ContactUs = () => {
                         <li>
                             <button
                                 className="dropdown-item"
-                                onClick={() => handleCountryClick("India")}
+                                onClick={() => handleCountryClick("Australia")}
                             >
-                                India
+                                Australia
                             </button>
                         </li>
                         <li>
                             <button
                                 className="dropdown-item"
-                                onClick={() => handleCountryClick("UAE")}
+                                onClick={() => handleCountryClick("US")}
                             >
-                                UAE
+                                US
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="dropdown-item"
+                                onClick={() => handleCountryClick("India")}
+                            >
+                                India
                             </button>
                         </li>
                         <li>
