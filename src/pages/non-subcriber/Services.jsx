@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaHandPointRight } from 'react-icons/fa';
+import { FaHandPointRight, FaPlusCircle } from 'react-icons/fa';
 import { TiTick } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
@@ -20,12 +20,13 @@ const CalculatePrice = (planToggle, price) => {
 
 const Services = () => {
     const [planToggle, setPlanToggle] = useState(false)
+    const [modalContent, setModalContent] = useState("")
     useEffect(() => {
         AOS.init({
-          duration: 1000, 
-          once: true, 
+            duration: 1000,
+            once: true,
         });
-      }, []);
+    }, []);
 
     return <>
 
@@ -62,13 +63,18 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
+            <p className='text-primary-2 text-center fw-bold' data-aos='fade-up'>
+            ONE TIME PAYMENT
+            </p>
+            {/* <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
                 <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Monthly</span>
                 <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle} />
                 <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Yearly</span>
-            </div>
-            <div className="d-flex flex-col gap-3 mt-4 text-center align-items-stretch" style={{width:"100%", overflowX:"scroll"}}>
-                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-right">
+            </div> */}
+            <div className="row">
+
+            <div className="d-md-flex flex-col gap-3 mt-4 text-center align-items-stretch">
+                <div className="col-lg-3 col-md-6 col-12 text-dark my-2" data-aos="fade-right">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Foundation Package</h4>
@@ -80,36 +86,40 @@ const Services = () => {
                                 <div editable="rich">
                                     <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>CV, Cover Letter, and LinkedIn Review: </b>
-                                                Professional enhancement of your CV, cover letter, and LinkedIn profile, including a customized LinkedIn banner and profile content to increase your digital presence.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Professional enhancement of your CV, cover letter, and LinkedIn profile, including a customized LinkedIn banner and profile content to increase your digital presence.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12'>CV, Cover Letter, and LinkedIn Review
+                                                </span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>One Free Consulting Call: </b>
-                                                A personalized consultation to discuss your career goals and the best strategies to achieve them.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("A personalized consultation to discuss your career goals and the best strategies to achieve them.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-2'>One Free Consulting Call</span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>3 ATS-Friendly Resumes and Cover Letters: </b>
-                                                Tailored for five different job roles you are targeting, ensuring your application passes through Applicant Tracking Systems (ATS) effectively.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Tailored for five different job roles you are targeting, ensuring your application passes through Applicant Tracking Systems (ATS) effectively.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12'>3 ATS-Friendly Resumes and Cover Letters</span>
+                                            </a>
                                         </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Ideal For: </b>
-                                                Students looking to make a strong first impression with a polished digital presence and targeted job applications.
-                                            </span>
-                                        </li>
-
                                     </ul>
-
                                 </div>
                             </div>
                             <div className="d-grid lc-block mt-auto">
@@ -118,7 +128,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-right">
+                <div className="col-lg-3 col-md-6 col-12 text-dark my-2" data-aos="fade-right">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Advance Package</h4>
@@ -130,49 +140,34 @@ const Services = () => {
                                 <div editable="rich">
                                     <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
+                                            <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
                                             <span className='col-md-10'>
                                                 <b>Everything in Plan 1</b>
                                             </span>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Personalized Interview Answers: </b>
-                                                Crafted based on your work experience, education, and projects to ensure you're prepared for any interview.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Crafted based on your work experience, education, and projects to ensure you're prepared for any interview.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-1'>Personalized Interview Answers</span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Weekly Job Subscription: </b>
-                                                <ul>
-                                                    <li>Graduate Schemes</li>
-                                                    <li>Top Websites for Job Search</li>
-                                                    <li>Must-Know Websites</li>
-                                                    <li>Top 25 Graduate Employers</li>
-                                                    <li>Graduate Salaries (Degree Specific)</li>
-                                                    <li>Ineligible Occupations for Skilled Work Visa 2024</li>
-                                                    <li>Job Codes for New Entrants 2024</li>
-                                                    <li>Everything about UK e-Visa (Digital)</li>
-                                                    <li>UK Point System - Must Know</li>
-                                                    <li>UK Point System - Must Know</li>
-                                                    <li>UK Companies with Visa Sponsorship</li>
-                                                    <li>Different Types of Visa</li>
-
-                                                </ul>
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("<ul> <li>Graduate Schemes</li> <li>Top Websites for Job Search</li> <li>Must-Know Websites</li> <li>Top 25 Graduate Employers</li> <li>Graduate Salaries (Degree Specific)</li> <li>Ineligible Occupations for Skilled Work Visa 2024</li> <li>Job Codes for New Entrants 2024</li> <li>Everything about UK e-Visa (Digital)</li> <li>UK Point System - Must Know</li> <li>UK Point System - Must Know</li> <li>UK Companies with Visa Sponsorship</li> <li>Different Types of Visa</li> </ul>")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-2'>Weekly Job Subscription</span>
+                                            </a>
                                         </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Ideal For:</b>
-                                                Students seeking a comprehensive approach to their job search, with ongoing support and resources to stay informed and prepared.
-                                            </span>
-                                        </li>
-
                                     </ul>
-
                                 </div>
                             </div>
                             <div className="d-grid lc-block mt-auto">
@@ -181,7 +176,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-left">
+                <div className="col-lg-3 col-md-6 col-12 text-dark my-2" data-aos="fade-left">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Professional Package</h4>
@@ -193,48 +188,60 @@ const Services = () => {
                                 <div editable="rich">
                                     <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Everything in Plan 2</b>
+                                            <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                            <span className='col-md-12'><b>Everything in Plan 2</b>
                                             </span>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Mentorship Session: </b>
-                                                Guidance from a subject matter expert in your field of study or industry.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Guidance from a subject matter expert in your field of study or industry.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-12 ps-2'>
+                                                    Mentorship Session:
+                                                </span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Project-Based Experience:</b>
-                                                Learn and complete three projects to bolster your CV with hands-on, project-based experience.
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Learn and complete three projects to bolster your CV with hands-on, project-based experience.")}
+                                            >
+                                                <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-12 ps-2'>
+                                                    Project-Based Experience
+                                                </span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b> Mock Interview Prep: </b>
-                                                Intensive preparation sessions tailored to your specific career goals and industry
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Intensive preparation sessions tailored to your specific career goals and industry")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-2'>
+                                                    Mock Interview Prep
+                                                </span>
+                                            </a>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b> Updates on Career Fairs and Networking Events: </b>
-                                                Stay informed about relevant career fairs and networking events in the UK to build your professional network.
-
-                                            </span>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Stay informed about relevant career fairs and networking events in the UK to build your professional network.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12'>Updates on Career Fairs and Networking Events.</span>
+                                            </a>
                                         </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Ideal For: </b>
-                                                Students who want to go beyond the basics, focusing on developing project-based experience, gaining insights from industry experts, and staying connected to key networking opportunities.
-                                            </span>
-                                        </li>
-
                                     </ul>
 
                                 </div>
@@ -245,7 +252,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6 col-10 text-dark my-2" data-aos="fade-left">
+                <div className="col-lg-3 col-md-6 col-12 text-dark my-2" data-aos="fade-left">
                     <div className="card h-100">
                         <div className="card-header">
                             <h4 className="my-0 " editable="inline">Ultimate Career Package</h4>
@@ -257,39 +264,52 @@ const Services = () => {
                                 <div editable="rich">
                                     <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
+                                            <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
                                             <span className='col-md-10'>
                                                 <b> Everything in Plan 3</b>
                                             </span>
                                         </li>
                                         <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Internship in Your Field: </b>
-                                                Secure an internship in your industry to gain valuable UK work experience.
-                                            </span>
-                                        </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>1 Interview with the company in you domain</b>
-                                            </span>
-                                        </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b> Certification Training and Guidance: </b>
-                                                Ongoing training and support until you pass certification exams relevant to your field, such as Microsoft or Cloud certifications, to build credibility and ensure long-term career growth.
-                                            </span>
-                                        </li>
-                                        <li className="d-flex">
-                                            <span className='col-md-1'> <FaHandPointRight className='text-primary' /> </span>
-                                            <span className='col-md-10'>
-                                                <b>Ideal For: </b>
-                                                Students committed to maximizing their job prospects, with a focus on practical experience, financial planning, professional certifications, and long-term career growth.
-                                            </span>
-                                        </li>
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Secure an internship in your industry to gain valuable UK work experience.")}
+                                            >
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-12 ps-2'>
+                                                    Internship in Your Field
+                                                </span>
+                                            </a>
 
+                                        </li>
+                                        <li className="d-flex">
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                // data-bs-toggle="modal"
+                                                // data-bs-target="#exampleModal"
+                                                // onClick={() => setModalContent("")}
+                                            >
+                                                <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-12'>
+                                                    1 Interview with the company in you domain
+                                                </span>
+                                            </a>
+
+                                        </li>
+                                        <li className="d-flex">
+                                            <a href='#'
+                                                className='text-dark d-flex'
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                onClick={() => setModalContent("Ongoing training and support until you pass certification exams relevant to your field, such as Microsoft or Cloud certifications, to build credibility and ensure long-term career growth.")}
+                                            >
+                                                <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-12 ps-2'>
+                                                    Certification Training and Guidance:
+                                                </span>
+                                            </a>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -300,7 +320,27 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            </div>
 
+        </div>
+
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    {/* <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="exampleModalLabel">Register Now</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> */}
+                    <button type="button" className="btn-close mt-2 ms-auto me-2 " data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div className="modal-body">
+                        <div
+                            className="blog-content"
+                            dangerouslySetInnerHTML={{ __html: modalContent }}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </>
