@@ -188,7 +188,7 @@ const Services = () => {
                                 <div editable="rich">
                                     <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                         <li className="d-flex">
-                                            <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                            <span className='col-md-1'> <FaPlusCircle className='text-primary' /></span>
                                             <span className='col-md-12'><b>Everything in Plan 2</b>
                                             </span>
                                         </li>
@@ -199,7 +199,7 @@ const Services = () => {
                                                 data-bs-target="#exampleModal"
                                                 onClick={() => setModalContent("Guidance from a subject matter expert in your field of study or industry.")}
                                             >
-                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
                                                 <span className='col-md-12 ps-2'>
                                                     Mentorship Session:
                                                 </span>
@@ -212,7 +212,7 @@ const Services = () => {
                                                 data-bs-target="#exampleModal"
                                                 onClick={() => setModalContent("Learn and complete three projects to bolster your CV with hands-on, project-based experience.")}
                                             >
-                                                <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
                                                 <span className='col-md-12 ps-2'>
                                                     Project-Based Experience
                                                 </span>
@@ -226,9 +226,7 @@ const Services = () => {
                                                 onClick={() => setModalContent("Intensive preparation sessions tailored to your specific career goals and industry")}
                                             >
                                                 <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
-                                                <span className='col-md-12 ps-2'>
-                                                    Mock Interview Prep
-                                                </span>
+                                                <span className='col-md-12 ps-2'>Mock Interview Preperation.</span>
                                             </a>
                                         </li>
                                         <li className="d-flex">
@@ -276,10 +274,8 @@ const Services = () => {
                                                 data-bs-target="#exampleModal"
                                                 onClick={() => setModalContent("Secure an internship in your industry to gain valuable UK work experience.")}
                                             >
-                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /> </span>
-                                                <span className='col-md-12 ps-2'>
-                                                    Internship in Your Field
-                                                </span>
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-2'>Internship in Your Field</span>
                                             </a>
 
                                         </li>
@@ -291,9 +287,7 @@ const Services = () => {
                                                 // onClick={() => setModalContent("")}
                                             >
                                                 <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
-                                                <span className='col-md-12'>
-                                                    1 Interview with the company in you domain
-                                                </span>
+                                                <span className='col-md-12'>1 Interview with the company in you domain</span>
                                             </a>
 
                                         </li>
@@ -304,10 +298,8 @@ const Services = () => {
                                                 data-bs-target="#exampleModal"
                                                 onClick={() => setModalContent("Ongoing training and support until you pass certification exams relevant to your field, such as Microsoft or Cloud certifications, to build credibility and ensure long-term career growth.")}
                                             >
-                                                <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
-                                                <span className='col-md-12 ps-2'>
-                                                    Certification Training and Guidance:
-                                                </span>
+                                                <span className='col-md-1'><FaPlusCircle className='text-primary' /></span>
+                                                <span className='col-md-12 ps-1'>Certification Training and Guidance</span>
                                             </a>
                                         </li>
                                     </ul>
