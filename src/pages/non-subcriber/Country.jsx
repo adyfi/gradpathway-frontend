@@ -18,53 +18,19 @@ const CountryHome = () => {
     }, []);
 
     return <>
-        <div className="container-fluid mt-5 pt-5">
-            {/* <h1 className="text-center text-primary-2 mt-4">Which Country Are you planning for ?</h1> */}
-            <div className="d-flex justify-content-center my-4">
-                <div className="dropdown">
-                    <button className="btn btn-primary dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select Country
-                    </button>
-                    <ul className="dropdown-menu">
-                        <li>
-                            <button
-                                className="dropdown-item"
-                                onClick={() => handleCountryClick("Australia")}
-                            >
-                                Australia
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className="dropdown-item"
-                                onClick={() => handleCountryClick("US")}
-                            >
-                                US
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className="dropdown-item"
-                                onClick={() => handleCountryClick("India")}
-                            >
-                                India
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className="dropdown-item"
-                                onClick={() => handleCountryClick("UK")}
-                            >
-                                UK
-                            </button>
-                        </li>
-                    </ul>
+        <div className="container mt-15vh">
+            <div className="d-flex justify-content-center">
+                <div className="col-md-5 py-4 d-flex pt-5">
+                    <h1 className="text-primary-2 fw-bolder pt-5">
+                        Empowering Your Global Career Journey
+                    </h1>
+                </div>
+                <div className="col-md-7">
+                    <img src={"./world-map-big.jpg"} width={"100%"} />
                 </div>
             </div>
         </div>
-        <div className="d-flex justify-content-center">
-            <img src={"./world-map-big.jpg"} width={"60%"} />
-        </div>
+
 
         <div className="containeer-fluid mt-5 p-2 py-5 bg-edf7fa">
             <div className="container ">
@@ -137,11 +103,11 @@ const CountryHome = () => {
                     <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
                 </div>
             </div>
-           
+
             <div className="row py-5 border bg-light">
                 <h1 className="text-primary-2 text-center display-3 fw-bolder">Need more information?</h1>
                 <div className="text-center">
-                    <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Click here</a>
+                    <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Schedule a Call</a>
                 </div>
             </div>
         </div>

@@ -30,6 +30,8 @@ import SuccessStories from './pages/non-subcriber/SuccessStories.jsx';
 import ROICalculator from './pages/non-subcriber/ROICalculator.jsx';
 import LaunchingSoon from './pages/non-subcriber/LaunchingSoon.jsx';
 import CountryHome from './pages/non-subcriber/Country.jsx';
+import CountryHeader from './layouts/CountryHeader.jsx';
+import CountryPageLayout from './layouts/CountryPageLayout.jsx';
 
 function App() {
   return (
@@ -39,8 +41,8 @@ function App() {
         {/* <Route path="/" element={<Homepage />} /> */}
         {/* protected homepage */}
         {/* <Route path="/" element={<ProtectedRoute allowedRoles={['admin', 'user']}><Homepage /></ProtectedRoute>} /> */}
-        <Route path="/" element={<UnprotectedLayout><CountryHome /></UnprotectedLayout>} />
-        <Route path="/launching" element={<UnprotectedLayout><LaunchingSoon /></UnprotectedLayout>} />
+        <Route path="/" element={<CountryPageLayout><CountryHome /></CountryPageLayout>} />
+        <Route path="/launching" element={<CountryPageLayout><LaunchingSoon /></CountryPageLayout>} />
         <Route path="/home" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
         <Route path="/about" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
