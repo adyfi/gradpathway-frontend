@@ -59,7 +59,7 @@ const ROICalculator = () => {
 
     // Calculate Total Salary Earned in Recovery Time
     const totalSalaryEarnedInRecoveryTime = parseFloat((expectedSalary * recoveryTime).toFixed(2));
-    
+
     // const roi = calculateROI(educationCost, expectedSalary, expenses, jobDuration);
     const totalIncome = totalCosts * jobDuration;
     const totalExpenses = parseInt(expenses * 12 * jobDuration) + parseInt(totalCosts);
@@ -159,7 +159,7 @@ const ROICalculator = () => {
                             </div>
 
                             <div className="form-group  mb-4">
-                                <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} month{jobSearchDuration>1?'s':''}</label>
+                                <label htmlFor="jobSearchDuration" className="form-label">Job Search Duration (JSD) - {jobSearchDuration} month{jobSearchDuration > 1 ? 's' : ''}</label>
                                 <input
                                     type="range"
                                     className="custome-range"
@@ -178,8 +178,10 @@ const ROICalculator = () => {
 
                             <p className='d-flex justify-content-between mb-3 h5'>
                                 <span className='text-secondary'>Loss per Month (LPM): </span>
-                                <span className='fw-bolder text-danger'>{lossPerMonth} </span>
-                                <span className='fw-bolder'>/month</span>
+                                <span>
+                                    <span className='fw-bolder text-danger'>{lossPerMonth} </span>
+                                    <span className='fw-bolder text-danger'>/month</span>
+                                </span>
                             </p>
 
                             <p className='d-flex justify-content-between mb-3 h5'>
@@ -259,7 +261,7 @@ const ROICalculator = () => {
                             />
                         </div>
 
-                        <h3 className='text-primary-2 d-flex justify-content-between p-2 border rounded bg-light'> <span>ROI :</span> <span className={`${finalRoiInPercent > 0 ? 'text-success': 'text-danger'} fw-bolder`}>{finalRoiInPercent}%</span></h3>
+                        <h3 className='text-primary-2 d-flex justify-content-between p-2 border rounded bg-light'> <span>ROI :</span> <span className={`${finalRoiInPercent > 0 ? 'text-success' : 'text-danger'} fw-bolder`}>{finalRoiInPercent}%</span></h3>
                     </div>
                     <h3 className='col-12 mt-5 mb-4 text-primary-2'>ROI Breakdown: Net Earnings vs Total Expenses</h3>
                     <div className="col-md-12 d-flex justify-content-center align-items-center flex-row">
@@ -285,7 +287,7 @@ const ROICalculator = () => {
             <div className="d-flex text-center justify-content-center mb-5">
                 <a href="/services" className='btn btn-primary'>Explore Our Services</a>
                 <a href="/assesment" className='btn btn-outline-primary-2 ms-2 '>Take a Free AI Profile Evaluation</a>
-            </div>                         
+            </div>
         </div>
     );
 };
