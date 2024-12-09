@@ -70,7 +70,7 @@ export const TimelineSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6" style={{ position: 'static !important', top: '0' }}>
+                    <div className="col-md-6" style={{ position: 'sticky', top: '15vh', height:"500px" }}>
                         <div className="row mb-4 px-4">
                             <div className="lc-block mb-1">
                                 <div className='' editable="rich" data-aos="fade-up">

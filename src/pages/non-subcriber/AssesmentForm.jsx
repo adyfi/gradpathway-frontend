@@ -339,7 +339,7 @@ const AssesmentForm = () => {
                                         checked={formData.applications_submitted === "0-5"}
                                         onChange={handleChange}
                                     />
-                                    <label className="ms-3 form-check-label" htmlFor="applications_submitted_0_5">
+                                <label className="ms-3 form-check-label" htmlFor="applications_submitted_0_5">
                                         0-5
                                     </label>
                                 </div>
@@ -570,7 +570,7 @@ const AssesmentForm = () => {
                             <h3 className='text-light bg-primary-2 p-2 mb-4'>Post-Study Work (PSW) Visa Status</h3>
 
                             <div className="p-3 pt-1 col-md-6 py-4">
-                                <label>Have you gained any work experience in the UK (internships, part-time jobs, etc.)? </label>
+                                <label>Do you currently hold a Post-Study Work (PSW) visa?</label>
                                 <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                     <input
                                         className="form-check-input"
@@ -597,6 +597,20 @@ const AssesmentForm = () => {
                                     />
                                     <label className="form-check-label ms-3" htmlFor="psw_visa_status_no">
                                         No
+                                    </label>
+                                </div>
+                                <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                    <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="psw_visa_status"
+                                        id="psw_visa_status_will_apply"
+                                        value="No"
+                                        checked={formData.psw_visa_status === "Will apply in 3 months"}
+                                        onChange={handleChange}
+                                    />
+                                    <label className="form-check-label ms-3" htmlFor="psw_visa_status_will_apply">
+                                        Will apply in 3 months
                                     </label>
                                 </div>
                             </div>
