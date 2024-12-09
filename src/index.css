@@ -70,6 +70,10 @@ a{
     background: #F8FDFF;
 }
 
+.bg-c7e5ee{
+    background: #c7e5ee;
+}
+
 a, .isLink{
     text-decoration: none
 }

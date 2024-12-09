@@ -32,6 +32,7 @@ import LaunchingSoon from './pages/non-subcriber/LaunchingSoon.jsx';
 import CountryHome from './pages/non-subcriber/Country.jsx';
 import CountryHeader from './layouts/CountryHeader.jsx';
 import CountryPageLayout from './layouts/CountryPageLayout.jsx';
+import ServicesBundle from './pages/non-subcriber/ServicesBundle.jsx';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/home" element={<UnprotectedLayout><Homepage /></UnprotectedLayout>} />
         <Route path="/about" element={<UnprotectedLayout><AboutUs /></UnprotectedLayout>} />
         <Route path="/services" element={<UnprotectedLayout><Services /></UnprotectedLayout>} />
+        <Route path="/services/bundles" element={<UnprotectedLayout><ServicesBundle /></UnprotectedLayout>} />
         <Route path="/blogs" element={<UnprotectedLayout><Blogs /></UnprotectedLayout>} />
         <Route path="/blogs/:slug" element={<UnprotectedLayout><BlogPost /></UnprotectedLayout>} />
         <Route path="/contact" element={<UnprotectedLayout><ContactUs /></UnprotectedLayout>} />
