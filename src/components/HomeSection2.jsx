@@ -24,16 +24,16 @@ export const HomeSection2 = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <div class="lc-block d-sm-flex align-items-center mb-3 overflow-hidden position-relative">
-                        <div class="d-inline-flex">
+                    <div className="lc-block d-sm-flex align-items-center mb-3 overflow-hidden position-relative">
+                        <div className="d-inline-flex">
                             <div>
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" className="text-success">
                                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
                                     <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"></path>
                                 </svg>
                             </div>
 
-                            <div class="ms-3 align-self-center" editable="rich">
+                            <div className="ms-3 align-self-center" editable="rich">
                                 <h4 className='fw-bolder'>
                                     Discover Your Path
                                 </h4>
@@ -43,16 +43,16 @@ export const HomeSection2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="lc-block d-sm-flex align-items-center mb-3">
-                        <div class="d-inline-flex">
+                    <div className="lc-block d-sm-flex align-items-center mb-3">
+                        <div className="d-inline-flex">
                             <div>
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" className="text-success">
                                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
                                     <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"></path>
                                 </svg>
                             </div>
 
-                            <div class="ms-3 align-self-center" editable="rich">
+                            <div className="ms-3 align-self-center" editable="rich">
                                 <h4 className='fw-bolder'>
                                     Build Your Professional Presence
                                 </h4>
@@ -62,16 +62,16 @@ export const HomeSection2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="lc-block d-sm-flex align-items-center mb-3">
-                        <div class="d-inline-flex">
+                    <div className="lc-block d-sm-flex align-items-center mb-3">
+                        <div className="d-inline-flex">
                             <div>
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" className="text-success">
                                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
                                     <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"></path>
                                 </svg>
                             </div>
 
-                            <div class="ms-3 align-self-center" editable="rich">
+                            <div className="ms-3 align-self-center" editable="rich">
                                 <h4 className='fw-bolder'>
                                     Upskill for specific roles
                                 </h4>
@@ -82,16 +82,16 @@ export const HomeSection2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="lc-block d-sm-flex align-items-center mb-3">
-                        <div class="d-inline-flex">
+                    <div className="lc-block d-sm-flex align-items-center mb-3">
+                        <div className="d-inline-flex">
                             <div>
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" className="text-success">
                                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
                                     <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"></path>
                                 </svg>
                             </div>
 
-                            <div class="ms-3 align-self-center" editable="rich">
+                            <div className="ms-3 align-self-center" editable="rich">
                                 <h4 className='fw-bolder'>
                                     Secure Your Future
                                 </h4>

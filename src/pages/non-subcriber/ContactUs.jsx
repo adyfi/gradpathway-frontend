@@ -20,46 +20,46 @@ const ContactUs = () => {
           <p className='col-md-8 offset-md-2 text-center'>
             We're here to help! Reach out to us with your questions, feedback, or inquiries, and our team will ensure you get the support you need for your journey with GradPathWay.
           </p>
-          <div class="container py-5">
-            <div class="row min-vh-25 align-items-start text-center">
-              <div class="col-md-4 mb-4 mb-md-0">
-                <div class="lc-block mb-4">
+          <div className="container py-5">
+            <div className="row min-vh-25 align-items-start text-center">
+              <div className="col-md-4 mb-4 mb-md-0">
+                <div className="lc-block mb-4">
                   <div editable="rich">
 
-                    <h2 class="fw-bolder">Address</h2>
+                    <h2 className="fw-bolder">Address</h2>
                   </div>
                 </div>
-                <div class="lc-block">
+                <div className="lc-block">
                   <div editable="rich">
-                    <p class="lead">49 Featherstone Street <br /> London TN - ABCD<br />Zip 123 456</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4 mb-md-0">
-                <div class="lc-block mb-4">
-                  <div editable="rich">
-
-                    <h2 class="fw-bolder">Phone</h2>
-                  </div>
-                </div>
-                <div class="lc-block">
-                  <div editable="rich">
-
-                    <p class="lead">Tel: 123-456-4321<br />Mobile 02-406-7690<br />Mail: info@gradpathway.com</p>
-
+                    <p className="lead">49 Featherstone Street <br /> London TN - ABCD<br />Zip 123 456</p>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mb-4 mb-md-0">
-                <div class="lc-block mb-4">
+              <div className="col-md-4 mb-4 mb-md-0">
+                <div className="lc-block mb-4">
                   <div editable="rich">
 
-                    <h2 class="fw-bolder">Hour</h2>
+                    <h2 className="fw-bolder">Phone</h2>
                   </div>
                 </div>
-                <div class="lc-block">
+                <div className="lc-block">
                   <div editable="rich">
-                    <p class="lead">Check in: 08:00<br />Check out: 21:00<br />Support 7/24</p>
+
+                    <p className="lead">Tel: 123-456-4321<br />Mobile 02-406-7690<br />Mail: info@gradpathway.com</p>
+
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 mb-4 mb-md-0">
+                <div className="lc-block mb-4">
+                  <div editable="rich">
+
+                    <h2 className="fw-bolder">Hour</h2>
+                  </div>
+                </div>
+                <div className="lc-block">
+                  <div editable="rich">
+                    <p className="lead">Check in: 08:00<br />Check out: 21:00<br />Support 7/24</p>
                   </div>
                 </div>
               </div>
