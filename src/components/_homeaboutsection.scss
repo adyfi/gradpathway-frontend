@@ -1,0 +1,77 @@
+.why-choose-cards{
+    .card-box{
+        height: 365px;
+        overflow: hidden;
+        position: relative;
+        -webkit-transition-duration: 550ms;
+        transition-duration: 550ms;
+        -webkit-transition-property: scale;
+        transition-property: scale;
+        -webkit-transition-timing-function: cubic-bezier(0.85,0,0,1);
+        transition-timing-function: cubic-bezier(0.85,0,0,1);
+        &:hover{
+            scale: 1.04;
+            .card-image{
+                -webkit-filter: blur(75px);
+                filter: blur(75px);
+                opacity: .5;
+                width: 800px;
+            }
+            .card-text{
+                .ptag-content{
+                    left: 0;
+                }
+            }
+        }
+    }
+    .card-image{
+        img{
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        aspect-ratio: .7075471698;
+        pointer-events: none;
+        position: absolute;
+        -webkit-transition-duration: 550ms;
+        transition-duration: 550ms;
+        -webkit-transition-property: opacity, width, -webkit-filter;
+        transition-property: opacity, width, -webkit-filter;
+        transition-property: filter, opacity, width;
+        transition-property: filter, opacity, width, -webkit-filter;
+        -webkit-transition-timing-function: cubic-bezier(0.85,0,0,1);
+        transition-timing-function: cubic-bezier(0.85,0,0,1);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 100%;
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.8071603641456583) 0%, rgba(255,255,255,0.10407913165266103) 100%);
+        }
+    }
+    .card-text{
+        inset: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .ptag-content{
+            left: 100%;
+            position: relative;
+            -webkit-transition-duration: 550ms;
+            transition-duration: 550ms;
+            -webkit-transition-property: left;
+            transition-property: left;
+            -webkit-transition-timing-function: cubic-bezier(0.85,0,0,1);
+            transition-timing-function: cubic-bezier(0.85,0,0,1);
+        }
+    }
+}
