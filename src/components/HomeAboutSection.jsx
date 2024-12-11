@@ -17,7 +17,7 @@ export const HomeAboutSection = () => {
 
 	return (
 		
-			<div className="container py-5 py-md-6">
+			<div className="container py-5 py-md-6 why-choose-wrapper">
 				<div className="row mb-4">
 					<div className="col-md-12">
 						<div className="lc-block text-center mb-2">
