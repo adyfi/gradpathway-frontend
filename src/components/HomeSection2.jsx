@@ -70,7 +70,7 @@ export const HomeSection2 = () => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center mt-5">
                         <a href="" className='btn btn-primary px-5 py-3 rounded-pill'>
                             <h5 className='m-0'>
                                 Find Out How

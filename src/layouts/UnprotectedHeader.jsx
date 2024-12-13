@@ -39,12 +39,12 @@ const UnprotectedHeader = () =>{
   };
   return ( <>
     <nav className='custom-navbar-wrapper shadow-sm position-relative fixed-top'>
-      <div className='nav-heading bg-primary-2 p-1 text-white text-center'>
+      {/* <div className='nav-heading bg-primary-2 p-1 text-white text-center fixed-top'>
           <small>📝 Unlock Your Potential with a Free Career Assessment!</small>
-        </div>
-      <div className='container-fluid'>
+        </div> */}
+      <div className='container-fluid fixed-top bg-white shadow-sm'>
         
-        <div className='navbar-content navbar-light bg-white shadow-sm d-flex py-1 '>
+        <div className='navbar-content navbar-light d-flex py-1 '>
           <a className="navbar-brand" href="/">
             <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height={"50px"} />
           </a>

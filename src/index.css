@@ -80,12 +80,17 @@ a, .isLink{
 .blog-box{
     cursor: pointer;
 }
+
 .text-primary {
     color: #2265B0 !important;
 }
 
 .text-primary-2 {
     color: #2265B0 !important;
+}
+
+.text-secondary-2{
+    color: #4BABC9;
 }
 
 .bg-primary-2 {
