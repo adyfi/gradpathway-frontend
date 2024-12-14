@@ -31,7 +31,7 @@ export const TimelineSection = () => {
                     <div className="col-md-6">
                         <div className="timeline-item w-100 mb-4 py-4 text-light lc-block">
                             <div className="timeline-img"></div>
-                            <div className="timeline-content bg-primary-2" data-aos="fade-right">
+                            <div className="timeline-content" data-aos="fade-right">
                                 <p editable="inline" className="lead">Step 1</p>
                                 <h2 editable="inline" className="fw-bold rfs-12">Take Assessment</h2>
                                 <div editable="rich">
