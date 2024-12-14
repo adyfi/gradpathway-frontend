@@ -75,8 +75,8 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
                     <div className='ps-3 mt-4'>
                         {improvementTips?.map((tip, index) => (
                             <>
-                                <p className='mb-0 text-primary-2 h5'>{tip.title} </p>
-                                <p>{tip.description}</p>
+                                <p className='mb-0 text-primary-2 h5'>{tip.key} </p>
+                                <p>{tip.value}</p>
                             </>
                         ))}
                     </div>
