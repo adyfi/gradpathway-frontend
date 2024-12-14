@@ -42,7 +42,7 @@ const UnprotectedHeader = () =>{
       {/* <div className='nav-heading bg-primary-2 p-1 text-white text-center fixed-top'>
           <small>📝 Unlock Your Potential with a Free Career Assessment!</small>
         </div> */}
-      <div className='container-fluid fixed-top bg-white shadow-sm'>
+      <div className='container-fluid fixed-top bg-nav shadow-sm'>
         
         <div className='navbar-content navbar-light d-flex py-1 '>
           <a className="navbar-brand" href="/">

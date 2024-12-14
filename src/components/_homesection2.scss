@@ -6,7 +6,8 @@
     // margin-bottom: 80px;
 }
 .howitworks-box{
-    background-color: rgb(34 101 176 / 52%);
+    // background-color: rgb(34 101 176 / 52%);
+    background-color: #4BABC9;
     padding: 20px;
     border-radius: 7px;
     border: 1px solid rgb(34 101 176 / 34%);
@@ -16,28 +17,30 @@
     height: 100%;
     transition: all 0.5s ease;
     transform: scale(.9);
+    cursor: pointer;
     &:hover{
         transform: scale(1);
     }
     &.change-color{
-        background-color: #4babc98a;
+        background-color: #4BABC9;
         box-shadow: 0 0 15px #4babc98a;
         .image-box{
             background: #4babc98a;
             border: 1px solid rgb(130 193 213);
         }
         h3{
-            color: #5691a5;
+            color: #ffffff;
         }
         p{
-            color: #334950;
+            color: #ffffff;
         }
     }
     h3{
-        color: #4b6c93;
+           color: #ffffff;
     }
     p{
-        color: #2d3d4e;
+        // color: #2d3d4e;
+        color: #ffffff;
         margin-bottom: 0;
     }
     .text-box{

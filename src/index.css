@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Play:wght@400;700&display=swap');
+
+body{
+    font-family: "Outfit", sans-serif;
+}
 a{
     text-decoration: none !important;
     /* color: black; */
     color: default;
+}
+
+.bg-nav{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .custome-range {
@@ -202,7 +216,7 @@ a, .isLink{
 
 .timeline:before {
     content: "";
-    background: var(--bs-primary);
+    background: #2265b0;
     width: 5px;
     height: 95%;
     position: absolute;
@@ -229,7 +243,7 @@ a, .isLink{
     top: 30px;
     right: -15px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent var(--bs-primary);
+    border-color: transparent transparent transparent #2265b0;
 }
 
 .timeline-item::after {
@@ -243,7 +257,7 @@ a, .isLink{
     width: 94%;
     padding: 20px 15px;
     border-radius: 4px;
-    background: var(--bs-primary);
+    background: #2265b0;
 }
 
 .timeline-content::after {
@@ -255,13 +269,13 @@ a, .isLink{
     top: 30px;
     right: -15px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent var(--bs-primary);
+    border-color: transparent transparent transparent #2265b0;
 }
 
 .timeline-img {
     width: 30px;
     height: 30px;
-    background: var(--bs-primary);
+    background: #2265b0;
     border-radius: 50%;
     position: absolute;
     left: 50%;

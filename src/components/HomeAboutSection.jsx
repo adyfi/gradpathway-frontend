@@ -22,7 +22,7 @@ export const HomeAboutSection = () => {
 					<div className="col-md-12">
 						<div className="lc-block text-center mb-2">
 							<div editable="rich">
-								<h2 className="display-5 text-primary fw-bolder" data-aos="fade-up">Why Choose GradPathWay?&nbsp;</h2>
+								<h2 className="display-5 text-primary-2 fw-bolder" data-aos="fade-up">Why Choose GradPathWay?&nbsp;</h2>
 							</div>
 						</div>
 						<div className="lc-block text-center">
@@ -45,7 +45,7 @@ export const HomeAboutSection = () => {
 									</div>
 								</div>
 								<div className='card-text position-absolute'>
-									<div className="h1 text-primary lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2">
+									<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2">
 										<FaBookReader />
 									</div>
 									<div className="lc-block">
@@ -65,7 +65,7 @@ export const HomeAboutSection = () => {
 									<img src='./why-choose2.webp' alt='' className='img-fluid' />
 								</div>
 								<div className='card-text position-absolute'>
-									<div className="h1 text-primary lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
+									<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
 							
 										<GrResources />
 									</div>
@@ -86,7 +86,7 @@ export const HomeAboutSection = () => {
 									<img src='./why-choose4.webp' alt='' className='img-fluid' />
 								</div>
 								<div className='card-text position-absolute'>
-									<div className="h1 text-primary lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
+									<div className="h1 text-primary-2 lc-block rounded-circle d-flex justify-content-center align-items-center mx-auto mb-2" >
 										
 										<MdOutlineSupport />
 									</div>
