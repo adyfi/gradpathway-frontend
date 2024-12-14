@@ -186,12 +186,12 @@ const ROICalculator = () => {
 
                             <p className='d-flex justify-content-between mb-3 h5'>
                                 <span className='text-secondary'>Total Loss Due to Unemployment:</span>
-                                <span className='fw-bolder text-danger'>£ {totalLossDueToUnemployment}</span>
+                                <span className='fw-bolder text-danger'>£ {totalLossDueToUnemployment.toFixed(1)}</span>
                             </p>
 
                             <p className='d-flex justify-content-between mb-3 h5'>
                                 <span className='text-secondary'>Recovery Time (RT): </span>
-                                <span className='fw-bolder text-success'>{recoveryTime > 0 ? recoveryTime.toFixed(1) : 'N/A'}</span>
+                                <span className='fw-bolder text-success'>{recoveryTime > 0 ? recoveryTime.toFixed(1) : 'N/A'} Year{recoveryTime > 1 && 's'}</span>
                             </p>
 
 
@@ -285,8 +285,8 @@ const ROICalculator = () => {
                 </div>
             </div>
             <div className="d-flex text-center justify-content-center mb-5">
-                <a href="/services" className='btn btn-primary'>Explore Our Services</a>
-                <a href="/assesment" className='btn btn-outline-primary-2 ms-2 '>Take a Free AI Profile Evaluation</a>
+                <a href="/services" className='btn btn-primary rounded-pill'>Explore Our Services</a>
+                <a href="/assesment" className='btn btn-outline-primary-2 ms-2 rounded-pill'>Take a Free AI Assessment</a>
             </div>
         </div>
     );

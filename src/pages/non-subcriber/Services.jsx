@@ -36,8 +36,12 @@ const Services = () => {
                     <div className="lc-block mb-4">
                         <div editable="rich">
                             <h1 className="text-primary-2 display-3 fw-bolder" data-aos="fade-up">Our Services</h1>
-                            <p data-aos="fade-up">
-                                At GradPathWay, we offer tailored packages to empower your career journey. From refining your CV, cover letter, and LinkedIn profile in the Foundation Package, to comprehensive job search resources and interview preparation in the Advanced Package, we have you covered. For a deeper focus, the Professional Package provides mentorship, project-based experience, and mock interviews in specific streams, while the Ultimate Career Package ensures hands-on internships, certifications, and industry-aligned opportunities. Choose the plan that fits your ambitions and take the next step toward a rewarding career!!
+                            <p data-aos="fade-up mt-5">
+                                At GradPathWay, we offer tailored packages to empower your career journey. From refining your CV, cover letter, and LinkedIn profile in the Foundation Package, 
+                                to comprehensive job search resources and interview preparation in the Advanced Package, we have you covered. 
+                            </p>
+                            <p>    
+                                For a deeper focus, the Professional Package provides mentorship, project-based experience, and mock interviews in specific streams, while the Ultimate Career Package ensures hands-on internships, certifications, and industry-aligned opportunities. Choose the plan that fits your ambitions and take the next step toward a rewarding career!!
                             </p>
                             <a href='#plans' className='btn btn-primary rounded-pill mb-2 px-4 py-2 p-0 m-0 text-white' data-aos="fade-up">Explore Our Plans</a>
                             <ul className='d-flex gap-4 style-non p-0' data-aos="fade-up">
@@ -64,7 +68,7 @@ const Services = () => {
                 </div>
             </div>
             <p className='text-primary-2 text-center fw-bold' data-aos='fade-up'>
-                ONE TIME PAYMENT
+                {/* ONE TIME PAYMENT */}
             </p>
             {/* <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
                 <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Monthly</span>
@@ -142,7 +146,7 @@ const Services = () => {
                                             <li className="d-flex">
                                                 <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
                                                 <span className='col-md-10'>
-                                                    <b>Everything in Plan 1</b>
+                                                    <b>Everything in Foundation Package</b>
                                                 </span>
                                             </li>
                                             <li className="d-flex">
@@ -189,7 +193,7 @@ const Services = () => {
                                         <ul className="list-unstyled" style={{ textAlign: "left", fontSize: ".8em" }}>
                                             <li className="d-flex">
                                                 <span className='col-md-1'> <FaPlusCircle className='text-primary' /></span>
-                                                <span className='col-md-12'><b>Everything in Plan 2</b>
+                                                <span className='col-md-12'><b>Everything in Advance Package</b>
                                                 </span>
                                             </li>
                                             <li className="d-flex">
@@ -264,7 +268,7 @@ const Services = () => {
                                             <li className="d-flex">
                                                 <span className='col-md-1'>  <FaPlusCircle className='text-primary' /> </span>
                                                 <span className='col-md-10'>
-                                                    <b> Everything in Plan 3</b>
+                                                    <b> Everything in Professional Package</b>
                                                 </span>
                                             </li>
                                             <li className="d-flex">

@@ -38,7 +38,7 @@ export const HomeHero = () => {
                             <span editable="inline" className="mb-0 text-muted"> Happy Students </span>
                         </div>
                     </div> */}
-                    <a className="btn btn-outline-primary-2 px-4 rounded-pill mt-3 me-2" href="/assesment">Gradpathway AI</a>
+                    <a className="btn btn-outline-primary-2 px-4 rounded-pill mt-3 me-2" href="/assesment">Take Free AI Assessment</a>
                     <a className="btn btn-primary px-4 rounded-pill mt-3" href="/services">Explore Services</a>
                 </div>
                 <div className="col-12 col-md-5 col-lg-6">

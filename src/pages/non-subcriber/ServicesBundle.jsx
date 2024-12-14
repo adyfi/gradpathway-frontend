@@ -53,7 +53,7 @@ const ServicesBundle = () => {
             </div>
 
             <div className="row text-center mt-5">
-                <h2 className='display-5  text-primary-2' data-aos="fade-up">Foundation Package: How it Works</h2>
+                <h2 className='display-5  text-primary-2' data-aos="fade-up">{activeBundle === 'foundation' ? 'Foundation Package': activeBundle ===  'advance' ? 'Advance Package': ''}: How it Works</h2>
                 <p className='col-md-6 offset-md-3' data-aos="fade-up" data-aos-delay="100">
                     You'll leave with a powerful digital presence and targeted applications to confidently apply for jobs.
                 </p>
@@ -120,7 +120,7 @@ const ServicesBundle = () => {
                                 </ol>
                             </div>
                             <div className="col-12 mb-4 p-4 border rounded bg-light" data-aos="fade-up" data-aos-delay="200">
-                                <h3>Step 2: Free Consulting Call</h3>
+                                <h3>Step 3: Free Consulting Call</h3>
                                 <ol>
                                     <li>Step 1: Schedule your free consulting call through your dashboard. </li>
                                     <li>Step 2: In the call, our consultant will discuss your career goals and provide actionable insights for targeting specific roles. </li>
@@ -154,7 +154,7 @@ const ServicesBundle = () => {
                                 </ol>
                             </div>
                             <div className="col-12 mb-4 p-4 border rounded bg-light" data-aos="fade-up" data-aos-delay="200">
-                                <h3>Step 2: Weekly Job Subscription</h3>
+                                <h3>Step 3: Weekly Job Subscription</h3>
                                 <ol>
                                     <li>Set up your job preferences (e.g., industries, locations, and job roles) on the dashboard.</li>
                                     <li>Every week, you'll receive a curated list of job openings tailored to your preferences.</li>

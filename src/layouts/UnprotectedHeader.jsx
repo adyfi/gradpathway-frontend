@@ -71,11 +71,11 @@ const UnprotectedHeader = () =>{
                   <li><a className="dropdown-item" href="/assesment">AI Asssesment</a></li>
                 </ul>
               </li>
-              <li><Link  to={"/contact"}>Contact</Link></li>
               <li><Link  to={"/services"}>Services</Link></li>
               <li><Link  to={"/blogs"}>Blogs</Link></li>
               <li><Link  to={"/mentor"}>Mentor</Link></li>
               <li><Link  to={"/recruiter"}>Recruiter</Link></li>
+              <li><Link  to={"/contact"}>Contact</Link></li>
             </ul>
           </div>
           <div className='login-btn d-flex align-items-center'>

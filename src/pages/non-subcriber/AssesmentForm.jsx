@@ -175,7 +175,8 @@ const AssesmentForm = () => {
                                 Take our personalized career assessment to discover your strengths, align your interests, and unlock your career potential. Share your details, and let us guide you toward the right path with expert insights and tailored plans.
                             </small>
                         </p>
-                        <h5 className="col-md-12 bg-primary-2 text-light p-2 rounded  fw-bolder">
+                        <a href="./Assessment-example.pdf" className='my-5 text-dark'>Click here to Download Example Report</a>
+                        <h5 className="col-md-12 bg-primary-2 text-light p-2 rounded  fw-bolder mt-3">
                             Question Sections
                         </h5>
                         <ul className='ps-0 mt-'>
