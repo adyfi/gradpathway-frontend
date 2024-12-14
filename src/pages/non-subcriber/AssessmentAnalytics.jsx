@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tooltip, Cell, Legend, Pie, PieChart, ResponsiveContainer } from 'recharts';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
+// import jsPDF from 'jspdf';
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning, improvementTips = [], setShowAnalytics, personalDetails }) => {
@@ -29,31 +29,31 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
         const dd = String(date.getDate()).padStart(2, '0'); const yyyy = date.getFullYear(); return `${mm}-${dd}-${yyyy}`;
     };
 
-    const downloadPDF = () => { 
-        const input = document.getElementById('report'); 
-        html2canvas(input) .then((canvas) => { 
-            const imgData = canvas.toDataURL('image/png'); 
-            const pdf = new jsPDF('p', 'mm', 'a4');  
-            const imgWidth = 210;
-            const pageHeight = 295;
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            let heightLeft = imgHeight;
-            let position = 0;          
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
+    // const downloadPDF = () => { 
+    //     const input = document.getElementById('report'); 
+    //     html2canvas(input) .then((canvas) => { 
+    //         const imgData = canvas.toDataURL('image/png'); 
+    //         const pdf = new jsPDF('p', 'mm', 'a4');  
+    //         const imgWidth = 210;
+    //         const pageHeight = 295;
+    //         const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    //         let heightLeft = imgHeight;
+    //         let position = 0;          
+    //         pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+    //         heightLeft -= pageHeight;
             
-            while (heightLeft >= 0) { 
-                position = heightLeft - imgHeight; 
-                pdf.addPage(); 
-                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight); 
-                heightLeft -= pageHeight; 
-            }
-            
-            pdf.save('report.pdf'); 
-        }).catch((error) => { 
-            console.error('Error creating PDF:', error); 
-        });
-    };
+    //         while (heightLeft >= 0) { 
+    //             position = heightLeft - imgHeight; 
+    //             pdf.addPage(); 
+    //             pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight); 
+    //             heightLeft -= pageHeight; 
+    //         }
+
+    //         pdf.save('report.pdf'); 
+    //     }).catch((error) => { 
+    //         console.error('Error creating PDF:', error); 
+    //     });
+    // };
 
     return (
         <>
@@ -180,7 +180,7 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
         </div>
         
         <div className="d-md-flex justify-content-center mb-5 mt-4">
-            <button className="btn btn-outline-primary-2 px-4 rounded-pill mt-3 me-3" onClick={downloadPDF}>Download</button>
+            {/* <button className="btn btn-outline-primary-2 px-4 rounded-pill mt-3 me-3" onClick={downloadPDF}>Download</button> */}
             <a className="btn btn-primary px-4 rounded-pill mt-3 me-2" href="#">Checkout</a>
             <button className="btn btn-primary px-4 rounded-pill mt-3" onClick={handleShowAnalytics}>Re-Take assessment</button>
         </div>
