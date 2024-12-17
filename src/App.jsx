@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/non-subcriber/Login.jsx';
-import Homepage from './pages/non-subcriber/Homepage.jsx';
+import Homepage from './pages/non-subcriber/homepage/Homepage.jsx';
 
 import AboutUs from './pages/non-subcriber/AboutUs.jsx';
 import Services from './pages/non-subcriber/Services.jsx';

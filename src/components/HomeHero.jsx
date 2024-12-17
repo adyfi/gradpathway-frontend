@@ -15,7 +15,7 @@ export const HomeHero = () => {
                 <div className="col-12 col-md-7 col-lg-6">
                     <div className=" mb-4">
                             <p className='mb-0'>
-                                Career Coaching to Propel your Career
+                                Career Coaching to Propel your Career adsgf
                             </p>
                             <h1 className="display-5 fw-bolder">Your <span className='text-primary-2'>partner</span> in landing your <span className='text-primary-2'>next</span> career <span className='text-primary-2'>opportunity</span></h1>
                             <p>
