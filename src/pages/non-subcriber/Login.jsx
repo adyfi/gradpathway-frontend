@@ -9,6 +9,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    console.log("username"+"password")
+    console.log(username)
+    console.log(password)
     const isAuthenticated = login(username, password);
     if (isAuthenticated) {
       navigate('/dashboard');
@@ -47,15 +50,16 @@ const Login = () => {
                   <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
                 </div>
                 <div className="mb-3">
-                  <label for="formGroupExampleInput2" className="form-label">Email Id</label>
-                  <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com" />
+                  <label for="formGroupExampleInput2"  className="form-label">Email Id</label>
+                  <input type="text" className="form-control" onChange={(e) => setUsername(e.target.value)} id="formGroupExampleInput2" placeholder="example@gmail.com" />
                 </div>
                 <div className="mb-3">
-                  <label for="formGroupExampleInput2" className="form-label">Password</label>
-                  <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="9876543210" />
+                  <label for="formGroupExampleInput2"  className="form-label">Password</label>
+                  <input type="text" className="form-control" onChange={(e) => setPassword(e.target.value)} id="formGroupExampleInput2" placeholder="9876543210" />
                 </div>
                 <div className="col-12">
-                  <button type="submit" className="btn btn-primary px-5">Login</button>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
+                  <button type="submit"  onClick={handleLogin} className="btn btn-primary px-5">Login</button>
                 </div>
               </div>
             </div>

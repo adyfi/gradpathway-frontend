@@ -21,9 +21,6 @@ import Recruiter from './pages/non-subcriber/Recruiter.jsx';
 import { Mentor } from './pages/non-subcriber/Mentor.jsx';
 import MentorForm from './components/MentorForm.jsx';
 import MentorRegistration from './pages/non-subcriber/MentorRegistration.jsx';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import 'aos/dist/aos.css';
 import { NotFound } from './pages/non-subcriber/NotFound.jsx';
 import BlogPost from './pages/non-subcriber/BlogsPost.jsx';
 import SuccessStories from './pages/non-subcriber/SuccessStories.jsx';
@@ -33,6 +30,9 @@ import CountryHome from './pages/non-subcriber/Country.jsx';
 import CountryHeader from './layouts/CountryHeader.jsx';
 import CountryPageLayout from './layouts/CountryPageLayout.jsx';
 import ServicesBundle from './pages/non-subcriber/ServicesBundle.jsx';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import 'aos/dist/aos.css';
 
 function App() {
   return (
