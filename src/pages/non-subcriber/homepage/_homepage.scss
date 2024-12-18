@@ -1,6 +1,11 @@
 .main-wrapper{
     
 }
+
+.text-subtitle{
+    color: #585858;
+}
+
 .hero{
     padding-top: 8rem;
     padding-bottom: 3rem;
@@ -158,12 +163,17 @@
 }
 
 .services {
-    padding: 3rem 0;
+    padding: 7rem 0;
     .my-card {
-        border-radius: 30px;
-        border: 2px solid #1C2229;
-        padding: 15px;
-        margin-bottom: 20px;        
+        border-radius: 10px;
+        // border: 2px solid rgba(28, 34, 41, 0.752);
+        border: 1px solid rgba(28, 34, 41, 0.752);
+        padding: 25px 20px;
+        margin-bottom: 20px;     
+        
+        h4{
+
+        }
         .bg-card-round {
             background-color: #1C2229;
             height: 50px;
@@ -176,10 +186,12 @@
         }
         &:hover {
             transition: .5s all;
-            box-shadow: 0px 0px 30px #2265b040;
+            box-shadow: 0px 0px 8px #2264b0ce;
+            border: 1px solid #ffffff;
             cursor: pointer;
             .bg-card-round {
                 background-color: #2265B0;
+                border: #2265B0;
                 transform: rotate(0deg);
                 transition: all 0.3s ease-in-out;
                 cursor: pointer;
@@ -189,7 +201,7 @@
 }
 @media (max-width: 767.98px) {
     .services {
-        padding: 0 0 2rem;
+        padding: 5rem 0;
     }
 }
 
