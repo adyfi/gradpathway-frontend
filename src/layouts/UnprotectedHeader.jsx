@@ -52,23 +52,23 @@ const UnprotectedHeader = () =>{
             <ul className='d-flex m-0' >
               <li><Link to={"/home"}>Home</Link></li>
               <li className="dropdown">
-                <a className=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#" className="dropdown-toggle">
                   About
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="/about">About</a></li>
-                  <li><a className="dropdown-item" href="/faq">FAQ</a></li>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="/about"><i><img src='./nav-information.webp' alt=""/></i>About</a></li>
+                  <li><a className="dropdown-item" href="/faq"><i><img src='./nav-faq.webp' alt=""/></i>FAQ</a></li>
                   <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="/success-stories">Success Stories</a></li>
+                  <li><a className="dropdown-item" href="/success-stories"><i><img src='./nav-success.webp' alt=""/></i>Success Stories</a></li>
                 </ul>
               </li>
               <li className="dropdown">
-                <a className="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="dropdown-toggle">
                   Tools
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="/roi">ROI Calculator</a></li>
-                  <li><a className="dropdown-item" href="/assesment">AI Asssesment</a></li>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="/roi"><i><img src='./nav-calculator.webp' alt=""/></i>ROI Calculator</a></li>
+                  <li><a className="dropdown-item" href="/assesment"><i><img src='./nav-survey.webp' alt=""/></i>AI Asssesment</a></li>
                 </ul>
               </li>
               <li><Link  to={"/services"}>Services</Link></li>
