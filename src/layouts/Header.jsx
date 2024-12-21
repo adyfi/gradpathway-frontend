@@ -4,38 +4,34 @@ const Header = () => {
   return (
     <>
       
-        <nav className='sidebar-wrapper'>
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./profile-icon.webp" alt="" />
-              <span>Jonh Cena</span>
-            </a>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+        <nav className='sidebar-wrapper shadow-border'>
+          <div className='admin-logo'>
+            <img src='./grandpathway-logo.svg' alt='Grandpathway Admin Logo' />
           </div>
-
           <div className='navbar-wrappper'>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i className="bi bi-house"></i> home</a>
+
+            <ul className="nav nav-tabs flex-column" id="myTab" role="tablist">
+              <li className='plan-name'>
+                <p>Home</p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-person"></i> Profile</a>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i className="bi bi-clipboard-data"></i>
+                Dashboard</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-list-task"></i> Task</a>
+              <li className='plan-name'>
+                <p>Foundation Package</p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-calculator"></i> Calculator</a>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">CV/Resume/Cover letter</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-inbox"></i> Inbox</a>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">One Free Consulting Call</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact-tab-pane2" type="button" role="tab" aria-controls="contact-tab-pane2" aria-selected="false">One Free Consulting Call</button>
               </li>
             </ul>
+              
           </div>
         </nav>
 
