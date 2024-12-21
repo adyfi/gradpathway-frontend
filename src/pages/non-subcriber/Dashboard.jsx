@@ -120,7 +120,8 @@ const Dashboard = () => {
                             </ul>
                           </div>
                           {/* <label for="formFile" className="form-label">Default file input example</label> */}
-                          <input className="form-control" type="file" id="formFile"/>
+                          <input className="form-control mb-4" type="file" id="formFile"/>
+                          <button type="button" class="btn btn-outline-primary">Download</button>
                         </div>
                       </div>
 
@@ -198,7 +199,57 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="tab-pane fade" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2" tabindex="0">..reyewrh.</div>
+              <div className="tab-pane fade" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2" tabindex="0">
+              <div className="cv-resume-wrapper shadow-border">
+                  <div className="resume-list">
+                      <div className="resume-box mb-4">
+                        <div className="resume-image">
+                          <img src="./profile-icon.webp" alt="" />
+                        </div>
+                        <div className="resume-text-content">
+                          <h3>Title</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                          <div className="">
+                            <ul>
+                              <li><span>Created At</span><span>21/12/2024</span></li>
+                              <li><span>Updated At</span><span>21/12/2024</span></li>
+                              <li><span>File Size</span><span>10mb</span></li>
+                              <li><span>File Type</span><span>pdf</span></li>
+                            </ul>
+                          </div>
+                          {/* <label for="formFile" className="form-label">Default file input example</label> */}
+                          <input className="form-control mb-4" type="file" id="formFile"/>
+                          <button type="button" class="btn btn-outline-primary">Download</button>
+                        </div>
+                      </div>
+
+                      <div className="resume-box mb-4">
+                        <div className="resume-image">
+                          <img src="./profile-icon.webp" alt="" />
+                        </div>
+                        <div className="resume-text-content">
+                          <form>
+                            <div className="mb-3">
+                              <label for="exampleInputEmail1" className="form-label"><b>Title</b></label>
+                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            </div>
+                            <div className="mb-3">
+                              <label for="exampleInputPassword1" className="form-label"><b>Description </b></label>
+                              <input type="password" className="form-control" id="exampleInputPassword1" />
+                            </div>
+                            <div className="mb-3">
+                              <label for="formFile" className="form-label"><b>Select CV</b></label>
+                              <input className="form-control" type="file" id="formFile"/>
+                            </div>
+                            
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                          </form>
+                          
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
