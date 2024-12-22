@@ -109,19 +109,19 @@ const Dashboard = () => {
                           <img src="./profile-icon.webp" alt="" />
                         </div>
                         <div className="resume-text-content">
-                          <h3>Title</h3>
+                          <h6>Jonh Cena</h6>
+                          <h3>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</h3>
                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
                           <div className="">
                             <ul>
-                              <li><span>Created At</span><span>21/12/2024</span></li>
-                              <li><span>Updated At</span><span>21/12/2024</span></li>
-                              <li><span>File Size</span><span>10mb</span></li>
-                              <li><span>File Type</span><span>pdf</span></li>
+                              <li><i class="bi bi-calendar-week"></i><span>Nov 10</span></li>
+                              <li><i class="bi bi-gear"></i><span>Dec 12</span></li>
+                              <li><i class="bi bi-file-earmark-richtext"></i><span>10mb</span></li>
+                              <li><i class="bi bi-file-earmark-medical"></i><span>pdf</span></li>
                             </ul>
                           </div>
-                          {/* <label for="formFile" className="form-label">Default file input example</label> */}
-                          <input className="form-control mb-4" type="file" id="formFile"/>
-                          <button type="button" class="btn btn-outline-primary">Download</button>
+                          <button type="button" class="btn btn-outline-primary">Download Resume <i class="bi bi-download"></i>
+                          </button>
                         </div>
                       </div>
 
