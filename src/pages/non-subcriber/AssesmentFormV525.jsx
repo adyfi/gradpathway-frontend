@@ -9,7 +9,7 @@ const AssesmentForm = () => {
         name: "Enter Name",
         email: "example.email@gmail.com",
         phone_number: "+44 1234567890",
-        linkedin_profile: "Year",
+        linkedin_profile: "https://linkedin.com/",
         current_course: "Master's in Computer Science",
         highest_education: "Bachelor's in IT",
         work_experience_home_country: "2 years in software development",
@@ -180,11 +180,11 @@ const AssesmentForm = () => {
                             Question Sections
                         </h5>
                         <ul className='ps-0 mt-'>
-                            <li className={` ${currentSection === 0 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Personal and Educational Background</li>
-                            <li className={` ${currentSection === 1 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Work Experience </li>
-                            <li className={` ${currentSection === 2 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Skills and Competencies </li>
-                            <li className={` ${currentSection === 3 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Career Goals and Preferences</li>
-                            <li className={` ${currentSection === 4 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Cultural Fit and Soft Skills </li>
+                            <li className={` ${currentSection === 0 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Contact Details Section</li>
+                            <li className={` ${currentSection === 1 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Job Search Assessment Questions </li>
+                            <li className={` ${currentSection === 2 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Job Search Progress </li>
+                            <li className={` ${currentSection === 3 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Work Experience in the UK </li>
+                            <li className={` ${currentSection === 4 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Post-Study Work (PSW) Visa Status </li>
                             <li className={` ${currentSection === 5 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Career Goals </li>
                             <li className={` ${currentSection === 6 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Job search methods </li>
                             <li className={` ${currentSection === 7 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Visa Considerations </li>
@@ -194,16 +194,13 @@ const AssesmentForm = () => {
                         </ul>
                     </div>
 
-                    <div className="col-md-8 form-right rounded assessment-form-new">
+                    <div className="col-md-8 form-right rounded">
                         <form onSubmit={handleSubmit}>
 
                             {currentSection === 0 && (
 
                                 <div className="row pb-2 pt-3 px-3">
-                                    <h3 className='text-primary-form p-2 fw-bolder'><b>Assessment Questions for Grad Students</b></h3>
-                                    <div className='mb-3 ms-1'>
-                                        <span className='rounded col h5'>  Personal and Educational Background </span>
-                                    </div>
+                                    <h3 className='text-primary-form p-2 fw-bolder'>Contact Details Section asdg</h3>
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="name" className="form-label">Full Name</label>
                                         <input
@@ -265,124 +262,6 @@ const AssesmentForm = () => {
                                         />
                                     </div>
 
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="linkedin_profile" className="form-label">1.	What is your highest level of education completed?</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="linkedin_profile" className="form-label">2.	What is your major or field of study? </label>
-                                        {/* o	(Open-ended/Dropdown) */}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="linkedin_profile" className="form-label">3.	What year did you graduate or expect to graduate? </label>
-                                        <input
-                                            type="text"
-                                            placeholder="What year did you graduate or expect to graduate? "
-                                            className="form-control"
-                                            id="linkedin_profile"
-                                            name="What year did you graduate or expect to graduate? "
-                                            value={formData.linkedin_profile}
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label>4.	Do you have any additional certifications or qualifications? </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <label htmlFor="linkedin_profile" className="form-label">If yes, list them</label>
-                                        {/* o	(Open-ended/Dropdown) */}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label>5.	Are you currently enrolled in any skill-development programs or bootcamps?  </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <label htmlFor="linkedin_profile" className="form-label">If yes, specify.</label>
-                                        {/* o	(Open-ended/Dropdown) */}
-                                        <input
-                                            type="text"
-                                            placeholder="Enter your full name"
-                                            className="form-control"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-
                                     <div className="d-md-flex justify-content-end">
                                         <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
                                             Continue
@@ -393,363 +272,49 @@ const AssesmentForm = () => {
                             {currentSection === 1 && (
 
                                 <div className="row pb-2 pt-3 px-3">
-                                    <h3 className='text-primary-form p-2 fw-bolder'> Work Experience  </h3>
+                                    <h3 className='text-primary-form p-2 fw-bolder'> Job Search Assessment Questions  </h3>
+                                    <div className='mb-3 ms-1'>
+                                        <span className='rounded col h5'>  Personal and Academic Background </span>
+                                    </div>
 
-                                    <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className='form-label'>1.	Do you have any work experience related to your field of study? </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details </span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Job Title </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Duration</label>
-                                                {/* add job titles in option*/}
-                                                <input
-                                                    type="time"
-                                                    placeholder="Enter your Highest Education"
-                                                    className="form-control"
-                                                    id="highest_education"
-                                                    name="highest_education"
-                                                    value={formData.highest_education}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Responsibilities</label>
-                                                {/*need to add multiselect dropdown*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    <div className="p-3 pt-1 col-md-12">
+                                        <label htmlFor="current_course" className="form-label">What is your current course of study in the UK?</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Enter your Current Course"
+                                            className="form-control"
+                                            id="current_course"
+                                            name="current_course"
+                                            value={formData.current_course}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">2.	Have you undertaken any internships?  </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details </span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Role</label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Duration</label>
-                                                {/*need to add multiselect dropdown*/}
-                                                <input
-                                                    type="time"
-                                                    placeholder="Enter your Highest Education"
-                                                    className="form-control"
-                                                    id="highest_education"
-                                                    name="highest_education"
-                                                    value={formData.highest_education}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                        </div>
+                                        <label htmlFor="highest_education" className="form-label">What is your highest level of education completed prior to this course?
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="Enter your Highest Education"
+                                            className="form-control"
+                                            id="highest_education"
+                                            name="highest_education"
+                                            value={formData.highest_education}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">3.	Have you worked on any freelance, consulting, or part-time projects?</label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details </span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Role</label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Duration</label>
-                                                {/*need to add multiselect dropdown*/}
-                                                <input
-                                                    type="time"
-                                                    placeholder="Enter your Highest Education"
-                                                    className="form-control"
-                                                    id="highest_education"
-                                                    name="highest_education"
-                                                    value={formData.highest_education}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                        </div>
+                                        <label htmlFor="work_experience_home_country" className="form-label">How many years of work experience do you have in your home country?</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Enter your work experience in home country"
+                                            className="form-control"
+                                            id="work_experience_home_country"
+                                            name="work_experience_home_country"
+                                            value={formData.work_experience_home_country}
+                                            onChange={handleChange}
+                                        />
                                     </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">4.	Have you been involved in any research projects or academic publications?</label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details </span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Role</label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Duration</label>
-                                                {/*need to add multiselect dropdown*/}
-                                                <input
-                                                    type="time"
-                                                    placeholder="Enter your Highest Education"
-                                                    className="form-control"
-                                                    id="highest_education"
-                                                    name="highest_education"
-                                                    value={formData.highest_education}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">5.	What is your experience level with industry tools or software relevant to your field? </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details (Beginner, Intermediate, Advanced; specify tools/software used).</span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Role</label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Duration</label>
-                                                {/*need to add multiselect dropdown*/}
-                                                <input
-                                                    type="time"
-                                                    placeholder="Enter your Highest Education"
-                                                    className="form-control"
-                                                    id="highest_education"
-                                                    name="highest_education"
-                                                    value={formData.highest_education}
-                                                    onChange={handleChange}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div className="d-md-flex justify-content-end">
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
@@ -764,211 +329,9 @@ const AssesmentForm = () => {
                             {currentSection === 2 && (
 
                                 <div className="row pb-2 pt-3 px-3">
-                                    <h3 className='text-primary-form p-2 fw-bolder'>Skills and Competencies </h3>
+                                    <h3 className='text-primary-form p-2 fw-bolder'>Job Search Progress  </h3>
                                     <div className="p-3 pt-1 col-md-12 py-4">
-                                        <div className='mb-2'>
-                                            <span className='rounded col h6'>1.	Rate your proficiency in the following skills on a scale of 1–5:  </span>
-                                        </div>
-                                        <div className='row'>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Communication Skills</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Analytical Thinking</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Team Collaboration</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Leadership Skills</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Technical Skills (specific to field)</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 mb-3'>
-                                                <label className='form-label '>Problem-Solving Skills</label>
-                                                <div class="number-rating">
-                                                    <input type="radio" id="rate1" name="rating" value="1"/>
-                                                    <label for="rate1">1</label>
-                                                    <input type="radio" id="rate2" name="rating" value="2"/>
-                                                    <label for="rate2">2</label>
-                                                    <input type="radio" id="rate3" name="rating" value="3"/>
-                                                    <label for="rate3">3</label>
-                                                    <input type="radio" id="rate4" name="rating" value="4"/>
-                                                    <label for="rate4">4</label>
-                                                    <input type="radio" id="rate5" name="rating" value="5"/>
-                                                    <label for="rate5">5</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="linkedin_profile" className="form-label">2.	Which programming languages or technical tools are you proficient in? </label>
-                                        {/*add ulti select dropedown*/}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">3.	Are you familiar with modern trends or technologies in your field? </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, specify.</span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">4.	Have you participated in hackathons, competitions, or other extracurricular activities showcasing your skills? </label>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_yes"
-                                                value="Yes"
-                                                checked={formData.uk_job_search_started === "Yes"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_yes">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
-                                            <input
-                                                className="form-check-input"
-                                                type="radio"
-                                                name="uk_job_search_started"
-                                                id="uk_job_search_no"
-                                                value="No"
-                                                checked={formData.uk_job_search_started === "No"}
-                                                onChange={handleChange}
-                                            />
-                                            <label className="form-check-label ms-2" htmlFor="uk_job_search_no">
-                                                No
-                                            </label>
-                                        </div>
-                                        <div className='if-yes-div'>
-                                            <div className=''>
-                                                <span className='rounded col h6'>If yes, provide details.</span>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <label htmlFor="linkedin_profile" className="form-label">Organization </label>
-                                                {/* add job titles in option*/}
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">Bachelor's</option>
-                                                    <option value="2">Master's</option>
-                                                    <option value="3">Ph.D</option>
-                                                    <option value="3">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">5.	Are you comfortable with remote/hybrid working models?</label>
+                                        <label>Have you started applying for jobs in the UK?</label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
                                                 className="form-check-input"
@@ -998,6 +361,129 @@ const AssesmentForm = () => {
                                             </label>
                                         </div>
                                     </div>
+
+                                    <div className="p-3 pt-1 col-md-12 py-4">
+                                        <label>If yes, how many job applications have you submitted so far? </label>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="applications_submitted"
+                                                id="applications_submitted_0_5"
+                                                value="0-5"
+                                                checked={formData.applications_submitted === "0-5"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="applications_submitted_0_5">
+                                                0-5
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="applications_submitted"
+                                                id="applications_submitted_6_10"
+                                                value="6-10"
+                                                checked={formData.applications_submitted === "6-10"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="applications_submitted_6_10">
+                                                6-5
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="applications_submitted"
+                                                id="applications_submitted_11_20"
+                                                value="11-20"
+                                                checked={formData.applications_submitted === "11-20"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="applications_submitted_11_20">
+                                                11-20
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="applications_submitted"
+                                                id="applications_submitted_20+"
+                                                value="20+"
+                                                checked={formData.applications_submitted === "20+"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-2 form-check-label" htmlFor="applications_submitted_20+">
+                                                20+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="p-3 pt-1 col-md-12 py-4">
+                                        <label>How many interviews have you been invited to in the UK? </label>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="interviews_received"
+                                                id="interviews_received_0"
+                                                value="0"
+                                                checked={formData.interviews_received === "0"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="interviews_received_0">
+                                                0
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="interviews_received"
+                                                id="interviews_received_1_2"
+                                                value="1-2"
+                                                checked={formData.interviews_received === "1-2"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="interviews_received_1_2">
+                                                1-2
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="interviews_received"
+                                                id="interviews_received_3_5"
+                                                value="3-5"
+                                                checked={formData.interviews_received === "3-5"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-3 form-check-label" htmlFor="interviews_received_3_5">
+                                                3-5
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="interviews_received"
+                                                id="interviews_received_6+"
+                                                value="6+"
+                                                checked={formData.interviews_received === "6+"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="ms-2 form-check-label" htmlFor="interviews_received_6+">
+                                                6+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
                                     <div className="d-md-flex justify-content-end">
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
@@ -1013,20 +499,9 @@ const AssesmentForm = () => {
                             {currentSection === 3 && (
 
                                 <div className="row pb-2 pt-3 px-3">
-                                    <h3 className='text-primary-form p-2 fw-bolder'>Career Goals and Preferences</h3>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="linkedin_profile" className="form-label">1.	What industries or roles are you targeting for your career? </label>
-                                        {/* o	(Open-ended/Dropdown) */}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
+                                    <h3 className='text-primary-form p-2 fw-bolder'>Work Experience in the UK </h3>
                                     <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className="form-label">2.	Are you open to relocating for job opportunities? </label>
+                                        <label>Have you gained any work experience in the UK (internships, part-time jobs, etc.)? </label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
                                                 className="form-check-input"
@@ -1057,29 +532,62 @@ const AssesmentForm = () => {
                                         </div>
                                     </div>
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="work_experience_uk_relevance" className="form-label">3.	What type of employment are you looking for? </label>
-                                        {/* o	multiselect dropdown */}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className="form-label">4.	What are your long-term career goals? 
-                                        </label>
+                                        <label htmlFor="work_experience_uk_relevance" className="form-label">If yes, please describe the type of work experience you have gained in the UK.  </label>
                                         <input
                                             type="text"
-                                            placeholder="Enter your full name"
+                                            placeholder="Relevance of UK Work Experience to Desired Career Path"
                                             className="form-control"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
+                                            id="work_experience_uk_relevance"
+                                            name="work_experience_uk_relevance"
+                                            value={formData.work_experience_uk_relevance}
                                             onChange={handleChange}
-                                            required
                                         />
+                                    </div>
+                                    <div className="p-3 pt-1 col-md-12 py-4">
+                                        <label>How relevant is this experience to your desired career path?
+                                        </label>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="rel_work_exp"
+                                                id="rel_work_exp_1"
+                                                value="Highly Relevant"
+                                                cherel_cked={formData.rel_work_exp === "Highly Relevant"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="rel_work_exp_1">
+                                                Highly Relevant
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="rel_work_exp"
+                                                id="rel_work_exp_2"
+                                                value="Somewhat Relevant"
+                                                cherel_cked={formData.rel_work_exp === "Somewhat Relevant"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="rel_work_exp_2">
+                                                Somewhat Relevant
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="rel_work_exp"
+                                                id="rel_work_exp_3"
+                                                value="Not Relevant"
+                                                checked={formData.rel_work_exp === "Not Relevant"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="rel_work_exp_3">
+                                                Not Relevant
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div className="d-md-flex justify-content-end">
@@ -1094,74 +602,21 @@ const AssesmentForm = () => {
                             )}
                             {currentSection === 4 && (
                                 <div className="row pb-2 pt-3 px-3">
-                                    <h3 className='text-primary-form p-2 fw-bolder'>Cultural Fit and Soft Skills</h3>
+                                    <h3 className='text-primary-form p-2 fw-bolder'>Post-Study Work (PSW) Visa Status</h3>
 
                                     <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className="form-label">1.	What motivates you most in a job? </label>
-                                        {/* multiselect dropdown */}
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">Bachelor's</option>
-                                            <option value="2">Master's</option>
-                                            <option value="3">Ph.D</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div>
-
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="name" className="form-label">2.	How do you handle feedback and criticism? </label>
-                                        <input
-                                            type="text"
-                                            placeholder="Enter your full name"
-                                            className="form-control"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="name" className="form-label">3.	What is your approach to learning new skills on the job? </label>
-                                        <input
-                                            type="text"
-                                            placeholder="Enter your full name"
-                                            className="form-control"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-                                    <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="name" className="form-label">4.	Describe a time when you overcame a challenge in a team setting. </label>
-                                        <input
-                                            type="text"
-                                            placeholder="Enter your full name"
-                                            className="form-control"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-
-                                    <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className="form-label">5.	Are you comfortable working in diverse, multicultural teams? </label>
+                                        <label>Do you currently hold a Post-Study Work (PSW) visa?</label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
                                                 className="form-check-input"
                                                 type="radio"
-                                                name="work_exp_in_uk"
-                                                id="work_exp_in_uk_yes"
+                                                name="psw_visa_status"
+                                                id="psw_visa_status_yes"
                                                 value="Yes"
-                                                checked={formData.work_exp_in_uk === "Yes"}
+                                                checked={formData.psw_visa_status === "Yes"}
                                                 onChange={handleChange}
                                             />
-                                            <label className="form-check-label ms-3" htmlFor="work_exp_in_uk_yes">
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_status_yes">
                                                 Yes
                                             </label>
                                         </div>
@@ -1169,14 +624,88 @@ const AssesmentForm = () => {
                                             <input
                                                 className="form-check-input"
                                                 type="radio"
-                                                name="work_exp_in_uk"
-                                                id="work_exp_in_uk_no"
+                                                name="psw_visa_status"
+                                                id="psw_visa_status_yes"
                                                 value="No"
-                                                checked={formData.work_exp_in_uk === "No"}
+                                                checked={formData.psw_visa_status === "No"}
                                                 onChange={handleChange}
                                             />
-                                            <label className="form-check-label ms-3" htmlFor="work_exp_in_uk_no">
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_status_no">
                                                 No
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="psw_visa_status"
+                                                id="psw_visa_status_will_apply"
+                                                value="Will apply in 3 months"
+                                                checked={formData.psw_visa_status === "Will apply in 3 months"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_status_will_apply">
+                                                Will apply in 3 months
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div className="p-3 pt-1 col-md-12 py-4">
+                                        <label>If yes, when does your PSW visa expire?  </label>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="psw_visa_expiry_months"
+                                                id="psw_visa_expiry_months_Less_than_3_months"
+                                                value="Less than 3 months"
+                                                checked={formData.psw_visa_expiry_months === "Less than 3 months"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_expiry_months_Less_than_3_months">
+                                                Less than 3 months
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="psw_visa_expiry_months"
+                                                id="psw_visa_expiry_months_Less_than_3_6_months"
+                                                value="3-6 months"
+                                                checked={formData.psw_visa_expiry_months === "3-6 months"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_expiry_months_Less_than_3_6_months">
+                                                3-6 months
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="psw_visa_expiry_months"
+                                                id="psw_visa_expiry_months_Less_than_7_12_months"
+                                                value="7-12 months"
+                                                checked={formData.psw_visa_expiry_months === "7-12 months"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_expiry_months_Less_than_7_12_months">
+                                                7-12 months
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
+                                            <input
+                                                className="form-check-input"
+                                                type="radio"
+                                                name="psw_visa_expiry_months"
+                                                id="psw_visa_expiry_months_More_than_12_months"
+                                                value="More than 12 months"
+                                                checked={formData.psw_visa_expiry_months === "More than 12 months"}
+                                                onChange={handleChange}
+                                            />
+                                            <label className="form-check-label ms-3" htmlFor="psw_visa_expiry_months_More_than_12_months">
+                                                More than 12 months
                                             </label>
                                         </div>
                                     </div>

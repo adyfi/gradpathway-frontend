@@ -151,3 +151,33 @@ background: linear-gradient(0deg, rgba(34,101,176,1) 35%, rgba(75,171,201,1) 100
       top: -50%;
     }
   }
+
+  .assessment-form-new .form-label{
+    font-weight: 700;
+  }
+
+  .number-rating {
+    display: flex;
+    gap: 10px;
+    /* font-size: 1.5rem; */
+}
+
+.number-rating input {
+    display: none;
+}
+
+.number-rating label {
+    padding: 2px 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.number-rating input:checked + label,
+.number-rating label:hover,
+.number-rating input:hover + label {
+    background-color: #f5a623;
+    color: white;
+    border-color: #f5a623;
+}
