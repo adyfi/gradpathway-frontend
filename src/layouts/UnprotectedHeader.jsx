@@ -55,7 +55,7 @@ const UnprotectedHeader = () =>{
                 <a href="#" className="dropdown-toggle">
                   About
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu py-3 px-2">
                   <li><a className="dropdown-item" href="/about"><i><img src='./nav-information.webp' alt=""/></i>About</a></li>
                   <li><a className="dropdown-item" href="/faq"><i><img src='./nav-faq.webp' alt=""/></i>FAQ</a></li>
                   <li><hr className="dropdown-divider" /></li>
@@ -66,7 +66,7 @@ const UnprotectedHeader = () =>{
                 <a className="dropdown-toggle">
                   Tools
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu px-2 py-3">
                   <li><a className="dropdown-item" href="/roi"><i><img src='./nav-calculator.webp' alt=""/></i>ROI Calculator</a></li>
                   <li><a className="dropdown-item" href="/assesment"><i><img src='./nav-survey.webp' alt=""/></i>AI Asssesment</a></li>
                 </ul>
@@ -79,12 +79,12 @@ const UnprotectedHeader = () =>{
             </ul>
           </div>
           <div className='login-btn d-flex align-items-center'>
-            <button class="btn btn-p d-flex align-items-center gap-2 rounded-pill">
+            <a href='/login' class="btn btn-p d-flex align-items-center gap-2 rounded-pill">
               <span class="m-0">
                 Login
               </span>
               <img src="./arrow-right.svg" class="icon-arrow-right" alt="" />
-            </button>
+            </a>
           </div>
           <div className='mobile-icon d-none' onClick={toggleNav}>
           <img src='./interface.png' alt='hamburger icon' />
