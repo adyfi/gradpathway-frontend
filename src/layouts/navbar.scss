@@ -1,0 +1,158 @@
+.custom-navbar-wrapper{
+    .bg-nav{
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    .navbar-content{
+        justify-content: space-between;
+    }
+    .nav-heading{
+
+    }
+    .nav-collapse-wrapper{
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                padding: 10px;
+                li{
+                    padding: 0;
+                    border: none;
+                    a{
+                        padding: 10px 20px;
+                    }
+                }
+            }
+            a{
+                color: #000000cc;
+                transition: all 0.5s ease;
+                i{
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                img{
+                    width: 30px;
+                    transition: all 0.5s ease;
+                }
+                &:hover{
+                    font-weight: 500;
+                    color: #2265B0;
+                    background-color: transparent;
+                    img{
+                        filter: brightness(0) saturate(100%) invert(34%) sepia(22%) saturate(3147%) hue-rotate(183deg) brightness(92%) contrast(90%);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .login-btn{
+        .icon-arrow-right{
+            filter: brightness(0) saturate(100%) invert(35%) sepia(36%) saturate(1297%) hue-rotate(173deg) brightness(94%) contrast(94%);
+        }
+        .btn-p {
+            color: #2265B0;
+            display: inline-flex;
+            border-radius: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 10px 32px;
+            transition: all 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid #2265B0;
+            .icon-arrow-right{
+                width: 15px;
+                transform: rotate(-45deg);
+                transform-origin: center;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+                color: #212121;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transform: scale(1.1);
+                .icon-arrow-right{
+                    transform: rotate(0deg);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+    .dropdown{
+        &:hover{
+            .dropdown-menu{
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .mobile-icon{
+            display: flex !important;
+            align-items: center;
+            img{
+                height: 30px;
+                filter: opacity(0.2);
+            }
+        }
+        .navbar-content{
+            box-shadow: none !important;
+        }
+        .container-fluid.fixed-top.bg-nav{
+            border-radius: 0;
+        }
+        .nav-collapse-wrapper{
+            display: none !important;
+            &.responsive{
+                display: block !important;
+                position: absolute;
+                left: 0;
+                right: 0;
+                background: #fff;
+                top: 59px;
+                box-shadow: var(--bs-box-shadow-sm) !important;
+            }
+            ul{
+                flex-direction: column;
+                li{
+                    padding: 10px 15px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                   
+                }
+            }
+        }
+        .login-btn{
+            flex: 1 0 0;
+            justify-content: flex-end;
+            padding-right: 20px;
+            .icon-arrow-right{
+                filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(9%) hue-rotate(236deg) brightness(93%) contrast(105%);
+            }
+        }
+    }
+    @media screen and (max-width: 767.98px) {
+        .navbar-brand{
+            img{
+                height: 40px;
+            }
+        }
+        .container-fluid.fixed-top.bg-nav{
+            border-radius: 0;
+        }
+        .nav-collapse-wrapper{
+            &.responsive{
+                top: 49px;
+                background-color: #fff;
+            }
+        }
+        .login-btn{
+            padding-right: 10px;
+            .btn-p {
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
