@@ -16,7 +16,7 @@ const TimelineSection = () => {
                 <div className="col-lg-8 mx-auto text-center">
                     <div className="lc-block mb-1">
                         <div editable="rich">
-                            <h1 className='text-primary-2' data-aos="fade-up">Your Ideal Career is Ready & Waiting for you</h1>
+                            <h1 className='text-primary-2 fw-bolder' data-aos="fade-up">Your Ideal Career is Ready & Waiting for you</h1>
                         </div>
                     </div>
                     <div className="lc-block">
