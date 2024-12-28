@@ -289,15 +289,50 @@ const Dashboard = () => {
                             <h3>
                               {/* <span><img src="./customer-service.webp" alt="resue"/></span> */}
                               Weekly Job Subscription</h3>
-                            <p> A weekly subscription delivering the latest jobs specific to your profile.
+                            <p className="mb-3"> A weekly subscription delivering the latest jobs specific to your profile.
                             </p>
                             <div className="">
-                                <ul>
-                                  <li><span className="fw-bold">Job Preferences:</span><p>Desired job roles or titles. Experience level (entry-level, mid-level, senior).
-                                  </p></li>
-                                  <li><span className="fw-bold">Personalization:</span><p>Keywords or skills the user provides. User’s resume (if uploaded).</p></li>
-                                  <li><span className="fw-bold">Featured Jobs:</span><p>Highlight top or trending jobs for the week.</p></li>
-                                  <li><span className="fw-bold">Value Proposition:</span><p>Access to curated job opportunities.</p></li>
+                                <ul className="img-left-right-text">
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_44076.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Job Preferences:</span>
+                                      <p><small>Desired job roles or titles. Experience level (entry-level, mid-level, senior).</small></p>
+                                    </div>
+                                  </li>
+
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_1099.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Personalization:</span>
+                                      <p><small>Keywords or skills the user provides. User’s resume (if uploaded).</small></p>
+                                    </div>
+                                  </li>
+
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_802.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Featured Jobs:</span>
+                                      <p><small>Highlight top or trending jobs for the week.</small></p>
+                                    </div>
+                                  </li>
+                                  
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_21280.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Value Proposition:</span>
+                                      <p><small>Access to curated job opportunities.</small></p>
+                                    </div>
+                                  </li>
+                                 
                                 </ul>
                               </div>
                           </div>
