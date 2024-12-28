@@ -1,43 +1,44 @@
-import React from 'react'; 
-const Header = () => <header>
-{/* <!-- main menu section HTML  --> */}
-<nav className="navbar navbar-expand-lg fixed-top">
-<div className="container">
-<a className="navbar-brand" href="#">
-<img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" />
-</a>
+import React from 'react';
+import './admin-dashboard.scss'
+const Header = () => {
+  return (
+    <>
+      
+        <nav className='sidebar-wrapper shadow-border'>
+          <div className='admin-logo'>
+            <img src='./grandpathway-logo.svg' alt='Grandpathway Admin Logo' />
+          </div>
+          <div className='navbar-wrappper'>
 
-<div className="collapse navbar-collapse" id="navbarSupportedContent">
-<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-<li className="nav-item">
-  <a className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
-        alt="" /></i>Home</a>
-</li>
-<li className="nav-item">
-  <a className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
-        alt="" /></i>Services</a>
-</li>
-<li className="nav-item">
-  <a className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>About us</a>
-</li>
+            <ul className="nav nav-tabs flex-column" id="myTab" role="tablist">
+              <li className='plan-name'>
+                <p>Home</p>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i className="bi bi-clipboard-data"></i>
+                Dashboard</button>
+              </li>
+              <li className='plan-name'>
+                <p>Foundation Package</p>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">CV</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">One Free Consulting Call</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact-tab-pane2" type="button" role="tab" aria-controls="contact-tab-pane2" aria-selected="false">Resume/ Cover letter</button>
+              </li>
+            </ul>
+              
+          </div>
+        </nav>
 
-<li className="nav-item">
-  <a className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>Blogs</a>
-</li>
+        
+      
+    </>
 
-</ul>
-
-</div>
-<div className="getintouch-nav">
-<a href="#" className="login">Login</a>
-<a href="#" className="getintouch"><i><img src="/img/user.svg" alt="" /></i>Get in Touch</a>
-</div>
-<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span className="navbar-toggler-icon"></span>
-</button>
-</div>
-</nav>
-{/* <!-- main menu section HTML END --> */}
-</header>; 
+  );
+}
 export default Header;

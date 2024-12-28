@@ -1,0 +1,190 @@
+  .max-w-form{
+    max-width: 1000px !important;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+  }
+
+  .text-primary-form{
+    color: #0a3262;   
+   }
+  
+   .text-secondary-form{
+      color: #2f2f2f;
+   }
+
+   .bg-ptitle-form{
+    background: #efefef9d;
+   }
+  
+   .aform-container ul{
+    list-style: none;
+   }
+
+  .aform-container input{
+    background: #efefef; 
+  }
+
+  .aform-container input:focus{
+    background: #f3f3f3; 
+  }
+   
+
+  .form-right{
+    background: #ffffff6a;
+  }
+  
+  .aform-container {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #041425; */
+    color: #000;
+    line-height: 1.6;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+
+
+    background: rgb(34,101,176);
+background: linear-gradient(0deg, rgba(34,101,176,1) 35%, rgba(75,171,201,1) 100%);
+  }
+  
+  .aform-container .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  
+  .aform-container .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .aform-container .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: drop 4s 0s infinite;
+            animation: drop 4s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .aform-container .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .aform-container .line:nth-child(1)::after {
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+  }
+  .aform-container .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .aform-container .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.3s;
+            animation-delay: 2.3s;
+  }
+
+  .aform-container .line:nth-child(4) {
+    margin-left: -12%;
+  }
+  .aform-container .line:nth-child(4)::after {
+    -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s;
+  }
+  .aform-container .line:nth-child(5) {
+    margin-left: 12%;
+  }
+  .aform-container .line:nth-child(5)::after {
+    -webkit-animation-delay: 2.6s;
+            animation-delay: 2.6s;
+  }
+
+  .aform-container .line:nth-child(6) {
+    margin-left: -40%;
+  }
+  .aform-container .line:nth-child(6)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .aform-container .line:nth-child(7) {
+    margin-left: 40%;
+  }
+  .aform-container .line:nth-child(7)::after {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  
+  @-webkit-keyframes drop {
+    0% {
+      top: 110%;
+    }
+    100% {
+      top: -50%;
+    }
+  }
+  
+  @keyframes drop {
+    0% {
+      top: 110%;
+    }
+    100% {
+      top: -50%;
+    }
+  }
+
+  .assessment-form-new .form-label{
+    font-weight: 700;
+  }
+
+  .number-rating {
+    display: flex;
+    gap: 10px;
+    /* font-size: 1.5rem; */
+}
+
+.number-rating input {
+    display: none;
+}
+
+.number-rating label {
+    padding: 2px 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.number-rating input:checked + label,
+.number-rating label:hover,
+.number-rating input:hover + label {
+    background-color: #f5a623;
+    color: white;
+    border-color: #f5a623;
+}
+
+.disabled-btn-style:disabled {
+  background-color: #b3b3b3;
+  color: #ffffff; 
+  cursor: not-allowed; 
+  opacity: 0.6; 
+}

@@ -80,7 +80,7 @@ const MentorForm = () => {
                     {/* Personal Details */}
                     <div className="col-12"><h4>Personal Details:</h4></div>
                     <div className="col-md-6">
-                        <label className="form-label">Full Name</label>
+                        <label className="form-label">First Name</label>
                         <input
                             type="text"
                             placeholder="First Name"
@@ -234,7 +234,7 @@ const MentorForm = () => {
 
                     {passwordError && <p className="text-danger">{passwordError}</p>}
                     {error && <p className="text-danger">Error: {error}</p>}
-                    {success && <p className="text-success">Form submitted successfully!</p>}
+                    {success && <p className="text-success">Registration Completed successfully!</p>}
 
                     {/* Submit */}
                     <div className="col-12">

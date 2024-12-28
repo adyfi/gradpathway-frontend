@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { sendRecommendationRequest } from '../../api/api';
-import { AssessmentAnalytics } from './AssessmentAnalytics';
 import "./animationForm.css"
-import Loader from '../../components/Loader';
+import Loader from '../../components/loader';
 
 const AssesmentForm = () => {
     const [personalDetails, setPersonalDetails] = useState(null)
     const [formData, setFormData] = useState({
-        name: "Enter Name",
-        email: "example.email@gmail.com",
+        name: "",
+        email: "",
         phone_number: "+44 1234567890",
-        linkedin_profile: "Year",
+        linkedin_profile: "https://www.linkedin.com/",
         current_course: "Master's in Computer Science",
         highest_education: "Bachelor's in IT",
         work_experience_home_country: "2 years in software development",
@@ -21,7 +20,7 @@ const AssesmentForm = () => {
         interviews_received: '0',
         confidence_level: "High",
         work_experience_uk_relevance: "SW Developer",
-        
+
         k_job_search_started: "Yes",
         uk_experience: "6 months internship in IT",
         target_industry: "IT & Software",
@@ -37,7 +36,7 @@ const AssesmentForm = () => {
         is_backup_plan: 'Yes',
         backup_plan: "Pursue further certifications",
         cvFile: null,
-
+        graduation_year: 2024,
         rel_work_exp: 'Not Relevant',
         work_exp_in_uk: 'Yes',
         identified_preferd_companies: "Yes"
@@ -71,10 +70,10 @@ const AssesmentForm = () => {
 
     };
 
-    
 
 
-    
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -89,10 +88,9 @@ const AssesmentForm = () => {
                 linkedIn: formData.linkedin_profile,
             })
             const response = await sendRecommendationRequest(formData);
-            alert("recommendation Successfully");
-            setLoading(false);
-            console.log("response?.status ")
-            console.log(response?.status)
+            // alert("recommendation Successfully");
+            // console.log("response?.status ") 
+            // console.log(response?.status)
             if (response?.status === 200 || response?.status === 201) {
                 const recommendationData = response.data?.recommendation;
                 console.log("response.data?.recommendation")
@@ -129,12 +127,6 @@ const AssesmentForm = () => {
         }
     };
 
-    if (loading) {
-        return (
-            <Loader />
-        );
-    }
-
     const handleNext = () => {
         setCurrentSection((prev) => prev + 1);
     };
@@ -168,6 +160,8 @@ const AssesmentForm = () => {
         )
     }
     return (<>
+
+        {loading && <Loader />}
         <div className="container-fluid aform-container">
             <div className="lines">
                 <div className="line"></div>
@@ -204,7 +198,7 @@ const AssesmentForm = () => {
                             <li className={` ${currentSection === 2 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Skills and Competencies </li>
                             <li className={` ${currentSection === 3 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Career Goals and Preferences</li>
                             <li className={` ${currentSection === 4 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Cultural Fit and Soft Skills </li>
-                            <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li>
+                            {/* <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li> */}
 
                         </ul>
                     </div>
@@ -219,7 +213,7 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="name" className="form-label">Full Name</label>
+                                        <label htmlFor="name" className="form-label">Full Name <span className='text-danger'>*</span></label>
                                         <input
                                             type="text"
                                             placeholder="Enter your full name"
@@ -231,9 +225,8 @@ const AssesmentForm = () => {
                                             required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="email" className="form-label">Email Address</label>
+                                        <label htmlFor="email" className="form-label">Email Address <span className='text-danger'>*</span></label>
                                         <input
                                             type="email"
                                             placeholder="Enter your email"
@@ -242,11 +235,11 @@ const AssesmentForm = () => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
+                                            required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="phone_number" className="form-label">Phone Number</label>
+                                        <label htmlFor="phone_number" className="form-label">Phone Number <span className='text-danger'>*</span></label>
                                         <input
                                             type="text"
                                             placeholder="Enter your phone number"
@@ -255,9 +248,9 @@ const AssesmentForm = () => {
                                             name="phone_number"
                                             value={formData.phone_number}
                                             onChange={handleChange}
+                                            required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="linkedin_profile" className="form-label">LinkedIn Profile URL</label>
                                         <input
@@ -284,13 +277,14 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">1. What is your highest level of education completed?</label>
+                                        <label htmlFor="highest_education" className="form-label">1. What is your highest level of education completed? <span className='text-danger'>*</span></label>
                                         <select
                                             className="form-select"
                                             id="highest_education"
                                             name="highest_education"
                                             value={formData.highest_education}
                                             onChange={handleChange}
+                                            required
                                         >
                                             <option value="">Open this select menu</option>
                                             <option value="1">Bachelor's</option>
@@ -301,7 +295,7 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="field_of_study" className="form-label">2. What is your major or field of study?</label>
+                                        <label htmlFor="field_of_study" className="form-label">2. What is your major or field of study? <span className='text-danger'>*</span></label>
                                         <select
                                             className="form-select"
                                             id="field_of_study"
@@ -318,8 +312,8 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="graduation_year" className="form-label">3. What year did you graduate or expect to graduate?</label>
-                                        <input
+                                        <label htmlFor="graduation_year" className="form-label">3. What year did you graduate or expect to graduate? <span className='text-danger'>*</span></label>
+                                        {/* <input
                                             type="text"
                                             placeholder="Enter the graduation year"
                                             className="form-control"
@@ -327,7 +321,24 @@ const AssesmentForm = () => {
                                             name="graduation_year"
                                             value={formData.graduation_year}
                                             onChange={handleChange}
-                                        />
+                                        /> */}
+                                        <select
+                                            className="form-control"
+                                            id="graduation_year"
+                                            name="graduation_year"
+                                            value={formData.graduation_year}
+                                            onChange={handleChange}
+                                        >
+                                            <option value="" disabled>Select year</option>
+                                            {Array.from({ length: 31 }, (_, index) => {
+                                                const year = 2000 + index; // Generate years from 2000 to 2030
+                                                return (
+                                                    <option key={year} value={year}>
+                                                        {year}
+                                                    </option>
+                                                );
+                                            })}
+                                        </select>
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12 py-4">
@@ -423,9 +434,7 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="d-md-flex justify-content-end">
-                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
-                                            Continue
-                                        </button>
+                                        <button type="button" className="btn btn-dark text-white mt-3" onClick={handleNext} disabled={!formData.name || !formData.email || !formData.phone_number} > Continue </button>
                                     </div>
                                 </div>
                             )}
@@ -439,6 +448,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12 py-4">
                                         <label className='form-label'>
                                             1. Do you have any work experience related to your field of study?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
@@ -523,6 +533,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="internship_status" className="form-label">
                                             2. Have you undertaken any internships?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
@@ -784,6 +795,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="experience_level_status" className="form-label">
                                             5. What is your experience level with industry tools or software relevant to your field?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
@@ -794,6 +806,7 @@ const AssesmentForm = () => {
                                                 value="Yes"
                                                 checked={formData.experience_level_status === "Yes"}
                                                 onChange={handleChange}
+                                                required
                                             />
                                             <label className="form-check-label ms-2" htmlFor="experience_level_yes">
                                                 Yes
@@ -808,6 +821,7 @@ const AssesmentForm = () => {
                                                 value="No"
                                                 checked={formData.experience_level_status === "No"}
                                                 onChange={handleChange}
+                                                required
                                             />
                                             <label className="form-check-label ms-2" htmlFor="experience_level_no">
                                                 No
@@ -828,45 +842,56 @@ const AssesmentForm = () => {
                                                         name="tools_experience"
                                                         value={formData.tools_experience}
                                                         onChange={handleChange}
+                                                        required
                                                     >
                                                         <option value="">Select Experience Level</option>
                                                         <option value="Beginner">Beginner</option>
                                                         <option value="Intermediate">Intermediate</option>
                                                         <option value="Advanced">Advanced</option>
+                                                        <option value="No Experience">No Experience</option>
                                                     </select>
                                                 </div>
-                                                <div className="mb-3">
-                                                    <label htmlFor="tools_used" className="form-label">Tools/Software Used</label>
-                                                    <textarea
-                                                        className="form-control"
-                                                        id="tools_used"
-                                                        name="tools_used"
-                                                        value={formData.tools_used}
-                                                        onChange={handleChange}
-                                                        placeholder="List the tools/software you have experience with"
-                                                    />
-                                                </div>
-                                                <div className="mb-3">
-                                                    <label htmlFor="tools_duration" className="form-label">Duration of Use</label>
-                                                    <input
-                                                        type="text"
-                                                        className="form-control"
-                                                        id="tools_duration"
-                                                        name="tools_duration"
-                                                        value={formData.tools_duration}
-                                                        onChange={handleChange}
-                                                        placeholder="Enter duration (e.g., 6 months, 2 years)"
-                                                    />
-                                                </div>
+                                                {(formData.tools_experience === "Beginner" || formData.tools_experience === "Intermediate" || formData.tools_experience === "Advanced") && (
+                                                    <div>
+                                                        <div className="mb-3">
+                                                            <label htmlFor="tools_used" className="form-label">Tools/Software Used</label>
+                                                            <textarea
+                                                                className="form-control"
+                                                                id="tools_used"
+                                                                name="tools_used"
+                                                                value={formData.tools_used}
+                                                                onChange={handleChange}
+                                                                placeholder="List the tools/software you have experience with"
+                                                                required
+                                                            />
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <label htmlFor="tools_duration" className="form-label">Duration of Use</label>
+                                                            <input
+                                                                type="text"
+                                                                className="form-control"
+                                                                id="tools_duration"
+                                                                name="tools_duration"
+                                                                value={formData.tools_duration}
+                                                                onChange={handleChange}
+                                                                placeholder="Enter duration (e.g., 6 months, 2 years)"
+                                                                required
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
                                     </div>
+
 
                                     <div className="d-md-flex justify-content-end">
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
+                                        <button type="button"
+                                            disabled={!formData.has_work_experience_in_field && !formData.experience_level_status && !formData.tools_experience && !formData.tools_used && !formData.tools_duration && !formData.internship_status}
+                                            className="btn text-white bg-black mt-3" onClick={handleNext}>
                                             Continue
                                         </button>
                                     </div>
@@ -875,7 +900,6 @@ const AssesmentForm = () => {
                             )}
 
                             {currentSection === 2 && (
-
                                 <div className="row pb-2 pt-3 px-3">
                                     <h3 className="text-primary-form p-2 fw-bolder">Skills and Competencies</h3>
 
@@ -884,6 +908,7 @@ const AssesmentForm = () => {
                                         <div className="mb-2">
                                             <span className="rounded col h6">
                                                 1. Rate your proficiency in the following skills on a scale of 1–5:
+                                                <span className="text-danger">*</span>
                                             </span>
                                         </div>
                                         <div className="row">
@@ -906,8 +931,9 @@ const AssesmentForm = () => {
                                                                     name={name}
                                                                     value={value}
                                                                     checked={formData[name] === String(value)}
-                                                                    onChange={(e) => handleChange(e, name)}
+                                                                    onChange={handleChange}
                                                                     className="me-1"
+                                                                    required
                                                                 />
                                                                 <label htmlFor={`${name}_rate${value}`}>{value}</label>
                                                             </React.Fragment>
@@ -922,12 +948,15 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="technical_tools" className="form-label">
                                             2. Which programming languages or technical tools are you proficient in?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <select
                                             id="technical_tools"
                                             className="form-select"
                                             value={formData.technical_tools}
-                                            onChange={(e) => handleChange(e, "technical_tools")}
+                                            name="technical_tools"
+                                            onChange={handleChange}
+                                            required
                                         >
                                             <option value="" disabled>Select your proficiency</option>
                                             <option value="JavaScript">JavaScript</option>
@@ -937,12 +966,26 @@ const AssesmentForm = () => {
                                             <option value="SQL">SQL</option>
                                             <option value="Others">Others</option>
                                         </select>
+                                        {formData.technical_tools === "Others" && (
+                                            <div className="mt-3">
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Enter your proficiency"
+                                                    name='technical_tools'
+                                                    value={formData.other_proficiency}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+                                        )}
                                     </div>
 
                                     {/* Question 3: Familiarity with Trends */}
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="current_trends" className="form-label">
                                             3. Are you familiar with modern trends or technologies in your field?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <div className="form-check ms-4 mt-2">
                                             <input
@@ -953,6 +996,7 @@ const AssesmentForm = () => {
                                                 value="Yes"
                                                 checked={formData.current_trends_familiarity === "Yes"}
                                                 onChange={(e) => handleChange(e, "current_trends_familiarity")}
+                                                required
                                             />
                                             <label className="form-check-label ms-2" htmlFor="current_trends_yes">
                                                 Yes
@@ -967,6 +1011,7 @@ const AssesmentForm = () => {
                                                 value="No"
                                                 checked={formData.current_trends_familiarity === "No"}
                                                 onChange={(e) => handleChange(e, "current_trends_familiarity")}
+                                                required
                                             />
                                             <label className="form-check-label ms-2" htmlFor="current_trends_no">
                                                 No
@@ -985,6 +1030,7 @@ const AssesmentForm = () => {
                                                     name="current_trends_description"
                                                     value={formData.current_trends_description}
                                                     onChange={(e) => handleChange(e, "current_trends_description")}
+                                                    required
                                                 />
                                             </div>
                                         )}
@@ -1078,14 +1124,28 @@ const AssesmentForm = () => {
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
+                                        <button
+                                            type="button"
+                                            className="btn text-white bg-black mt-3"
+                                            onClick={handleNext}
+                                            disabled={
+                                                !formData.technical_tools ||
+                                                !formData.current_trends_familiarity ||
+                                                !formData.communication_rating ||
+                                                !formData.analytical_rating ||
+                                                !formData.collaboration_rating ||
+                                                !formData.leadership_rating ||
+                                                !formData.technical_rating ||
+                                                !formData.problem_solving_rating
+                                            }
+                                        >
                                             Continue
                                         </button>
+
                                     </div>
                                 </div>
-
-
                             )}
+
 
                             {currentSection === 3 && (
 
@@ -1096,6 +1156,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="career_industries" className="form-label">
                                             1. What industries or roles are you targeting for your career?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <select
                                             className="form-select"
@@ -1118,7 +1179,10 @@ const AssesmentForm = () => {
 
                                     {/* Question 2 */}
                                     <div className="p-3 pt-1 col-md-12 py-4">
-                                        <label className="form-label">2. Are you open to relocating for job opportunities?</label>
+                                        <label className="form-label">
+                                            2. Are you open to relocating for job opportunities?
+                                            <span className="text-danger">*</span>
+                                        </label>
                                         <div className="form-check form-check-inline ms-4 mt-2 d-flex flex-row">
                                             <input
                                                 className="form-check-input"
@@ -1153,6 +1217,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="employment_type" className="form-label">
                                             3. What type of employment are you looking for?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <select
                                             className="form-select"
@@ -1182,6 +1247,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12 py-4">
                                         <label htmlFor="long_term_goals" className="form-label">
                                             4. What are your long-term career goals?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -1200,7 +1266,13 @@ const AssesmentForm = () => {
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
+                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}
+                                            disabled={
+                                                !formData.career_industries ||
+                                                !formData.relocation_preference ||
+                                                !formData.employment_type ||
+                                                !formData.long_term_goals
+                                            }>
                                             Continue
                                         </button>
                                     </div>
@@ -1218,6 +1290,7 @@ const AssesmentForm = () => {
                                     <div className="p-3 pt-1 col-md-12 py-4">
                                         <label className="form-label" htmlFor="job_motivation">
                                             1. What motivates you most in a job?
+                                            <span className="text-danger">*</span>
                                         </label>
                                         <select
                                             className="form-select"
@@ -1333,9 +1406,18 @@ const AssesmentForm = () => {
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="submit" className="btn text-white bg-black mt-3" onClick={handleSubmit}>
-                                            Continue
+
+                                        <button
+                                            type="submit"
+                                            className="btn text-white bg-success mt-3"
+                                            onClick={handleSubmit}
+                                            disabled={
+                                                !formData.job_motivation
+                                            }>
+                                            Submit
                                         </button>
+
+
                                     </div>
                                 </div>
 
