@@ -65,7 +65,7 @@ const Homepage = () => {
             <img src="./ai-job-2.jpg" className="ai-job-4" id="ai-job-4" alt="">
             <img src="./ai-job-3.jpg" className="ai-job-5" id="ai-job-5" alt=""> */}
             <div className="d-flex col-md-8 offset-md-2 mt-5 pb-5">
-              <img src="./dashboard-big.webp" width="100%" className="dashboard-img rounded" alt="bg svg" />
+              <img src="./dashboard-big.webp" width="100%" className="dashboard-img " alt="bg svg" />
             </div>
           </div>
        
@@ -75,7 +75,7 @@ const Homepage = () => {
 
           <div className="row text-center">
             <div className="col-md-8 offset-md-2 mb-3">
-              <p className="text-primary-2 m-0 p-0">This is how you land your dream job.</p>
+              <p className="text-primary-2 m-0 p-0">This is how you land your dream job</p>
               <h1 className="m-0 fw-bolder p-0">Your Dream Career is Waiting For You</h1>
               <p className="text-subtitle m-0 p-0">We know how painful the job search is. That's why we've created services to help you out every step of the way.</p>
             </div>
