@@ -21,7 +21,8 @@ const AssesmentForm = () => {
         interviews_received: '0',
         confidence_level: "High",
         work_experience_uk_relevance: "SW Developer",
-        uk_job_search_started: "Yes",
+        
+        k_job_search_started: "Yes",
         uk_experience: "6 months internship in IT",
         target_industry: "IT & Software",
         identified_companies: "IBM, Microsoft, Google",
