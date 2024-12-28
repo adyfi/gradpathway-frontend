@@ -9,7 +9,17 @@ a{
     color: default;
 }
 
-
+/* .report-div {
+    margin-top: 15vh;
+    padding: 20vh 80px;
+    max-width: 850px;
+    background-image: url('Letterhead-2.png'), url('Letterhead-head.png');
+    background-repeat: repeat-y, no-repeat;
+    background-size: 100% auto, 100% auto;
+    background-position: top, top;
+  } */
+  
+  
 
 .custome-range {
     -webkit-appearance: none; /* Disable default appearance */

@@ -57,14 +57,25 @@ export const AssessmentAnalytics = ({ likelihoods, recommendedPackage, reasoning
 
     return (
         <>
-        <div className="container shadow-sm p-5 border mb-5" id='report' style={{ marginTop: "15vh", maxWidth: '750px' }}>
+        <div
+            className="container shadow-sm border mb-5 report-div"
+            style={{
+                marginTop: "15vh",
+                padding: '20vh 80px',
+                maxWidth: '850px',
+                backgroundImage: 'url("./Letterhead.png")',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% auto, 100% auto',
+                backgroundPosition: 'top, top',
+            }}
+        >
             <div className="row">
                 <div className="col-12 d-flex justify-content-between">
                     {/* <h2 className="text-left text-primary-2 fw-bold">GradPathway</h2> */}
-                    <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height="50px"></img>
+                    {/* <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height="50px"></img>
                     <span className='text-primary-2'>
                         Date: {formatDate(new Date())}
-                    </span>
+                    </span> */}
                 </div>
                 <h1 className='display-4 fw-bolder text-secondary-2'>
                     AI-Generated

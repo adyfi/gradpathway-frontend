@@ -88,9 +88,9 @@ const AssesmentForm = () => {
                 linkedIn: formData.linkedin_profile,
             })
             const response = await sendRecommendationRequest(formData);
-            alert("recommendation Successfully");
-            console.log("response?.status ")
-            console.log(response?.status)
+            // alert("recommendation Successfully");
+            // console.log("response?.status ") 
+            // console.log(response?.status)
             if (response?.status === 200 || response?.status === 201) {
                 const recommendationData = response.data?.recommendation;
                 console.log("response.data?.recommendation")
@@ -198,7 +198,7 @@ const AssesmentForm = () => {
                             <li className={` ${currentSection === 2 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Skills and Competencies </li>
                             <li className={` ${currentSection === 3 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Career Goals and Preferences</li>
                             <li className={` ${currentSection === 4 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Cultural Fit and Soft Skills </li>
-                            <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li>
+                            {/* <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li> */}
 
                         </ul>
                     </div>
@@ -1323,8 +1323,8 @@ const AssesmentForm = () => {
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="submit" className="btn text-white bg-black mt-3" onClick={handleSubmit}>
-                                            Continue
+                                        <button type="submit" className="btn text-white bg-success mt-3" onClick={handleSubmit}>
+                                            Submit
                                         </button>
                                     </div>
                                 </div>
