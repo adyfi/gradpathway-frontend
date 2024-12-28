@@ -7,19 +7,43 @@ const Dashboard = () => {
         <div className="container-fluid">
           <div className="row">
             <div>
-              <div className="shadow-border top-bar mb-4">
-                <div className="dropdown">
-                  <a className="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="./profile-icon.webp" alt="" />
-                    <span>Jonh Cena</span>
-                  </a>
+              <div className="shadow-border top-bar mb-4 d-flex justify-content-between">
+                <div className="div-left-header">
+                  <div className="search-box">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Search..." 
+                            aria-label="Search"
+                            aria-describedby="search-button" />
+                        <button class="btn btn-primary" type="button" id="search-button">
+                          <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="div-right-header d-flex">
+                  <div className="country-flag">
+                    <img src="./united-kingdom.webp" alt="India" />
+                  </div>  
+                  <div className="country-flag">
+                    <img src="./notification.webp" alt="India" />
+                  </div>  
+                  <div className="dropdown">
+                    <a className="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="./profile-icon.webp" alt="" />
+                      <span>Jonh Cena</span>
+                    </a>
 
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">Action</a></li>
-                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </div>  
+                    <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="#">Action</a></li>
+                      <li><a className="dropdown-item" href="#">Another action</a></li>
+                      <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                  
+                </div>
               </div>
             </div>
           </div>
@@ -28,8 +52,8 @@ const Dashboard = () => {
               <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <div className="dashboard">
                   <div className="welcome-test mb-4">
-                    <h2>Hello <span>John Cena</span></h2>
-                    <h3>Welcome to Your Hub: Stay Connected, Stay Informed, Stay Ahead!</h3>
+                    <h3>Hello <span>John Cena</span></h3>
+                    <h5>Welcome to Your Hub: Stay Connected, Stay Informed, Stay Ahead!</h5>
                   </div>
                   <div className=" main-dashboard-content ">
                     {/* <div className="buttons-wrapper mb-4 shadow-border">
@@ -45,8 +69,9 @@ const Dashboard = () => {
                       <div className="row">
                         <div className="col-md-8 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <div class="table-responsive">
-                              <table class="table m-0">
+                            <h3 className="mb-3">CV, Cover Letter, and LinkedIn Review</h3>
+                            <div className="table-responsive">
+                              <table className="table m-0">
                                 <thead>
                                   <tr>
                                     <th scope="col" className="fw-bold">Id</th>
@@ -61,63 +86,63 @@ const Dashboard = () => {
                                   <tr>
                                     <th scope="row">1</th>
                                     <td>
-                                      <div class="">
-                                        <h6 class="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div class="text-subtitle-2 mt-1 text-muted">Web Designer</div>
+                                      <div className="">
+                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
+                                        <div className="text-subtitle-2 text-muted "><small>Web Designer</small></div>
                                       </div>
                                     </td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted">CV</h6>
+                                      <h6 className="text-body-1 text-muted"><small>CV</small></h6>
                                     </td>
-                                    <td><h6 class="text-body-1 text-muted">PDF</h6></td>
+                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted"><span>27 Dec</span> <span>02:55</span></h6>
+                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
                                     </td>
-                                    <td className="text-center">
+                                    <td>
                                       <div>
-                                        <a href="#"><i class="bi bi-folder-symlink"></i> </a>
+                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
                                       </div>
                                     </td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>
-                                      <div class="">
-                                        <h6 class="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div class="text-subtitle-2 mt-1 text-muted">Web Designer</div>
+                                      <div className="">
+                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
+                                        <div className="text-subtitle-2 text-muted"><small>Web Designer</small></div>
                                       </div>
                                     </td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted">Resume</h6>
+                                      <h6 className="text-body-1 text-muted"><small>Resume</small></h6>
                                     </td>
-                                    <td><h6 class="text-body-1 text-muted">PDF</h6></td>
+                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted"><span>27 Dec</span> <span>02:55</span></h6>
+                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
                                     </td>
-                                    <td className="text-center">
+                                    <td>
                                       <div>
-                                        <a href="#"><i class="bi bi-folder-symlink"></i> </a>
+                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
                                       </div>
                                     </td>
                                   </tr>
                                   <tr>
                                     <th scope="row">3</th>
                                     <td>
-                                      <div class="">
-                                        <h6 class="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div class="text-subtitle-2 mt-1 text-muted">Web Designer</div>
+                                      <div className="">
+                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
+                                        <div className="text-subtitle-2 text-muted"><small>Web Designer</small></div>
                                       </div>
                                     </td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted">Cover Letter</h6>
+                                      <h6 className="text-body-1 text-muted"><small>Cover Letter</small></h6>
                                     </td>
-                                    <td><h6 class="text-body-1 text-muted">PDF</h6></td>
+                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
                                     <td>
-                                      <h6 class="text-body-1 text-muted"><span>27 Dec</span> <span>02:55</span></h6>
+                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
                                     </td>
-                                    <td className="text-center">
+                                    <td>
                                       <div>
-                                        <a href="#"><i class="bi bi-folder-symlink"></i> </a>
+                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
                                       </div>
                                     </td>
                                   </tr>
@@ -129,39 +154,122 @@ const Dashboard = () => {
 
                         <div className="col-md-4 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./customer-service.webp" alt="resue"/></span>Jone Cena</h3>
-                            <p className="mb-2"><b className="fw-bold">Title: </b>A personalized consultation to discuss your
-                              career goals.
-                            </p>
-                            <div className="d-flex mb-2">
-                              
-                              <h6 className="fw-bold me-1 mb-0">Schedule Call: </h6>
-                              <a href="#"><i class="bi bi-telephone"></i> Call Now</a>
-                            </div>
-                            <div className="d-flex">
-                              <h6 className="fw-bold me-1">Time & Date:</h6>
-                              <h6> 27 Dec / <span>5:00PM</span></h6>
-                            </div>
-                            <div className="d-flex">
-                              <h6 className="fw-bold me-1">Status:</h6>
-                              <h6>Pending</h6>
+                            <h3 className="mb-4">Analytics</h3>
+                            <div className="graph-wrap">
+                              <img src="./donut-chart.webp" alt="" />
                             </div>
                           </div>
-                        </div>
+                        </div>                          
 
                         <div className="col-md-4 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./mail.webp" alt="resue"/></span>3 ATSFriendly Resumes and Cover Letters:</h3>
-                            <p>Professional enhancement of your
-                              CV, cover
-                              letter, and LinkedIn profile, including a customized LinkedIn banner and
-                              profile content to increase your digital presence. </p>
+                            <h3 className="mb-3">Upcoming Schedules</h3>
+                            <div className="upcoming-schedules">
+                              <div className="call-list d-flex">
+                                <div className="left-time d-flex align-start">
+                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
+                                </div>
+                                <div className="center-icon text-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
+                                  <div className="line mx-auto bg-borderColor"></div>
+                                </div>
+                                <div className="right-time">
+                                  <h6 className="text-body-1 textSecondary">Scheduled call with John Harrison</h6>
+                                </div>
+                              </div>
+
+                              <div className="call-list d-flex">
+                                <div className="left-time d-flex align-start">
+                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
+                                </div>
+                                <div className="center-icon text-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
+                                  <div className="line mx-auto bg-borderColor"></div>
+                                </div>
+                                <div className="right-time">
+                                  <h6 className="text-body-1 textSecondary"> Scheduled call with John Doe </h6>
+                                </div>
+                              </div>
+
+                              <div className="call-list d-flex">
+                                <div className="left-time d-flex align-start">
+                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
+                                </div>
+                                <div className="center-icon text-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
+                                  <div className="line mx-auto bg-borderColor"></div>
+                                </div>
+                                <div className="right-time">
+                                  <h6 className="text-body-1 textSecondary">Scheduled call with William Carter</h6>
+                                </div>
+                              </div>
+                              <div className="btn-wrapper text-center">
+                                <a href="#" className="btn btn-primary">Scheduled call <i class="bi bi-telephone"></i></a>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
                         <div className="col-md-8 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./resume.webp" alt="resue"/></span>Personalized Interview Question Answers</h3>
+                            <h3 className="mb-3">Subscription Bundle</h3>
+                            <div className="row">
+                              <div className="col-md-6 mb-3">
+                                <div className="simple-box d-flex">
+                                  <div className="img-box me-3">
+                                    <img src="./world-wide-web.webp" alt="" />
+                                  </div>
+                                  <div className="text-box">
+                                    <h6>Top Websites for Job Search</h6>
+                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-md-6 mb-3">
+                                <div className="simple-box d-flex two">
+                                  <div className="img-box me-3">
+                                    <img src="./internet.webp" alt="" />
+                                  </div>
+                                  <div className="text-box">
+                                    <h6>Must-Know Websites</h6>
+                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-md-6 mb-3">
+                                <div className="simple-box d-flex three">
+                                  <div className="img-box me-3">
+                                    <img src="./graduation-cap.webp" alt="" />
+                                  </div>
+                                  <div className="text-box">
+                                    <h6>Top 25 Graduate Employers</h6>
+                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="col-md-6 mb-3">
+                                <div className="simple-box d-flex four">
+                                  <div className="img-box me-3">
+                                    <img src="./graduation-cap.webp" alt="" />
+                                  </div>
+                                  <div className="text-box">
+                                    <h6>Graduate Salaries Degree Specific</h6>
+                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="col-md-6 mb-4">
+                          <div className="shadow-border dashboard-box" >
+                            <h3>
+                              {/* <span><img src="./resume.webp" alt="resue"/></span> */}
+                              Personalized Interview Question Answers</h3>
                             <p>Crafted based on your work
                               experience, education, and projects to ensure youre prepared for any
                               interview.</p>
@@ -176,27 +284,57 @@ const Dashboard = () => {
                           </div>
                         </div>
  
-                        <div className="col-md-8 mb-4">
+                        <div className="col-md-6 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./customer-service.webp" alt="resue"/></span>Weekly Job Subscription</h3>
-                            <p> A weekly subscription delivering the latest jobs specific to your profile.
+                            <h3>
+                              {/* <span><img src="./customer-service.webp" alt="resue"/></span> */}
+                              Weekly Job Subscription</h3>
+                            <p className="mb-3"> A weekly subscription delivering the latest jobs specific to your profile.
                             </p>
                             <div className="">
-                                <ul>
-                                  <li><span className="fw-bold">Job Preferences:</span><p>Desired job roles or titles. Experience level (entry-level, mid-level, senior).
-                                  </p></li>
-                                  <li><span className="fw-bold">Personalization:</span><p>Keywords or skills the user provides. User’s resume (if uploaded).</p></li>
-                                  <li><span className="fw-bold">Featured Jobs:</span><p>Highlight top or trending jobs for the week.</p></li>
-                                  <li><span className="fw-bold">Value Proposition:</span><p>Access to curated job opportunities.</p></li>
+                                <ul className="img-left-right-text">
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_44076.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Job Preferences:</span>
+                                      <p><small>Desired job roles or titles. Experience level (entry-level, mid-level, senior).</small></p>
+                                    </div>
+                                  </li>
+
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_1099.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Personalization:</span>
+                                      <p><small>Keywords or skills the user provides. User’s resume (if uploaded).</small></p>
+                                    </div>
+                                  </li>
+
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_802.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Featured Jobs:</span>
+                                      <p><small>Highlight top or trending jobs for the week.</small></p>
+                                    </div>
+                                  </li>
+                                  
+                                  <li className="mb-3">
+                                    <div className="img-box">
+                                      <img src="./rb_21280.webp" alt=""/>
+                                    </div>
+                                    <div className="text-content">
+                                      <span className="fw-bold">Value Proposition:</span>
+                                      <p><small>Access to curated job opportunities.</small></p>
+                                    </div>
+                                  </li>
+                                 
                                 </ul>
                               </div>
-                          </div>
-                        </div>
-
-                        <div className="col-md-4 mb-4">
-                          <div className="shadow-border dashboard-box " >
-                            <h3><span><img src="./mail.webp" alt="resue"/></span>Subscription Bundle</h3>
-                            <p>Access to essential resources</p>
                           </div>
                         </div>
                       </div>
@@ -218,13 +356,13 @@ const Dashboard = () => {
                           <p><span className="fw-bold">Additional Comments:</span> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
                           <div className="">
                             <ul>
-                              <li className="d-flex"><i class="bi bi-calendar-week"></i><span className="me-1">Last Updated: </span><span className="fw-bold"> Nov 10</span></li>
-                              {/* <li><i class="bi bi-gear"></i><span>Dec 12</span></li> */}
-                              <li className="d-flex"><i class="bi bi-file-earmark-richtext"></i><span className="me-1">max Size:</span><span className="fw-bold">10mb</span></li>
-                              <li className="d-flex"><i class="bi bi-file-earmark-medical"></i><span className="me-1">File Type:</span><span className="fw-bold">pdf</span></li>
+                              <li className="d-flex"><i className="bi bi-calendar-week"></i><span className="me-1">Last Updated: </span><span className="fw-bold"> Nov 10</span></li>
+                              {/* <li><i className="bi bi-gear"></i><span>Dec 12</span></li> */}
+                              <li className="d-flex"><i className="bi bi-file-earmark-richtext"></i><span className="me-1">max Size:</span><span className="fw-bold">10mb</span></li>
+                              <li className="d-flex"><i className="bi bi-file-earmark-medical"></i><span className="me-1">File Type:</span><span className="fw-bold">pdf</span></li>
                             </ul>
                           </div>
-                          <button type="button" class="btn btn-outline-primary">Download Resume <i class="bi bi-download"></i>
+                          <button type="button" className="btn btn-outline-primary">Download Resume <i className="bi bi-download"></i>
                           </button>
                         </div>
                       </div>
@@ -270,7 +408,7 @@ const Dashboard = () => {
                             <ul className="d-flex flex-column">
                               <li><span className="fw-bold me-1">Call Date:</span><span>21/12/2024</span></li>
                               <li><span className="fw-bold me-1">Call Time:</span><span>05:30 PM</span></li>
-                              <li><span className="fw-bold me-1">Schedule Call:</span><span><a className=""><i class="bi bi-telephone"></i> Call</a>
+                              <li><span className="fw-bold me-1">Schedule Call:</span><span><a className=""><i className="bi bi-telephone"></i> Call</a>
                               </span></li>
                             </ul>
                           </div>
@@ -324,7 +462,7 @@ const Dashboard = () => {
                           </div>
                           {/* <label for="formFile" className="form-label">Default file input example</label> */}
                           <input className="form-control mb-4" type="file" id="formFile"/>
-                          <button type="button" class="btn btn-outline-primary">Download</button>
+                          <button type="button" className="btn btn-outline-primary">Download</button>
                         </div>
                       </div>
 
