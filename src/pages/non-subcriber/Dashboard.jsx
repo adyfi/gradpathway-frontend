@@ -156,7 +156,7 @@ const Dashboard = () => {
                           <div className="shadow-border dashboard-box" >
                             <h3 className="mb-4">Analytics</h3>
                             <div className="graph-wrap">
-                              <img src="./donut-chart.webp" alt="" />
+                              <img src="./ss-temp.png"  alt="" />
                             </div>
                           </div>
                         </div>                          
