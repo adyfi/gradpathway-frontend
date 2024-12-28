@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useFetchBlogPosts from '../../hooks/useFetchBlogPosts';
+import AOS from 'aos';
 
 function formatIsoDateCustom(isoDate) {
     const date = new Date(isoDate);
@@ -11,24 +12,22 @@ function formatIsoDateCustom(isoDate) {
     return `${day} ${month} ${year}`;
 }
 
-
 const Blogs = () => {
     const { posts, loading, error } = useFetchBlogPosts();
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true, 
+        });
+      }, []);
 
     return <div>
-        <div className="inner-page-wrapper">
-            <div className="inner-text-image-banner">
-                <div className="image-wrapper">
-                    <img src="/img/books-with.webp" alt="" />
-                </div>
-                <div className="text-banner-content">
-                    <h2>Our Blogs</h2>
-                    <p>Stay updated with expert insights, industry news, and creative innovations</p>
-                </div>
-            </div>
-
+        <div className="inner-page-wrapper" style={{ marginTop: "20vh" }}>
+            <h1 className='text-center fw-bolder display-4'>Our <span className='text-primary-2'>Blogs</span></h1>
+            <p className='col-md-6 offset-md-3 text-center'>
+                Explore insightful articles, tips, and resources designed to guide you on your career and education journey. Stay informed, inspired, and ahead in the competitive global landscape.
+            </p>
             <div className="blog-details-wrapper pt-5">
-
                 <div className="container">
                     {/* <div className="map-search-box">
                         <div className="input-group">
@@ -62,30 +61,33 @@ const Blogs = () => {
                         </div>
                     </div>
                 </div> */}
+
                 {loading && <p>Loading blogs...</p>}
                 {error && <p>Error: {error}</p>}
 
                 {!loading && !error && posts && (
-                    <div className="blog-list-wrapper">
+                    <div className="blog-list-wrapper mb-5">
                         <div className="container">
                             <div className="row">
-                                {posts.map(post => (
-                                    <div className="col-md-4">
-                                        <div className="blog-box">
-                                            <div className="image-wrapper">
-                                                <img src="/img/manager-women-working.webp" alt="" className="img-fluid" />
-                                            </div>
-                                            <div className="text-wrapper">
-                                                <h3>{post.title}</h3>
-                                                <div className="timeing">
-                                                    <span>{formatIsoDateCustom(post.created_at)}</span>
-                                                    {/* <span>10min ago</span> */}
+                                {posts && posts.length > 0 && posts?.map(post => (
+                                    <div className="col-md-4 p-3" key={post.slug} data-aos="fade-up">
+                                        <Link className='isLink' to={`/blogs/${post.id}`}>
+                                            <div className="blog-box">
+                                                <div className="image-wrapper">
+                                                    <img src="/img/manager-women-working.webp" alt="" className="img-fluid rounded" />
                                                 </div>
-                                                <p>
-                                                    {post.subtitle ? post.subtitle : "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-                                                </p>
+                                                <div className="text-wrapper pt-3">
+                                                    <h5 className='text-primary-2 fw-bold'>{post.title}</h5>
+                                                    <small className='text-dark'>
+                                                        {post.overview ? post.overview : ""}
+                                                    </small>
+
+                                                    <div className="timeing mt-3 d-flex justify-content-end">
+                                                        <small>{formatIsoDateCustom(post.created_at)}</small>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </div>
                                 ))}
                             </div>
@@ -93,14 +95,6 @@ const Blogs = () => {
                     </div>
                 )}
             </div>
-            <section className="opportunities-wrapper">
-                <div className="opportunities-content">
-                    <h2>Unlock new career opportunities
-                        with us</h2>
-                    <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
-                </div>
-            </section>
-
 
         </div>
     </div>

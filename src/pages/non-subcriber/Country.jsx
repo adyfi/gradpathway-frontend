@@ -1,92 +1,118 @@
-import React from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { Link } from 'react-router-dom';
-// const position = [51.505, -0.09];
-// const mapStyle = { height: "90vh" };
-const position = [51.505, -0.09]
+import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import { useEffect } from "react";
 
-const ContactUs = () => {
+const CountryHome = () => {
+    const navigate = useNavigate();
 
-    // let markers;
+    const handleCountryClick = (country) => {
+        console.log(`Selected country: ${country}`);
+        country === "UK" ? navigate("/home") : navigate("/launching");
+    };
 
-    // const addMarkers = () => {
-    //   markers = [];
-    //   for (let i = 0; i < 10000; i++) {
-    //     markers.push({
-    //       position: {
-    //         lng: -122.673447 + Math.random() * 200.0,
-    //         lat: 45.5225581 - 60 + Math.random() * 80
-    //       }
-    //     });
-    //   }
-    // };
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
 
-    // addMarkers();
-
-    return <div>
-        <div className="inner-page-wrapper">
-
-            <div className="inner-text-banner">
-                <div className="text-banner-content">
-                    <h2>GradPathWay</h2>
-                    <p>We help students achieve desired careers by innovating their skills</p>
+    return <>
+        <div className="container mt-15vh">
+            <div className="d-flex justify-content-center">
+                <div className="col-md-5 py-4 d-flex pt-5">
+                    <h1 className="text-primary-2 fw-bolder pt-5">
+                        Empowering Your Global Career Journey
+                    </h1>
+                </div>
+                <div className="col-md-7">
+                    <img src={"./world-map-big.jpg"} width={"100%"} />
                 </div>
             </div>
-
-            <div className="map-wrapper">
-                <div className="map-html-code">
-                    <h2>Choose a country based on your preferences</h2>
-                    <div className="map-container" style={{ width: '400px', height: '500px' }}>
-                        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-                            <TileLayer
-                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            />
-                            <Marker position={position}>
-                                <Popup>
-                                    A pretty CSS3 popup. <br /> Easily customizable.
-                                </Popup>
-                            </Marker>
-                        </MapContainer>
-                    </div>
-                    {/* <div className="map-search-box"> */}
-
-                        {/* <div className="input-group">
-                        <input className="form-control border-end-0 border rounded-pill" type="search" value="search" id="example-search-input" />
-                        <span className="input-group-append">
-                            <button className="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
-                                <i className="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div> */}
-                    {/* </div> */}
-
-                    {/* <div className="mapouter"> */}
-                    {/* <Map center={position} zoom={2} style={mapStyle} maxZoom={20}>
-        <TileLayer
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <MarkerCluster markers={markers} addMarkers={addMarkers} />
-      </Map> */}
-                    {/* <div className="gmap_canvas">
-                        <iframe className="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                        <a href="https://sprunkin.com/">Sprunki Incredibox</a>
-                    </div>
-                    <style>{'.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}'}</style> */}
-                    {/* </div> */}
-                </div>
-            </div>
-            <section className="opportunities-wrapper">
-                <div className="opportunities-content">
-                    <h2>Unlock new career opportunities
-                        with us</h2>
-                    <Link to={"/contactus"} className="btn btn-secondary" href="#">Get in Touch</Link>
-                </div>
-            </section>
-
         </div>
-    </div>
+
+
+        <div className="containeer-fluid mt-5 p-2 py-5 bg-edf7fa">
+            <div className="container ">
+                <div className="row">
+                    <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <h1 className="text-primary-2 fw-bolder">
+                            Why Choose GradPathway?
+                        </h1>
+                        <p className="text-secondary">
+                            Navigating today's global job market is complex, especially for international students who need
+                            support aligning their skills with employer expectations. GradPathway is more than just an
+                            ed-tech platform - we're a career catalyst. Our approach combines advanced AI tools and a
+                            powerful ROI calculator to help you measure and maximize the impact of your academic
+                            investment. By focusing on project-based learning, tailored career services, and digital
+                            skill-building, we're committed to your long-term success. Join GradPathway and unlock your
+                        </p>
+                    </div>
+                    <div className="col-md-6 text-center" data-aos="fade-left">
+                        <iframe width="500px" height="300" src="https://www.youtube.com/embed/UQtwRZ56AjE" title="Project Control Expo UK highlight video 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="containeer-fluid mt-5 p-2 py-5 px-md-5 px-2">
+            <div className="container mb-5">
+                <h1 className="text-primary-2 col-md-8 offset-md-2 text-center fw-bolder mb-5 display-5" data-aos="fade-up">Connecting Potentials to Professionals</h1>
+            </div>
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
+                <div className="col-md-7 ps-4 py-3">
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay UK</h1>
+                    <p className="h4">London</p>
+                    {/* <p className="h4">5-6 November 2024</p> */}
+                    <a href="/home" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                </div>
+                <div className="col-md-5">
+                    <img src="./expo/uk.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                </div>
+            </div>
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
+                <div className="col-md-5">
+                    <img src="./expo/usa.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                </div>
+                <div className="col-md-7 ps-4 py-3">
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay USA</h1>
+                    <p className="h4">Washington DC</p>
+                    {/* <p className="h4">7-9 October 2024</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                </div>
+            </div>
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
+                <div className="col-md-7 ps-4 py-3">
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay UAE</h1>
+                    <p className="h4">Dubai</p>
+                    {/* <p className="h4">18-19 February 2025</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                </div>
+                <div className="col-md-5">
+                    <img src="./expo/uae.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                </div>
+            </div>
+            <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-right" data-aos-delay="500">
+                <div className="col-md-5">
+                    <img src="./expo/aus.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
+                </div>
+                <div className="col-md-7 ps-4 py-3">
+                    <h1 className="text-primary-2 fw-bolder">GradPathWay Australia</h1>
+                    <p className="h4">Melbourne</p>
+                    {/* <p className="h4">26-27 November 2024</p> */}
+                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                </div>
+            </div>
+
+            <div className="row py-5 border bg-light">
+                <h1 className="text-primary-2 text-center display-3 fw-bolder">Need more information?</h1>
+                <div className="text-center">
+                    <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Schedule a Call</a>
+                </div>
+            </div>
+        </div>
+
+    </>
 };
 
-export default ContactUs;
+export default CountryHome;

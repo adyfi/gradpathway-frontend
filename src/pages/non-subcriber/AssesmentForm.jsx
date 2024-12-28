@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { sendRecommendationRequest } from '../../api/api';
 import { AssessmentAnalytics } from './AssessmentAnalytics';
 import "./animationForm.css"
-import Loader from '../../components/Loader';
+import Loader from '../../components/loader';
 
 const AssesmentForm = () => {
     const [personalDetails, setPersonalDetails] = useState(null)
     const [formData, setFormData] = useState({
-        name: "Enter Name",
-        email: "example.email@gmail.com",
+        name: "",
+        email: "",
         phone_number: "+44 1234567890",
-        linkedin_profile: "Year",
+        linkedin_profile: "https://www.linkedin.com/",
         current_course: "Master's in Computer Science",
         highest_education: "Bachelor's in IT",
         work_experience_home_country: "2 years in software development",
@@ -36,7 +36,7 @@ const AssesmentForm = () => {
         is_backup_plan: 'Yes',
         backup_plan: "Pursue further certifications",
         cvFile: null,
-
+        graduation_year:2024,
         rel_work_exp: 'Not Relevant',
         work_exp_in_uk: 'Yes',
         identified_preferd_companies: "Yes"
@@ -88,10 +88,9 @@ const AssesmentForm = () => {
                 linkedIn: formData.linkedin_profile,
             })
             const response = await sendRecommendationRequest(formData);
-            alert("recommendation Successfully");
-            setLoading(false);
-            console.log("response?.status ")
-            console.log(response?.status)
+            // alert("recommendation Successfully");
+            // console.log("response?.status ") 
+            // console.log(response?.status)
             if (response?.status === 200 || response?.status === 201) {
                 const recommendationData = response.data?.recommendation;
                 console.log("response.data?.recommendation")
@@ -128,12 +127,6 @@ const AssesmentForm = () => {
         }
     };
 
-    if (loading) {
-        return (
-            <Loader />
-        );
-    }
-
     const handleNext = () => {
         setCurrentSection((prev) => prev + 1);
     };
@@ -150,7 +143,7 @@ const AssesmentForm = () => {
         console.log("{ showAnalytics, likelihoods, recommendedPackage, reasoning, improvementTips }");
         console.log({ showAnalytics, likelihoods, recommendedPackage, reasoning, improvementTips });
     }, [showAnalytics])
-
+    
     if (showAnalytics) {
         console.log("{ likelihoods, recommendedPackage, reasoning, improvementTips }");
         console.log({ likelihoods, recommendedPackage, reasoning, improvementTips });
@@ -167,6 +160,8 @@ const AssesmentForm = () => {
         )
     }
     return (<>
+
+        {loading && <Loader />}
         <div className="container-fluid aform-container">
             <div className="lines">
                 <div className="line"></div>
@@ -203,7 +198,7 @@ const AssesmentForm = () => {
                             <li className={` ${currentSection === 2 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Skills and Competencies </li>
                             <li className={` ${currentSection === 3 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Career Goals and Preferences</li>
                             <li className={` ${currentSection === 4 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Cultural Fit and Soft Skills </li>
-                            <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li>
+                            {/* <li className={` ${currentSection === 10 ? 'bg-ptitle-form text-primary-2 fw-bolder' : ''} mb-0 py-1 px-2 rounded small`}> Next Steps </li> */}
 
                         </ul>
                     </div>
@@ -218,7 +213,7 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="name" className="form-label">Full Name</label>
+                                        <label htmlFor="name" className="form-label">Full Name <span className='text-danger'>*</span></label>
                                         <input
                                             type="text"
                                             placeholder="Enter your full name"
@@ -230,9 +225,8 @@ const AssesmentForm = () => {
                                             required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="email" className="form-label">Email Address</label>
+                                        <label htmlFor="email" className="form-label">Email Address <span className='text-danger'>*</span></label>
                                         <input
                                             type="email"
                                             placeholder="Enter your email"
@@ -241,11 +235,11 @@ const AssesmentForm = () => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
+                                            required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="phone_number" className="form-label">Phone Number</label>
+                                        <label htmlFor="phone_number" className="form-label">Phone Number <span className='text-danger'>*</span></label>
                                         <input
                                             type="text"
                                             placeholder="Enter your phone number"
@@ -254,9 +248,9 @@ const AssesmentForm = () => {
                                             name="phone_number"
                                             value={formData.phone_number}
                                             onChange={handleChange}
+                                            required
                                         />
                                     </div>
-
                                     <div className="p-3 pt-1 col-md-12">
                                         <label htmlFor="linkedin_profile" className="form-label">LinkedIn Profile URL</label>
                                         <input
@@ -283,13 +277,14 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="highest_education" className="form-label">1. What is your highest level of education completed?</label>
+                                        <label htmlFor="highest_education" className="form-label">1. What is your highest level of education completed? <span className='text-danger'>*</span></label>
                                         <select
                                             className="form-select"
                                             id="highest_education"
                                             name="highest_education"
                                             value={formData.highest_education}
                                             onChange={handleChange}
+                                            required
                                         >
                                             <option value="">Open this select menu</option>
                                             <option value="1">Bachelor's</option>
@@ -300,7 +295,7 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="field_of_study" className="form-label">2. What is your major or field of study?</label>
+                                        <label htmlFor="field_of_study" className="form-label">2. What is your major or field of study? <span className='text-danger'>*</span></label>
                                         <select
                                             className="form-select"
                                             id="field_of_study"
@@ -317,8 +312,8 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12">
-                                        <label htmlFor="graduation_year" className="form-label">3. What year did you graduate or expect to graduate?</label>
-                                        <input
+                                        <label htmlFor="graduation_year" className="form-label">3. What year did you graduate or expect to graduate? <span className='text-danger'>*</span></label>
+                                        {/* <input
                                             type="text"
                                             placeholder="Enter the graduation year"
                                             className="form-control"
@@ -326,7 +321,24 @@ const AssesmentForm = () => {
                                             name="graduation_year"
                                             value={formData.graduation_year}
                                             onChange={handleChange}
-                                        />
+                                        /> */}
+                                          <select
+                                                className="form-control"
+                                                id="graduation_year"
+                                                name="graduation_year"
+                                                value={formData.graduation_year}
+                                                onChange={handleChange}
+                                            >
+                                                <option value="" disabled>Select year</option>
+                                                {Array.from({ length: 31 }, (_, index) => {
+                                                    const year = 2000 + index; // Generate years from 2000 to 2030
+                                                    return (
+                                                        <option key={year} value={year}>
+                                                        {year}
+                                                        </option>
+                                                    );
+                                                })}
+                                            </select>
                                     </div>
 
                                     <div className="p-3 pt-1 col-md-12 py-4">
@@ -422,7 +434,12 @@ const AssesmentForm = () => {
                                     </div>
 
                                     <div className="d-md-flex justify-content-end">
-                                        <button type="button" className="btn text-white bg-black mt-3" onClick={handleNext}>
+                                        <button 
+                                            type="button" 
+                                            className="btn text-white bg-black mt-3" 
+                                            onClick={handleNext}
+                                            disabled={!formData.name || !formData.email || !formData.phone_number }
+                                        >
                                             Continue
                                         </button>
                                     </div>
@@ -1083,7 +1100,6 @@ const AssesmentForm = () => {
                                     </div>
                                 </div>
 
-
                             )}
 
                             {currentSection === 3 && (
@@ -1332,8 +1348,8 @@ const AssesmentForm = () => {
                                         <button type="button" className="btn btn-light mt-3 me-3" onClick={handleBack}>
                                             Back
                                         </button>
-                                        <button type="submit" className="btn text-white bg-black mt-3" onClick={handleSubmit}>
-                                            Continue
+                                        <button type="submit" className="btn text-white bg-success mt-3" onClick={handleSubmit}>
+                                            Submit
                                         </button>
                                     </div>
                                 </div>

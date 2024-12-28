@@ -1,52 +1,97 @@
-import React from 'react'; 
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.scss';
+
 // import grandpathwayLogo from './img/grandpathway-logo.svg';
 // import home.svg from './img/home.svg';
-const UnprotectedHeader = () => 
-<header>
-            {/* <!-- main menu section HTML  --> */}
-            <nav className="navbar navbar-expand-lg fixed-top">
-      <div className="container">
-      <Link to={"/"} className="navbar-brand">
-          <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" />
-      </Link>
+  // const offersText = [
+  //   ' 📝 Unlock Your Potential with a Free Career Assessment! Get personalized tips and insights tailored to your goals, and take the first step toward achieving career success!',
+  //   ' 🌟 Become a Mentor: Empower, Inspire, and Monetize Your Expertise!',
+  //   ' 💼 JobBoardAI: Your Instant Resume & Cover Letter Personalization Tool!'
+  // ]
+const UnprotectedHeader = () =>{
+  // const titles = [
+  //   "📝 Unlock Your Potential with a Free Career Assessment!",
+  //   "🌟 Discover Your Dream Career Path Today!",
+  //   "💡 Personalized Tips to Boost Your Career!",
+  //   "🚀 Take the First Step Toward Your Future!"
+  // ];
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to={"/home"} className="nav-link active" aria-current="page" href="#"><i><img src="/img/home.svg"
-                    alt="" /></i>Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/services"} className="nav-link" aria-current="page" href="#"><i><img src="/img/services.svg"
-                    alt="" /></i>
-                    Services
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/aboutus"} className="nav-link" href="#"><i><img src="/img/aboutus.svg" alt="" /></i>
-                About us
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/blogs"} className="nav-link" href="#"><i><img src="/img/blogs.svg" alt="" /></i>
-                Blogs
-              </Link>
-            </li>
-          </ul>
+  // const [currentTitle, setCurrentTitle] = useState(titles[0]);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentTitle((prevTitle) => {
+  //       const currentIndex = titles.indexOf(prevTitle);
+  //       const nextIndex = (currentIndex + 1) % titles.length;
+  //       return titles[nextIndex];
+  //     });
+  //   }, 4000);
+  //   return () => clearInterval(interval);
+  // }, []);
+  const toggleNav = () => {
+    const x = document.getElementById("myTopnav");
+    if (x.className === "nav-collapse-wrapper") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-collapse-wrapper"; // Adjusted to match your default class
+    }
+  };
+  return ( <>
+    <nav className='custom-navbar-wrapper position-relative fixed-top'>
+      {/* <div className='nav-heading bg-primary-2 p-1 text-white text-center fixed-top'>
+          <small>📝 Unlock Your Potential with a Free Career Assessment!</small>
+        </div> */}
+      <div className='container-fluid fixed-top bg-nav'>
+        
+        <div className='navbar-content navbar-light d-flex py-1 '>
+          <a className="navbar-brand" href="/">
+            <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height={"50px"} />
+          </a>
+          <div className='nav-collapse-wrapper d-flex align-items-center ' id='myTopnav'>
+            <ul className='d-flex m-0' >
+              <li><Link to={"/home"}>Home</Link></li>
+              <li className="dropdown">
+                <a href="#" className="dropdown-toggle">
+                  About
+                </a>
+                <ul className="dropdown-menu py-3 px-2">
+                  <li><a className="dropdown-item" href="/about"><i><img src='./nav-information.webp' alt=""/></i>About</a></li>
+                  <li><a className="dropdown-item" href="/faq"><i><img src='./nav-faq.webp' alt=""/></i>FAQ</a></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><a className="dropdown-item" href="/success-stories"><i><img src='./nav-success.webp' alt=""/></i>Success Stories</a></li>
+                </ul>
+              </li>
+              <li className="dropdown">
+                <a className="dropdown-toggle">
+                  Tools
+                </a>
+                <ul className="dropdown-menu px-2 py-3">
+                  <li><a className="dropdown-item" href="/roi"><i><img src='./nav-calculator.webp' alt=""/></i>ROI Calculator</a></li>
+                  <li><a className="dropdown-item" href="/assesment"><i><img src='./nav-survey.webp' alt=""/></i>AI Asssesment</a></li>
+                </ul>
+              </li>
+              <li><Link  to={"/services"}>Services</Link></li>
+              <li><Link  to={"/blogs"}>Blogs</Link></li>
+              <li><Link  to={"/mentor"}>Mentor</Link></li>
+              <li><Link  to={"/recruiter"}>Recruiter</Link></li>
+              <li><Link  to={"/contact"}>Contact</Link></li>
+            </ul>
+          </div>
+          <div className='login-btn d-flex align-items-center'>
+            <a href='/login' class="btn btn-p d-flex align-items-center gap-2 rounded-pill">
+              <span class="m-0">
+                Login
+              </span>
+              <img src="./arrow-right.svg" class="icon-arrow-right" alt="" />
+            </a>
+          </div>
+          <div className='mobile-icon d-none' onClick={toggleNav}>
+          <img src='./interface.png' alt='hamburger icon' />
+          </div>
         </div>
-        <div className="getintouch-nav">
-          <Link to={"/login"} className="login" href="#">Login</Link>
-          <Link to={"/contactus"} className="getintouch" href="#"><i><img src="/img/user.svg" alt="" /></i>Get in Touch</Link>
-          
-        </div>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
       </div>
     </nav>
-    {/* <!-- main menu section HTML END --> */}
-</header>; 
+  </>)}
+  ;
 export default UnprotectedHeader;

@@ -7,7 +7,7 @@ const Homepage = () => {
         <div className="row">
           <div className="col-md-5 col-lg-6">
             <div className="banner-text">
-              <h1>Welcome to GradPathway</h1>
+              <h1 className="text-primary">Welcome to GradPathway</h1>
               <h2>
                 Your trusted partner in bridging the gap between academic
                 success and career achievement across the UK, US, Australia, and
