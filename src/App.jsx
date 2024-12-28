@@ -32,7 +32,6 @@ import CountryPageLayout from './layouts/CountryPageLayout.jsx';
 import ServicesBundle from './pages/non-subcriber/ServicesBundle.jsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import 'aos/dist/aos.css';
 
 function App() {
   return (

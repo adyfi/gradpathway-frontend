@@ -26,6 +26,30 @@ export const login = async () => {
   }
 };
 
+export const register = async () => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+
+  const data = JSON.stringify({ email, password });
+  const config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: `${baseURL}/users/register/`,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+
+  try {
+    const response = await axios.request(config);
+    const accessToken = response.data.tokens.access
+    console.log(JSON.stringify(response.data));
+    return accessToken;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export const fetchBlogPosts = async () => {
   const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
   const config = {
@@ -76,6 +100,7 @@ export const createMentor = async (data) => {
     const response = await axios.request(config);
     return response;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
@@ -96,6 +121,7 @@ export const createRecruiter = async (data) => {
     const response = await axios.request(config);
     return response;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };

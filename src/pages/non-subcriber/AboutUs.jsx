@@ -61,10 +61,10 @@ const AboutUs = () => {
                 </div>
                 <div className="lc-block text-muted">
                     <div editable="rich">
-                        <p> We believe that your international education journey should culminate in a rewarding career. Our AI-powered platform is designed to elevate your job search experience, ensuring you're not just ready but equipped to stand out in competitive job markets worldwide.</p>
+                        <p> We believe that your international education journey should culminate in a rewarding career. Our AI-powered platform is designed to elevate your job search experience, ensuring you're not just ready, but equipped to stand out in competitive job markets worldwide.</p>
 
                         <h3 className='text-dark'>Our Vision & Mission</h3>   
-                        <p>We believe that your international education journey should culminate in a rewarding career. Our AI-powered platform is designed to elevate your job search experience, ensuring you're not just ready but equipped to stand out in competitive job markets worldwide.</p> 
+                        <p>We believe that your international education journey should culminate in a rewarding career. Our AI-powered platform is designed to elevate your job search experience, ensuring you're not just ready, but equipped to stand out in competitive job markets worldwide.</p> 
 
                         <h3 className='text-dark'>Why Choose GradPathWay?</h3>
                         <p>At GradPathWay, we are committed to providing you with the tools, resources, and guidance you need to succeed in the global job market. With access to personalized career advice, skill-building resources, and tailored job opportunities, our platform ensures that you are not only prepared but also positioned for success. Join us today and take the next step toward a thriving career with confidence.</p>

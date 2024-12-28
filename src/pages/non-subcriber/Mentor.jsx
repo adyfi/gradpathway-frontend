@@ -21,9 +21,9 @@ export const Mentor = () => {
                         <div editable="rich" >
                             <h1 className="text-primary-2 display-5 fw-bolder" data-aos="fade-left">The Ultimate Monetization Platform for Mentors</h1>
                             <p data-aos="fade-left">
-                                Unlock the full potential of your expertise with gradpathway, the all-in-one tool designed to help mentors build and grow their revenue streams. Seamlessly connect 1:1 with your followers to provide personalized guidance, host interactive webinars to engage larger audiences, or sell your expertly crafted guides to share your knowledge at scale.
+                                Unlock the full potential of your expertise with GradPathway, the all-in-one tool designed to help mentors build and grow their revenue streams. Seamlessly connect 1:1 with your followers to provide personalized guidance, host interactive webinars to engage larger audiences, or sell your expertly crafted guides to share your knowledge at scale.
                                 <br /> <br />
-                                gradpathway empowers you to focus on what you do best—mentoring—while we handle the rest. Whether you're looking to enhance your personal brand, expand your reach, or create new income opportunities, gradpathway makes it simple and effective. Your expertise, your way—monetize with ease using gradpathway!
+                                GradPathway empowers you to focus on what you do best—mentoring—while we handle the rest. Whether you're looking to enhance your personal brand, expand your reach, or create new income opportunities, GradPathway makes it simple and effective. Your expertise, your way—monetize with ease using GradPathway!
                             </p>
                         </div>
                     </div>

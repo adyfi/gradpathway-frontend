@@ -181,3 +181,10 @@ background: linear-gradient(0deg, rgba(34,101,176,1) 35%, rgba(75,171,201,1) 100
     color: white;
     border-color: #f5a623;
 }
+
+.disabled-btn-style:disabled {
+  background-color: #b3b3b3;
+  color: #ffffff; 
+  cursor: not-allowed; 
+  opacity: 0.6; 
+}
