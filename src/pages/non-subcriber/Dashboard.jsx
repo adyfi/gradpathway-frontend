@@ -265,9 +265,11 @@ const Dashboard = () => {
                           </div>
                         </div>
 
-                        <div className="col-md-8 mb-4">
+                        <div className="col-md-6 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./resume.webp" alt="resue"/></span>Personalized Interview Question Answers</h3>
+                            <h3>
+                              {/* <span><img src="./resume.webp" alt="resue"/></span> */}
+                              Personalized Interview Question Answers</h3>
                             <p>Crafted based on your work
                               experience, education, and projects to ensure youre prepared for any
                               interview.</p>
@@ -282,9 +284,11 @@ const Dashboard = () => {
                           </div>
                         </div>
  
-                        <div className="col-md-8 mb-4">
+                        <div className="col-md-6 mb-4">
                           <div className="shadow-border dashboard-box" >
-                            <h3><span><img src="./customer-service.webp" alt="resue"/></span>Weekly Job Subscription</h3>
+                            <h3>
+                              {/* <span><img src="./customer-service.webp" alt="resue"/></span> */}
+                              Weekly Job Subscription</h3>
                             <p> A weekly subscription delivering the latest jobs specific to your profile.
                             </p>
                             <div className="">
