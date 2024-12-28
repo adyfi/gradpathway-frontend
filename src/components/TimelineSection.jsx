@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AOS from 'aos';
 
-export const TimelineSection = () => {
+const TimelineSection = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -21,7 +21,7 @@ export const TimelineSection = () => {
                     </div>
                     <div className="lc-block">
                         <div editable="rich">
-                            <p className="lead" data-aos="fade-up">We understand the challenges of job hunting, which is why we've designed services to support you at every stage of the process..</p>
+                            <p className="lead" data-aos="fade-up">We understand the challenges of job hunting, which is why we've designed services to support you at every stage of the process.</p>
                         </div>
                     </div>
                 </div>
@@ -99,3 +99,6 @@ export const TimelineSection = () => {
         </>
     )
 }
+
+
+export default TimelineSection
