@@ -45,10 +45,10 @@ const Login = () => {
             <div className="col-md-5 m-auto login-content shadow-sm p-4 rounded border">
               <h1 className='text-primary'>User Login</h1>
               <div className="contact-form">
-                <div className="mb-3">  
+                {/* <div className="mb-3">  
                   <label for="formGroupExampleInput" className="form-label">Full Name</label>
                   <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
-                </div>
+                </div> */}
                 <div className="mb-3">
                   <label for="formGroupExampleInput2"  className="form-label">Email Id</label>
                   <input type="text" className="form-control" onChange={(e) => setUsername(e.target.value)} id="formGroupExampleInput2" placeholder="example@gmail.com" />

@@ -19,7 +19,7 @@ export const HomeHero = () => {
                             </p>
                             <h1 className="display-5 fw-bolder">Your <span className='text-primary-2'>partner</span> in landing your <span className='text-primary-2'>next</span> career <span className='text-primary-2'>opportunity</span></h1>
                             <p>
-                                We've helped over 100,000 people land their dream jobs. Let our job search strategies take you from resumes to better days.
+                                We've helped over 100,000 people secure their dream jobs. Let our job search strategies guide you from writing resumes to achieving better days.
                             </p>
                     </div>
                     {/* <div className="lc-block d-flex mb-5">

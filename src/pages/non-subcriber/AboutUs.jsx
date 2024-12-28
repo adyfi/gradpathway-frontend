@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Testimonials } from '../../components/Testimonials';
 import AOS from 'aos';
+import { ButtonPrimary } from '../../components/buttons/ButtonPrimary';
 
 const AboutUs = () => {
     useEffect(() => {
@@ -104,6 +105,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
+            <ButtonPrimary title={'Services'} link={'/services'} />   
         </div>
     </div>
     <Testimonials />

@@ -1,10 +1,67 @@
 .main-wrapper{
-    
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
 }
 
 .text-subtitle{
     color: #585858;
 }
+
+.dashboard-img{
+    z-index: 6;
+}
+
+.ai-job-img{
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 15px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50px;
+    transform-origin: center;
+    z-index: 3;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.ai-job-1{
+    top: 25vh;
+    left: -40px;
+    transform: rotate(15deg);
+}
+
+.ai-job-2{
+    top: 30vh;
+    right: -40px;
+    transform: rotate(-15deg);
+}
+
+
+.ai-job-3{
+    top: 105vh;
+    left: 60px;
+}
+
+
+.ai-job-4{
+    top: 105vh;
+    right: 60px;
+}
+
+// .ai-job-1 {
+//     width: 360px;
+//     height: auto;
+//     border: 15px solid rgba(255, 255, 255, 0.22);
+//     border-radius: 50px;
+//     position: absolute;
+//     top: 40vh;
+//     right: -40px;
+//     transform: rotate(-15deg);
+//     transform-origin: center;
+//     z-index: 3;
+//   }
 
 .hero{
     padding-top: 8rem;
