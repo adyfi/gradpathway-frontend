@@ -88,7 +88,7 @@
                 transition: all 0.3s ease-in-out;
             }
             &:hover {
-                color: white;
+                // color: white;
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 transform: scale(1.1);
                 .icon-arrow-right {
@@ -98,7 +98,7 @@
                 }
                 .icon-stars {
                     animation: blink 1s infinite;
-                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(259deg) brightness(101%) contrast(103%);
+                    // filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(259deg) brightness(101%) contrast(103%);
                 }
             }
             .icon-stars {

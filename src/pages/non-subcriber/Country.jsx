@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import { useEffect } from "react";
+import { ButtonPrimary } from "../../components/buttons/ButtonPrimary";
 
 const CountryHome = () => {
     const navigate = useNavigate();
@@ -62,9 +63,10 @@ const CountryHome = () => {
             <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">GradPathWay UK</h1>
-                    <p className="h4">London</p>
+                    <p className="h4 mb-4">London</p>
                     {/* <p className="h4">5-6 November 2024</p> */}
-                    <a href="/home" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                    {/* <a href="/home" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a> */}
+                    <ButtonPrimary title={'Explore'} link={'/home'} /> 
                 </div>
                 <div className="col-md-5">
                     <img src="./expo/uk.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
@@ -76,17 +78,19 @@ const CountryHome = () => {
                 </div>
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">GradPathWay USA</h1>
-                    <p className="h4">Washington DC</p>
+                    <p className="h4 mb-4">Washington DC</p>
                     {/* <p className="h4">7-9 October 2024</p> */}
-                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                    {/* <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a> */}
+                    <ButtonPrimary title={'Explore'} link={'/launching'} />
                 </div>
             </div>
             <div className="row my-5 p-3 border bg-F8FDFF" data-aos="fade-left" data-aos-delay="500">
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">GradPathWay UAE</h1>
-                    <p className="h4">Dubai</p>
+                    <p className="h4 mb-4">Dubai</p>
                     {/* <p className="h4">18-19 February 2025</p> */}
-                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                    {/* <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a> */}
+                    <ButtonPrimary title={'Explore'} link={'/launching'} />
                 </div>
                 <div className="col-md-5">
                     <img src="./expo/uae.webp" className="rounded shadow-sm" width={"100%"} alt="usa" />
@@ -98,16 +102,18 @@ const CountryHome = () => {
                 </div>
                 <div className="col-md-7 ps-4 py-3">
                     <h1 className="text-primary-2 fw-bolder">GradPathWay Australia</h1>
-                    <p className="h4">Melbourne</p>
+                    <p className="h4 mb-4">Melbourne</p>
                     {/* <p className="h4">26-27 November 2024</p> */}
-                    <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a>
+                    {/* <a href="/launching" className="btn btn-primary rounded-pill mt-4 px-5">Explore</a> */}
+                    <ButtonPrimary title={'Explore'} link={'/launching'} />
                 </div>
             </div>
 
             <div className="row py-5 border bg-light">
                 <h1 className="text-primary-2 text-center display-3 fw-bolder">Need more information?</h1>
-                <div className="text-center">
-                    <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Schedule a Call</a>
+                <div className="d-flex justify-content-center">
+                    {/* <a href="/contact" className="px-5 btn btn-primary rounded-pill shadow-sm">Schedule a Call</a> */}
+                    <ButtonPrimary title={'Schedule a Call'} link={'/contact'} />
                 </div>
             </div>
         </div>
