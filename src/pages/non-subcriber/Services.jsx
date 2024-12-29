@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
 const ToggleSwitch = ({ planToggle, setPlanToggle }) => (
-    <label className={"switch round"}>
+    <label className={"custom-switch round"}>
         <input type="checkbox" checked={planToggle} onChange={() => setPlanToggle(!planToggle)} />
         <span className={"slider round"} />
     </label>

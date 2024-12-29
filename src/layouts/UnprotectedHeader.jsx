@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
+import { ButtonPrimary } from '../components/buttons/ButtonPrimary';
+import { FaPhone } from 'react-icons/fa';
+import { FiPhoneCall } from 'react-icons/fi';
 
 // import grandpathwayLogo from './img/grandpathway-logo.svg';
 // import home.svg from './img/home.svg';
@@ -57,6 +60,7 @@ const UnprotectedHeader = () =>{
                 </a>
                 <ul className="dropdown-menu py-3 px-2">
                   <li><a className="dropdown-item" href="/about"><i><img src='./nav-information.webp' alt=""/></i>About</a></li>
+                  <li><a className="dropdown-item" href="/contact"> <i className='h5 me-3'><FiPhoneCall /></i>Contact</a></li>
                   <li><a className="dropdown-item" href="/faq"><i><img src='./nav-faq.webp' alt=""/></i>FAQ</a></li>
                   <li><hr className="dropdown-divider" /></li>
                   <li><a className="dropdown-item" href="/success-stories"><i><img src='./nav-success.webp' alt=""/></i>Success Stories</a></li>
@@ -71,20 +75,14 @@ const UnprotectedHeader = () =>{
                   <li><a className="dropdown-item" href="/assesment"><i><img src='./nav-survey.webp' alt=""/></i>AI Asssesment</a></li>
                 </ul>
               </li>
-              <li><Link  to={"/services"}>Services</Link></li>
-              <li><Link  to={"/blogs"}>Blogs</Link></li>
-              <li><Link  to={"/mentor"}>Mentor</Link></li>
-              <li><Link  to={"/recruiter"}>Recruiter</Link></li>
-              <li><Link  to={"/contact"}>Contact</Link></li>
+              <li><Link to={"/services"}>Services</Link></li>
+              <li><Link to={"/blogs"}>Blogs</Link></li>
+              <li><Link to={"/mentor"} title="Join as a expert">Mentor</Link></li>
+              <li><Link to={"/recruiter"} title='Hire talent from us'>Recruiter</Link></li>
             </ul>
           </div>
           <div className='login-btn d-flex align-items-center'>
-            <a href='/login' class="btn btn-p d-flex align-items-center gap-2 rounded-pill">
-              <span class="m-0">
-                Login
-              </span>
-              <img src="./arrow-right.svg" class="icon-arrow-right" alt="" />
-            </a>
+            <ButtonPrimary title={'Login'} link={'/login'} />
           </div>
           <div className='mobile-icon d-none' onClick={toggleNav}>
           <img src='./interface.png' alt='hamburger icon' />

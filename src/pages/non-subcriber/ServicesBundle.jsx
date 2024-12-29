@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FaHandPointRight, FaPlusCircle } from 'react-icons/fa';
-import { TiTick } from 'react-icons/ti';
-import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
 const ToggleSwitch = ({ planToggle, setPlanToggle }) => (
-    <label className={"switch round"}>
+    <label className={"custom-switch round"}>
         <input type="checkbox" checked={planToggle} onChange={() => setPlanToggle(!planToggle)} />
         <span className={"slider round"} />
     </label>
@@ -33,11 +30,11 @@ const ServicesBundle = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
+            <div className="d-flex justify-content-center align-items-center gap-3" data-aos="fade-up" >
                 <span className={`${!planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Monthly</span>
                 <ToggleSwitch planToggle={planToggle} setPlanToggle={setPlanToggle} />
                 <span className={`${planToggle ? 'text-primary' : 'text-dark'} h3 fw-bolder`}>Yearly</span>
-            </div> */}
+            </div>
             <div className="row gap-2" data-aos="fade-up">
                 <button className={`col-md-3 offset-md-3 col-10 offset-1 btn ${activeBundle === 'foundation' ? 'btn-primary':'btn-outline-primary-2'} mb-3 px-5 py-3`} onClick={() => setActiveBundle('foundation')}>
                     <span className='h5'>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { sendRecommendationRequest } from '../../api/api';
-import "./animationForm.css"
-import Loader from '../../components/loader';
+import { sendRecommendationRequest } from '../../../api/api';
+import "./animationForm.scss"
+import Loader from '../../../components/loader';
 import { AssessmentAnalytics } from './AssessmentAnalytics';
 
 const AssesmentForm = () => {

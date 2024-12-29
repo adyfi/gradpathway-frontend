@@ -8,22 +8,19 @@ import Services from './pages/non-subcriber/Services.jsx';
 import Blogs from './pages/non-subcriber/Blogs.jsx';
 import Country from './pages/non-subcriber/Country.jsx';
 import Faq from './pages/non-subcriber/Faq.jsx';
-import AdminDashboard from './pages/non-subcriber/AdminDashboard.jsx';
 import UserDashboard from './pages/non-subcriber/UserDashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute';
 import UnprotectedLayout from './layouts/UnprotectedLayout.jsx';
 import ProtectedLayout from './layouts/ProtectedLayout.jsx';
 import ContactUs from './pages/non-subcriber/ContactUs.jsx';
-import AssesmentForm from './pages/non-subcriber/AssesmentForm.jsx';
-import Mentors from './pages/non-subcriber/Mentors.jsx';
+import AssesmentForm from './pages/non-subcriber/assessment/AssesmentForm.jsx';
 import Recruiter from './pages/non-subcriber/Recruiter.jsx';
 import { Mentor } from './pages/non-subcriber/Mentor.jsx';
-import MentorForm from './components/MentorForm.jsx';
 import MentorRegistration from './pages/non-subcriber/MentorRegistration.jsx';
 import { NotFound } from './pages/non-subcriber/NotFound.jsx';
 import BlogPost from './pages/non-subcriber/BlogsPost.jsx';
 import SuccessStories from './pages/non-subcriber/SuccessStories.jsx';
-import ROICalculator from './pages/non-subcriber/ROICalculator.jsx';
+import ROICalculator from './pages/non-subcriber/roi/ROICalculator.jsx';
 import LaunchingSoon from './pages/non-subcriber/LaunchingSoon.jsx';
 import CountryHome from './pages/non-subcriber/Country.jsx';
 import CountryHeader from './layouts/CountryHeader.jsx';
@@ -59,7 +56,7 @@ function App() {
         <Route path="/mentor-registration" element={<UnprotectedLayout><MentorRegistration /></UnprotectedLayout>} />
         <Route path="/recruiter" element={<UnprotectedLayout><Recruiter /></UnprotectedLayout>} />
         <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
-        <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} />
+        {/* <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} /> */}
         <Route path="/dashboard/user" element={<ProtectedRoute allowedRoles={['user']}><ProtectedLayout><UserDashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="*" element={<UnprotectedLayout><NotFound /></UnprotectedLayout>} />
 

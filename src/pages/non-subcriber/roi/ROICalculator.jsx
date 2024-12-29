@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
+import './customRangeSlider.scss'
+
 const COLORS = ['#0088FE', '#00C49F'];
 
 const calculateSliderBackground = (value, min, max) => {
