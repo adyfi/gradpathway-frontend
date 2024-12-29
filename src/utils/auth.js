@@ -1,6 +1,6 @@
 // Hardcoded credentials
 const credentials = {
-    admin: { username: 'admin@mail.com', password: '123', role: 'admin' },
+    admin: { username: 'admin2@mail.com', password: '123', role: 'admin' },
     user: { username: 'user', password: 'user123', role: 'user' },
   };
   
