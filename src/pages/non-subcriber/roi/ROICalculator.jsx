@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
+import { ButtonPrimary } from '../../../components/buttons/ButtonPrimary';
 import './customRangeSlider.scss'
 
 const COLORS = ['#0088FE', '#00C49F'];
@@ -287,8 +288,8 @@ const ROICalculator = () => {
                 </div>
             </div>
             <div className="d-flex text-center justify-content-center mb-5">
-                <a href="/services" className='btn btn-primary rounded-pill'>Explore Our Services</a>
-                <a href="/assesment" className='btn btn-outline-primary-2 ms-2 rounded-pill'>Take a Free AI Assessment</a>
+                <ButtonPrimary title={'Explore Our Services'} link={'/services'} className="me-3"/> 
+                <ButtonPrimary title={'Take a Free AI Assessment'} link={'/assesment'} /> 
             </div>
         </div>
     );

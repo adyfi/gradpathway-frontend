@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RecruiterForm from '../../components/RecruiterForm';
+import { ButtonPrimary } from '../../components/buttons/ButtonPrimary';
 import AOS from 'aos';
 
 const Recruiter = () => {
@@ -23,7 +24,8 @@ const Recruiter = () => {
                         Why wait weeks to hire? Access skilled, pre-vetted tech talent ready to contribute from day one in just hours.
                     </p>
                     <div className="banner-button my-2" data-aos="fade-up">
-                        <a href="#" className="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
+                        {/* <a href="#" className="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a> */}
+                        <ButtonPrimary title={'Register Now'} link={''} />
                     </div>
                 </div>
                 <div className="col-md-5 d-flex justify-content-center mt-5">
@@ -52,8 +54,9 @@ const Recruiter = () => {
                     <button className="btn btn-outline-primary btn-lg"> QA/Tester</button>
                     <button className="btn btn-outline-primary btn-lg"> .NET Developer</button>
                 </div>
-                <div className="banner-button text-center mb-5" data-aos="fade-up">
-                    <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a>
+                <div className="banner-button d-flex justify-content-center mb-5" data-aos="fade-up">
+                    {/* <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</a> */}
+                    <ButtonPrimary title={'Register Now'} link={''} />
                 </div>
             </div>
         </div>

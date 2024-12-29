@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MentorWhySection } from '../../components/MentorWhySection'
+import { ButtonPrimary } from '../../components/buttons/ButtonPrimary';
 import AOS from 'aos';
 
 export const Mentor = () => {
@@ -43,7 +44,8 @@ export const Mentor = () => {
                             <span editable="inline" className="mb-0 text-muted">Happy Clients</span>
                         </div>
                     </div>
-                    <a className="btn btn-primary px-4 rounded-pill mt-3" href="/mentor-registration" >Register as Mentor</a>
+                    
+                    <ButtonPrimary title={'Register as Mentor'} link={'/mentor-registration'} /> 
                 </div>
            
             </div>
