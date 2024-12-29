@@ -2,502 +2,354 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="container-fluid p-0">
-      <div className="dashboard-main-content">
-        <div className="container-fluid">
-          <div className="row">
-            <div>
-              <div className="shadow-border top-bar mb-4 d-flex justify-content-between">
-                <div className="div-left-header">
-                  <div className="search-box">
-                    <div class="input-group">
-                        <input 
-                            type="text" 
-                            class="form-control" 
-                            placeholder="Search..." 
-                            aria-label="Search"
-                            aria-describedby="search-button" />
-                        <button class="btn btn-primary" type="button" id="search-button">
-                          <i class="bi bi-search"></i>
-                        </button>
-                    </div>
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-8 d-flex align-items-strech">
+            <div className="card w-100">
+              <div className="card-body">
+                <div className="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                  <div className="mb-3 mb-sm-0">
+                    <h5 className="card-title fw-semibold">Sales Overview</h5>
+                  </div>
+                  <div>
+                    <select className="form-select">
+                      <option value="1">March 2023</option>
+                      <option value="2">April 2023</option>
+                      <option value="3">May 2023</option>
+                      <option value="4">June 2023</option>
+                    </select>
                   </div>
                 </div>
-                <div className="div-right-header d-flex">
-                  <div className="country-flag">
-                    <img src="./united-kingdom.webp" alt="India" />
-                  </div>  
-                  <div className="country-flag">
-                    <img src="./notification.webp" alt="India" />
-                  </div>  
-                  <div className="dropdown">
-                    <a className="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="./profile-icon.webp" alt="" />
-                      <span>Jonh Cena</span>
-                    </a>
-
-                    <ul className="dropdown-menu">
-                      <li><a className="dropdown-item" href="#">Action</a></li>
-                      <li><a className="dropdown-item" href="#">Another action</a></li>
-                      <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                  
-                </div>
+                <div id="chart"></div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="tab-content" id="myTabContent">
-              <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div className="dashboard">
-                  <div className="welcome-test mb-4">
-                    <h3>Hello <span>John Cena</span></h3>
-                    <h5>Welcome to Your Hub: Stay Connected, Stay Informed, Stay Ahead!</h5>
-                  </div>
-                  <div className=" main-dashboard-content ">
-                    {/* <div className="buttons-wrapper mb-4 shadow-border">
-                      <button type="button" className="btn btn-outline-primary">Primary</button>
-                      <button type="button" className="btn btn-outline-secondary">Secondary</button>
-                      <button type="button" className="btn btn-outline-success">Success</button>
-                      <button type="button" className="btn btn-outline-danger">Danger</button>
-                      <button type="button" className="btn btn-outline-warning">Warning</button>
-                      <button type="button" className="btn btn-outline-info">Info</button>
-                      <button type="button" className="btn btn-outline-dark">Dark</button>
-                    </div> */}
-                    <div className="dashboard-boxs-wrapper">
-                      <div className="row">
-                        <div className="col-md-8 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3 className="mb-3">CV, Cover Letter, and LinkedIn Review</h3>
-                            <div className="table-responsive">
-                              <table className="table m-0">
-                                <thead>
-                                  <tr>
-                                    <th scope="col" className="fw-bold">Id</th>
-                                    <th scope="col" className="fw-bold">Name</th>
-                                    <th scope="col" className="fw-bold">Title</th>
-                                    <th scope="col" className="fw-bold">Type</th>
-                                    <th scope="col" className="fw-bold">Last Updated</th>
-                                    <th scope="col" className="fw-bold">Action</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>
-                                      <div className="">
-                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div className="text-subtitle-2 text-muted "><small>Web Designer</small></div>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small>CV</small></h6>
-                                    </td>
-                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
-                                    </td>
-                                    <td>
-                                      <div>
-                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>
-                                      <div className="">
-                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div className="text-subtitle-2 text-muted"><small>Web Designer</small></div>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small>Resume</small></h6>
-                                    </td>
-                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
-                                    </td>
-                                    <td>
-                                      <div>
-                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>
-                                      <div className="">
-                                        <h6 className="text-subtitle-1 fw-bold m-0">Jonh Cena</h6>
-                                        <div className="text-subtitle-2 text-muted"><small>Web Designer</small></div>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small>Cover Letter</small></h6>
-                                    </td>
-                                    <td><h6 className="text-body-1 text-muted"><small>PDF</small></h6></td>
-                                    <td>
-                                      <h6 className="text-body-1 text-muted"><small><span>27 Dec</span> <span>02:55</span></small></h6>
-                                    </td>
-                                    <td>
-                                      <div>
-                                        <a href="#"><i className="bi bi-folder-symlink"></i> </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
+          <div className="col-lg-4">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="card overflow-hidden">
+                  <div className="card-body p-4">
+                    <h5 className="card-title mb-9 fw-semibold">Yearly Breakup</h5>
+                    <div className="row align-items-center">
+                      <div className="col-8">
+                        <h4 className="fw-semibold mb-3">$36,358</h4>
+                        <div className="d-flex align-items-center mb-3">
+                          <span
+                            className="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                            <i className="ti ti-arrow-up-left text-success"></i>
+                          </span>
+                          <p className="text-dark me-1 fs-3 mb-0">+9%</p>
+                          <p className="fs-3 mb-0">last year</p>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <div className="me-4">
+                            <span className="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
+                            <span className="fs-2">2023</span>
+                          </div>
+                          <div>
+                            <span className="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
+                            <span className="fs-2">2023</span>
                           </div>
                         </div>
-
-                        <div className="col-md-4 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3 className="mb-4">Analytics</h3>
-                            <div className="graph-wrap">
-                              <img src="./ss-temp.png"  alt="" />
-                            </div>
-                          </div>
-                        </div>                          
-
-                        <div className="col-md-4 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3 className="mb-3">Upcoming Schedules</h3>
-                            <div className="upcoming-schedules">
-                              <div className="call-list d-flex">
-                                <div className="left-time d-flex align-start">
-                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
-                                </div>
-                                <div className="center-icon text-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
-                                  <div className="line mx-auto bg-borderColor"></div>
-                                </div>
-                                <div className="right-time">
-                                  <h6 className="text-body-1 textSecondary">Scheduled call with John Harrison</h6>
-                                </div>
-                              </div>
-
-                              <div className="call-list d-flex">
-                                <div className="left-time d-flex align-start">
-                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
-                                </div>
-                                <div className="center-icon text-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
-                                  <div className="line mx-auto bg-borderColor"></div>
-                                </div>
-                                <div className="right-time">
-                                  <h6 className="text-body-1 textSecondary"> Scheduled call with John Doe </h6>
-                                </div>
-                              </div>
-
-                              <div className="call-list d-flex">
-                                <div className="left-time d-flex align-start">
-                                  <h6 className="text-body-1 textSecondary text-nowrap">09:30 am</h6>
-                                </div>
-                                <div className="center-icon text-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle text-primary" width="13px" height="13px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <circle cx="12" cy="12" r="9"></circle> </svg>
-                                  <div className="line mx-auto bg-borderColor"></div>
-                                </div>
-                                <div className="right-time">
-                                  <h6 className="text-body-1 textSecondary">Scheduled call with William Carter</h6>
-                                </div>
-                              </div>
-                              <div className="btn-wrapper text-center">
-                                <a href="#" className="btn btn-primary">Scheduled call <i class="bi bi-telephone"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="col-md-8 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3 className="mb-3">Subscription Bundle</h3>
-                            <div className="row">
-                              <div className="col-md-6 mb-3">
-                                <div className="simple-box d-flex">
-                                  <div className="img-box me-3">
-                                    <img src="./world-wide-web.webp" alt="" />
-                                  </div>
-                                  <div className="text-box">
-                                    <h6>Top Websites for Job Search</h6>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-md-6 mb-3">
-                                <div className="simple-box d-flex two">
-                                  <div className="img-box me-3">
-                                    <img src="./internet.webp" alt="" />
-                                  </div>
-                                  <div className="text-box">
-                                    <h6>Must-Know Websites</h6>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-md-6 mb-3">
-                                <div className="simple-box d-flex three">
-                                  <div className="img-box me-3">
-                                    <img src="./graduation-cap.webp" alt="" />
-                                  </div>
-                                  <div className="text-box">
-                                    <h6>Top 25 Graduate Employers</h6>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-md-6 mb-3">
-                                <div className="simple-box d-flex four">
-                                  <div className="img-box me-3">
-                                    <img src="./graduation-cap.webp" alt="" />
-                                  </div>
-                                  <div className="text-box">
-                                    <h6>Graduate Salaries Degree Specific</h6>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small></p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="col-md-6 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3>
-                              {/* <span><img src="./resume.webp" alt="resue"/></span> */}
-                              Personalized Interview Question Answers</h3>
-                            <p>Crafted based on your work
-                              experience, education, and projects to ensure youre prepared for any
-                              interview.</p>
-                              <div className="">
-                                <ul>
-                                  <li><span className="fw-bold">Technical Questions:</span><p>Role-specific technical queries.</p></li>
-                                  <li><span className="fw-bold">Behavioral Questions:</span><p>Focus on soft skills and situational responses (e.g., STAR method).</p></li>
-                                  <li><span className="fw-bold">Industry-Specific Questions:</span><p>Tailored for the user’s selected industry.</p></li>
-                                  <li><span className="fw-bold">Common Questions:</span><p>General questions like "Tell me about yourself" or "What are your strengths?"</p></li>
-                                </ul>
-                              </div>
-                          </div>
-                        </div>
- 
-                        <div className="col-md-6 mb-4">
-                          <div className="shadow-border dashboard-box" >
-                            <h3>
-                              {/* <span><img src="./customer-service.webp" alt="resue"/></span> */}
-                              Weekly Job Subscription</h3>
-                            <p className="mb-3"> A weekly subscription delivering the latest jobs specific to your profile.
-                            </p>
-                            <div className="">
-                                <ul className="img-left-right-text">
-                                  <li className="mb-3">
-                                    <div className="img-box">
-                                      <img src="./rb_44076.webp" alt=""/>
-                                    </div>
-                                    <div className="text-content">
-                                      <span className="fw-bold">Job Preferences:</span>
-                                      <p><small>Desired job roles or titles. Experience level (entry-level, mid-level, senior).</small></p>
-                                    </div>
-                                  </li>
-
-                                  <li className="mb-3">
-                                    <div className="img-box">
-                                      <img src="./rb_1099.webp" alt=""/>
-                                    </div>
-                                    <div className="text-content">
-                                      <span className="fw-bold">Personalization:</span>
-                                      <p><small>Keywords or skills the user provides. User’s resume (if uploaded).</small></p>
-                                    </div>
-                                  </li>
-
-                                  <li className="mb-3">
-                                    <div className="img-box">
-                                      <img src="./rb_802.webp" alt=""/>
-                                    </div>
-                                    <div className="text-content">
-                                      <span className="fw-bold">Featured Jobs:</span>
-                                      <p><small>Highlight top or trending jobs for the week.</small></p>
-                                    </div>
-                                  </li>
-                                  
-                                  <li className="mb-3">
-                                    <div className="img-box">
-                                      <img src="./rb_21280.webp" alt=""/>
-                                    </div>
-                                    <div className="text-content">
-                                      <span className="fw-bold">Value Proposition:</span>
-                                      <p><small>Access to curated job opportunities.</small></p>
-                                    </div>
-                                  </li>
-                                 
-                                </ul>
-                              </div>
-                          </div>
+                      </div>
+                      <div className="col-4">
+                        <div className="d-flex justify-content-center">
+                          <div id="breakup"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div className="cv-resume-wrapper shadow-border">
-                  <div className="resume-list">
-                      <div className="resume-box mb-4">
-                        <div className="resume-image">
-                          <img src="./profile-icon.webp" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <h4 className="fw-bold"><span className="fw-bold">Title: </span>Jonh Cena</h4>
-                          <h5><span className="fw-bold">Type: </span> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</h5>
-                          <p><span className="fw-bold">Assigned Reviewer:</span> James Anderson</p>
-                          <p><span className="fw-bold">Additional Comments:</span> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                          <div className="">
-                            <ul>
-                              <li className="d-flex"><i className="bi bi-calendar-week"></i><span className="me-1">Last Updated: </span><span className="fw-bold"> Nov 10</span></li>
-                              {/* <li><i className="bi bi-gear"></i><span>Dec 12</span></li> */}
-                              <li className="d-flex"><i className="bi bi-file-earmark-richtext"></i><span className="me-1">max Size:</span><span className="fw-bold">10mb</span></li>
-                              <li className="d-flex"><i className="bi bi-file-earmark-medical"></i><span className="me-1">File Type:</span><span className="fw-bold">pdf</span></li>
-                            </ul>
-                          </div>
-                          <button type="button" className="btn btn-outline-primary">Download Resume <i className="bi bi-download"></i>
-                          </button>
+              <div className="col-lg-12">
+                <div className="card">
+                  <div className="card-body">
+                    <div className="row alig n-items-start">
+                      <div className="col-8">
+                        <h5 className="card-title mb-9 fw-semibold"> Monthly Earnings </h5>
+                        <h4 className="fw-semibold mb-3">$6,820</h4>
+                        <div className="d-flex align-items-center pb-1">
+                          <span
+                            className="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
+                            <i className="ti ti-arrow-down-right text-danger"></i>
+                          </span>
+                          <p className="text-dark me-1 fs-3 mb-0">+9%</p>
+                          <p className="fs-3 mb-0">last year</p>
                         </div>
                       </div>
-
-                      <div className="resume-box mb-4">
-                        <div className="resume-image">
-                          <img src="./profile-icon.webp" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <form>
-                            <div className="mb-3">
-                              <label for="exampleInputEmail1" className="form-label"><b>Title</b></label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="exampleInputPassword1" className="form-label"><b>Description </b></label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="formFile" className="form-label"><b>Select CV</b></label>
-                              <input className="form-control" type="file" id="formFile"/>
-                            </div>
-                            
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                          </form>
-                          
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                <div className="cv-resume-wrapper shadow-border">
-                  <div className="resume-list">
-                      <div className="resume-box mb-4">
-                        <div className="resume-image">
-                          <img src="./icons8-google-meet-480.png" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <h6 className="fw-bold"><span className="fw-bold me-1">Name:</span>William Carter</h6>
-                          <p><span className="fw-bold me-1">Title/Purpose:</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                          <div className="">
-                            <ul className="d-flex flex-column">
-                              <li><span className="fw-bold me-1">Call Date:</span><span>21/12/2024</span></li>
-                              <li><span className="fw-bold me-1">Call Time:</span><span>05:30 PM</span></li>
-                              <li><span className="fw-bold me-1">Schedule Call:</span><span><a className=""><i className="bi bi-telephone"></i> Call</a>
-                              </span></li>
-                            </ul>
+                      <div className="col-4">
+                        <div className="d-flex justify-content-end">
+                          <div
+                            className="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                            <i className="ti ti-currency-dollar fs-6"></i>
                           </div>
                         </div>
                       </div>
-
-                      <div className="resume-box mb-4 call-box">
-                        <div className="resume-image">
-                          <img src="./profile-icon.webp" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <form>
-                            <div className="mb-3">
-                              <label for="exampleInputEmail1" className="form-label"><b>Call Details</b></label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="exampleInputPassword1" className="form-label"><b>Description </b></label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="birthdaytime" className="form-label">Select (date and time):</label>
-                              <input type="datetime-local" id="birthdaytime" name="birthdaytime" className="form-control"/>
-                            </div>
-                            
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                          </form>
-                          
-                        </div>
-                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2" tabindex="0">
-              <div className="cv-resume-wrapper shadow-border">
-                  <div className="resume-list">
-                      <div className="resume-box mb-4">
-                        <div className="resume-image">
-                          <img src="./profile-icon.webp" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <h3>Title</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                          <div className="">
-                            <ul>
-                              <li><span>Created At</span><span>21/12/2024</span></li>
-                              <li><span>Updated At</span><span>21/12/2024</span></li>
-                              <li><span>File Size</span><span>10mb</span></li>
-                              <li><span>File Type</span><span>pdf</span></li>
-                            </ul>
-                          </div>
-                          {/* <label for="formFile" className="form-label">Default file input example</label> */}
-                          <input className="form-control mb-4" type="file" id="formFile"/>
-                          <button type="button" className="btn btn-outline-primary">Download</button>
-                        </div>
-                      </div>
-
-                      <div className="resume-box mb-4">
-                        <div className="resume-image">
-                          <img src="./profile-icon.webp" alt="" />
-                        </div>
-                        <div className="resume-text-content">
-                          <form>
-                            <div className="mb-3">
-                              <label for="exampleInputEmail1" className="form-label"><b>Title</b></label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="exampleInputPassword1" className="form-label"><b>Description </b></label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" />
-                            </div>
-                            <div className="mb-3">
-                              <label for="formFile" className="form-label"><b>Select CV</b></label>
-                              <input className="form-control" type="file" id="formFile"/>
-                            </div>
-                            
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                          </form>
-                          
-                        </div>
-                      </div>
-                  </div>
+                  <div id="earning"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="row">
+          <div className="col-lg-4 d-flex align-items-stretch">
+            <div className="card w-100">
+              <div className="card-body p-4">
+                <div className="mb-4">
+                  <h5 className="card-title fw-semibold">Recent Transactions</h5>
+                </div>
+                <ul className="timeline-widget mb-0 position-relative mb-n5">
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
+                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1">Payment received from John Doe of $385.90</div>
+                  </li>
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">10:00 am</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-info flex-shrink-0 my-8"></span>
+                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1 fw-semibold">New sale recorded <a
+                      href="javascript:void(0)" className="text-primary d-block fw-normal">#ML-3467</a>
+                    </div>
+                  </li>
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1">Payment was made of $64.95 to Michael</div>
+                  </li>
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
+                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1 fw-semibold">New sale recorded <a
+                      href="javascript:void(0)" className="text-primary d-block fw-normal">#ML-3467</a>
+                    </div>
+                  </li>
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-danger flex-shrink-0 my-8"></span>
+                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1 fw-semibold">New arrival recorded
+                    </div>
+                  </li>
+                  <li className="timeline-item d-flex position-relative overflow-hidden">
+                    <div className="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span className="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                    </div>
+                    <div className="timeline-desc text-dark mt-n1">Payment Done</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-8 d-flex align-items-stretch">
+            <div className="card w-100">
+              <div className="card-body p-4">
+                <h5 className="card-title fw-semibold mb-4">Recent Transactions</h5>
+                <div className="table-responsive">
+                  <table className="table text-nowrap mb-0 align-middle">
+                    <thead className="text-dark fs-4">
+                      <tr>
+                        <th className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0">Id</h6>
+                        </th>
+                        <th className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0">Assigned</h6>
+                        </th>
+                        <th className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0">Name</h6>
+                        </th>
+                        <th className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0">Priority</h6>
+                        </th>
+                        <th className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0">Budget</h6>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border-bottom-0"><h6 className="fw-semibold mb-0">1</h6></td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-1">Sunil Joshi</h6>
+                          <span className="fw-normal">Web Designer</span>
+                        </td>
+                        <td className="border-bottom-0">
+                          <p className="mb-0 fw-normal">Elite Admin</p>
+                        </td>
+                        <td className="border-bottom-0">
+                          <div className="d-flex align-items-center gap-2">
+                            <span className="badge bg-primary rounded-3 fw-semibold">Low</span>
+                          </div>
+                        </td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0 fs-4">$3.9</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="border-bottom-0"><h6 className="fw-semibold mb-0">2</h6></td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-1">Andrew McDownland</h6>
+                          <span className="fw-normal">Project Manager</span>
+                        </td>
+                        <td className="border-bottom-0">
+                          <p className="mb-0 fw-normal">Real Homes WP Theme</p>
+                        </td>
+                        <td className="border-bottom-0">
+                          <div className="d-flex align-items-center gap-2">
+                            <span className="badge bg-secondary rounded-3 fw-semibold">Medium</span>
+                          </div>
+                        </td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0 fs-4">$24.5k</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="border-bottom-0"><h6 className="fw-semibold mb-0">3</h6></td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-1">Christopher Jamil</h6>
+                          <span className="fw-normal">Project Manager</span>
+                        </td>
+                        <td className="border-bottom-0">
+                          <p className="mb-0 fw-normal">MedicalPro WP Theme</p>
+                        </td>
+                        <td className="border-bottom-0">
+                          <div className="d-flex align-items-center gap-2">
+                            <span className="badge bg-danger rounded-3 fw-semibold">High</span>
+                          </div>
+                        </td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0 fs-4">$12.8k</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="border-bottom-0"><h6 className="fw-semibold mb-0">4</h6></td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-1">Nirav Joshi</h6>
+                          <span className="fw-normal">Frontend Engineer</span>
+                        </td>
+                        <td className="border-bottom-0">
+                          <p className="mb-0 fw-normal">Hosting Press HTML</p>
+                        </td>
+                        <td className="border-bottom-0">
+                          <div className="d-flex align-items-center gap-2">
+                            <span className="badge bg-success rounded-3 fw-semibold">Critical</span>
+                          </div>
+                        </td>
+                        <td className="border-bottom-0">
+                          <h6 className="fw-semibold mb-0 fs-4">$2.4k</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-6 col-xl-3">
+            <div className="card overflow-hidden rounded-2">
+              <div className="position-relative">
+                <a href="javascript:void(0)"><img src="./assets/images/products/s4.jpg" className="card-img-top rounded-0" alt="..." /></a>
+                <a href="javascript:void(0)" className="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i className="ti ti-basket fs-4"></i></a>                      </div>
+              <div className="card-body pt-3 p-4">
+                <h6 className="fw-semibold fs-4">Boat Headphone</h6>
+                <div className="d-flex align-items-center justify-content-between">
+                  <h6 className="fw-semibold fs-4 mb-0">$50 <span className="ms-2 fw-normal text-muted fs-3"><del>$65</del></span></h6>
+                  <ul className="list-unstyled d-flex align-items-center mb-0">
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 col-xl-3">
+            <div className="card overflow-hidden rounded-2">
+              <div className="position-relative">
+                <a href="javascript:void(0)"><img src="./assets/images/products/s5.jpg" className="card-img-top rounded-0" alt="..." /></a>
+                <a href="javascript:void(0)" className="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i className="ti ti-basket fs-4"></i></a>                      </div>
+              <div className="card-body pt-3 p-4">
+                <h6 className="fw-semibold fs-4">MacBook Air Pro</h6>
+                <div className="d-flex align-items-center justify-content-between">
+                  <h6 className="fw-semibold fs-4 mb-0">$650 <span className="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6>
+                  <ul className="list-unstyled d-flex align-items-center mb-0">
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 col-xl-3">
+            <div className="card overflow-hidden rounded-2">
+              <div className="position-relative">
+                <a href="javascript:void(0)"><img src="./assets/images/products/s7.jpg" className="card-img-top rounded-0" alt="..." /></a>
+                <a href="javascript:void(0)" className="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i className="ti ti-basket fs-4"></i></a>                      </div>
+              <div className="card-body pt-3 p-4">
+                <h6 className="fw-semibold fs-4">Red Valvet Dress</h6>
+                <div className="d-flex align-items-center justify-content-between">
+                  <h6 className="fw-semibold fs-4 mb-0">$150 <span className="ms-2 fw-normal text-muted fs-3"><del>$200</del></span></h6>
+                  <ul className="list-unstyled d-flex align-items-center mb-0">
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 col-xl-3">
+            <div className="card overflow-hidden rounded-2">
+              <div className="position-relative">
+                <a href="javascript:void(0)"><img src="./assets/images/products/s11.jpg" className="card-img-top rounded-0" alt="..." /></a>
+                <a href="javascript:void(0)" className="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i className="ti ti-basket fs-4"></i></a>                      </div>
+              <div className="card-body pt-3 p-4">
+                <h6 className="fw-semibold fs-4">Cute Soft Teddybear</h6>
+                <div className="d-flex align-items-center justify-content-between">
+                  <h6 className="fw-semibold fs-4 mb-0">$285 <span className="ms-2 fw-normal text-muted fs-3"><del>$345</del></span></h6>
+                  <ul className="list-unstyled d-flex align-items-center mb-0">
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="me-1" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                    <li><a className="" href="javascript:void(0)"><i className="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-6 px-6 text-center">
+          <p className="mb-0 fs-4">Design and Developed by <a href="https://adminmart.com/" target="_blank" className="pe-1 text-primary text-decoration-underline">AdminMart.com</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a></p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

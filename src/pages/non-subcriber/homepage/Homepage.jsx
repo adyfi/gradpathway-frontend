@@ -158,7 +158,7 @@ const Homepage = () => {
       </div>
 
       <div className="container-fluid bg-light py-5">
-        <TimelineSection />
+        {/* <TimelineSection /> */}
       </div>
       <HomeWhyGPSection />
     </>

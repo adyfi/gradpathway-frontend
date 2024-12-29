@@ -26,12 +26,12 @@ const TimelineSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="container py-5 timeline position-relative">
+            <div className="container py-5 timeline2 position-relative">
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="timeline-item w-100 mb-4 py-4 text-light lc-block">
-                            <div className="timeline-img"></div>
-                            <div className="timeline-content" data-aos="fade-right">
+                        <div className="timeline2-item w-100 mb-4 py-4 text-light lc-block">
+                            <div className="timeline2-img"></div>
+                            <div className="timeline2-content" data-aos="fade-right">
                                 <p editable="inline" className="lead">Step 1</p>
                                 <h2 editable="inline" className="fw-bold rfs-12">Take Assessment</h2>
                                 <div editable="rich">
@@ -39,9 +39,9 @@ const TimelineSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="timeline-item w-100 mb-4 py-4 text-light lc-block">
-                            <div className="timeline-img"></div>
-                            <div className="timeline-content" data-aos="fade-right">
+                        <div className="timeline2-item w-100 mb-4 py-4 text-light lc-block">
+                            <div className="timeline2-img"></div>
+                            <div className="timeline2-content" data-aos="fade-right">
                                 <p editable="inline" className="lead">Step 2</p>
                                 <h2 editable="inline" className="fw-bold rfs-12">Get Tips and Personalized Plan</h2>
                                 <div editable="rich">
@@ -49,9 +49,9 @@ const TimelineSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="timeline-item w-100 mb-4 py-4 text-light lc-block">
-                            <div className="timeline-img"></div>
-                            <div className="timeline-content" data-aos="fade-right">
+                        <div className="timeline2-item w-100 mb-4 py-4 text-light lc-block">
+                            <div className="timeline2-img"></div>
+                            <div className="timeline2-content" data-aos="fade-right">
                                 <p editable="inline" className="lead">Step 3</p>
                                 <h2 editable="inline" className="fw-bold rfs-12">Get Personalized Assistance</h2>
                                 <div editable="rich">
@@ -59,9 +59,9 @@ const TimelineSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="timeline-item w-100 mb-4 py-4 text-light lc-block">
-                            <div className="timeline-img"></div>
-                            <div className="timeline-content" data-aos="fade-right">
+                        <div className="timeline2-item w-100 mb-4 py-4 text-light lc-block">
+                            <div className="timeline2-img"></div>
+                            <div className="timeline2-content" data-aos="fade-right">
                                 <p editable="inline" className="lead">Step 4</p>
                                 <h2 editable="inline" className="fw-bold rfs-12">Secure the Job</h2>
                                 <div editable="rich">
