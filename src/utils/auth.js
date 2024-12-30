@@ -9,22 +9,19 @@ const credentials = {
 export const login = async (email, password) => {
   try {
     const response = await userLogin(email, password);
-    // Assuming role is part of the response, if not include accordingly 
     const { tokens, role } = response;
     console.log('token', tokens);
-    // Save tokens and role to localStorage 
     if (tokens) {
       localStorage.setItem('auth', 'true');
-      localStorage.setItem('role', role ? role : 'user');
+      localStorage.setItem('role', role || 'user');
       localStorage.setItem('refreshToken', tokens.refresh);
       localStorage.setItem('accessToken', tokens.access);
       return true;
     }
-
     return false;
   } catch (error) {
     console.error('Login failed', error);
-    return false;
+    return false; // Explicitly return false in case of error
   }
 };
 
