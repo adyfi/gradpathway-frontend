@@ -4,6 +4,7 @@ import { FaHandPointRight, FaPlusCircle } from 'react-icons/fa';
 import { TiTick } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
+import { ButtonPrimaryFill } from '../../components/buttons/ButtonPrimaryFill';
 
 const ToggleSwitch = ({ planToggle, setPlanToggle }) => (
     <label className={"custom-switch round"}>
@@ -45,7 +46,7 @@ const Services = () => {
                                 For a deeper focus, the Professional Package provides mentorship, project-based experience, and mock interviews in specific streams, while the Ultimate Career Package ensures hands-on internships, certifications, and industry-aligned opportunities. Choose the plan that fits your ambitions and take the next step toward a rewarding career!!
                             </p>
                             {/* <a href='#plans' className='btn btn-primary rounded-pill mb-2 px-4 py-2 p-0 m-0 text-white' data-aos="fade-up">Explore Our Plans</a> */}
-                            <ButtonPrimary title={'Explore Our Plans'} link={'#plans'} />   
+                            <ButtonPrimaryFill title={'Explore Our Plans'} link={'#plans'} />   
                             <ul className='d-flex gap-4 style-non p-0 mt-3' data-aos="fade-up">
                                 <img height={"20px"} src="/img/paypal.webp" alt="" />
                                 <img height={"20px"} src="/img/sezzle.webp" alt="" />
@@ -334,7 +335,7 @@ const Services = () => {
                         <span editable="inline" className="mt-4 d-block mb-0 h5">learn about our services</span>
                         <h2 editable="inline" className="display-5 mb-0 fw-bolder text-primary-2 mb-4"><b>How our service bundles work</b></h2>
                         <div className='d-flex justify-content-center'>
-                            <ButtonPrimary title={'Learn More Now'} link={'/services/bundles'} /> 
+                            <ButtonPrimaryFill title={'Learn More Now'} link={'/services/bundles'} /> 
                         </div>
                     </div>
                 </div>

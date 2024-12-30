@@ -32,3 +32,72 @@
         }
     }
 }
+
+.custom-btn-primary-outline-none{
+    .icon-arrow-right{
+        filter: brightness(0) saturate(100%) invert(35%) sepia(36%) saturate(1297%) hue-rotate(173deg) brightness(94%) contrast(94%);
+    }
+    .custom-bpi {
+        color: #2265B0;
+        display: inline-flex;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 1;
+        padding: 10px 32px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: none;
+        .icon-arrow-right{
+            width: 15px;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover{
+            transform: scale(1.1);
+            color: #2265B0;
+            .icon-arrow-right{
+                transform: rotate(0deg);
+                transform-origin: center;
+            }
+        }
+    }
+}
+
+.custom-btn-primary-fill{
+    .icon-arrow-right{
+        // filter: brightness(0) saturate(100%) invert(35%) sepia(36%) saturate(1297%) hue-rotate(173deg) brightness(94%) contrast(94%);
+    }
+    .custom-bpi {
+        color: #ffffff;
+        display: inline-flex;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 1;
+        padding: 10px 32px;
+        transition: all 0.3s ease-in-out;
+        background: #2265B0;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid #2265B0;
+        .icon-arrow-right{
+            width: 15px;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            transition: all 0.3s ease-in-out;
+            color: #2265B0;
+        }
+        &:hover{
+            .icon-arrow-right{
+                filter: brightness(0) saturate(100%) invert(35%) sepia(36%) saturate(1297%) hue-rotate(173deg) brightness(94%) contrast(94%);
+            }
+            transform: scale(1.1);
+            border: 1px solid #2265B0;
+            color: #2265B0;
+            .icon-arrow-right{
+                transform: rotate(0deg);
+                transform-origin: center;
+            }
+        }
+    }
+}

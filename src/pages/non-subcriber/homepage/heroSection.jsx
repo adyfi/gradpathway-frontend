@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { ButtonPrimaryOutlineNone } from '../../../components/buttons/ButtonPrimaryOutlineNone';
+import { ButtonWithGenAIicon } from '../../../components/buttons/ButtonWithGenAIicon';
 
 const HeroSection = () => {
     useEffect(() => {
@@ -8,7 +10,7 @@ const HeroSection = () => {
           // Apply transformations
           const aiJob1 = document.getElementById('ai-job-1');
           const aiJob2 = document.getElementById('ai-job-2');
-          const aiJob3 = document.getElementById('ai-job-3');
+          const aiJob3 = documesssnt.getElementById('ai-job-3');
           const aiJob4 = document.getElementById('ai-job-4');
     
           if (aiJob1) aiJob1.style.transform = `translateY(${scrollY * -0.5}px) rotate(15deg)`;
@@ -41,18 +43,14 @@ const HeroSection = () => {
                             We've helped over 100,000 people secure their dream jobs. Let our job search strategies guide you from writing resumes to achieving better days
                         </p>
                         <div className="d-flex justify-content-center gap-5">
-                            <button className="btn btn-p d-flex align-items-center ">
-                                <span className="m-0">
-                                    Take a Free Asessment
-                                </span>
-                                <img src="./bi_stars.svg" className="icon-stars" alt="" />
-                            </button>
-                            <button className="btn btn-p-2 text-primary-2 d-flex align-items-center">
+                            <ButtonWithGenAIicon title={'Take a Free Asessment'} link={'/assessment'} />
+                            <ButtonPrimaryOutlineNone title={'Our Services'} link={'/services'} />
+                            {/* <button className="btn btn-p-2 text-primary-2 d-flex align-items-center">
                                 <span className="m-0">
                                     Our Services
                                 </span>
                                 <img src="./arrow-right.svg" className="icon-arrow-right" alt="" />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                     {/* <img src="./ai-job-2.jpg" className="ai-job-2" id="ai-job-2" alt="">

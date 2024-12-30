@@ -56,7 +56,7 @@ export const fetchBlogPosts = async () => {
     method: 'get',
     maxBodyLength: Infinity,
     url: `${baseURL}/blogs/`,
-    headers: { 'Content-Type': 'application/json'}
+    headers: { 'Content-Type': 'application/json' }
   };
   try {
     const response = await axios.request(config);
@@ -75,12 +75,12 @@ export const fetchBlogPostById = async (blogId) => {
     maxBodyLength: Infinity,
     url: `${baseURL}/blogs/${blogId}`,
   };
-  try { 
-    const response = await axios.request(config); 
-    console.log(JSON.stringify(response.data)); 
+  try {
+    const response = await axios.request(config);
+    console.log(JSON.stringify(response.data));
     return response.data
   } catch (error) {
-    console.error(error); 
+    console.error(error);
   }
 };
 
@@ -90,7 +90,7 @@ export const createMentor = async (data) => {
     method: 'post',
     maxBodyLength: Infinity,
     url: `${baseURL}/users/mentors/`,
-    headers: { 
+    headers: {
       'Content-Type': 'application/json'
     },
     data: JSON.stringify(data),
@@ -111,7 +111,7 @@ export const createRecruiter = async (data) => {
     method: 'post',
     maxBodyLength: Infinity,
     url: `${baseURL}/users/recruiters/`,
-    headers: { 
+    headers: {
       'Content-Type': 'application/json'
     },
     data: JSON.stringify(data),
@@ -131,7 +131,7 @@ export const sendRecommendationRequest = async (data) => {
   const config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: `${baseURL}/assessments/recommendation/`,
+    url: `${baseURL}/assessments/recommendation_new/`,
     headers: {
       'Content-Type': 'application/json'
     },
@@ -146,3 +146,22 @@ export const sendRecommendationRequest = async (data) => {
     console.error("Error:", error.response ? error.response.data : error.message);
   }
 }
+
+export const userLogin = async (email, password) => { 
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  let data = JSON.stringify({ email, password });
+  let config = { 
+    method: 'post', 
+    maxBodyLength: Infinity, 
+    url: `${baseURL}/users/login/`, 
+    headers: { 'Content-Type': 'application/json' }, 
+    data: data 
+  }; 
+  try { 
+    const response = await axios.request(config); 
+    return response.data; 
+  } catch (error) { 
+    console.error(error); 
+    throw error; 
+  } 
+};

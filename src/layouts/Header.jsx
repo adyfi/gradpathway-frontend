@@ -16,13 +16,13 @@ const Header = ({ children }) => {
               </div>
             </div>
             <nav className="sidebar-nav scroll-sidebar" data-simplebar="">
-              <ul id="sidebarnav">
+              <ul id="sidebarnav" className='p-0'>
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
                   <span className="hide-menu">Home</span>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./index.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./dashboard" aria-expanded="false">
                     <span>
                       <i className="ti ti-layout-dashboard"></i>
                     </span>
@@ -31,14 +31,14 @@ const Header = ({ children }) => {
                 </li>
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
-                  <span className="hide-menu">UI COMPONENTS</span>
+                  <span className="hide-menu">SERVICES</span>
                 </li>
                 <li className="sidebar-item">
                   <a className="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
                     <span>
                       <i className="ti ti-article"></i>
                     </span>
-                    <span className="hide-menu">Buttons</span>
+                    <span className="hide-menu">CV, C. Letter, LinkedIn</span>
                   </a>
                 </li>
                 <li className="sidebar-item">
@@ -46,7 +46,7 @@ const Header = ({ children }) => {
                     <span>
                       <i className="ti ti-alert-circle"></i>
                     </span>
-                    <span className="hide-menu">Alerts</span>
+                    <span className="hide-menu">Consulting Calls</span>
                   </a>
                 </li>
                 <li className="sidebar-item">
@@ -54,7 +54,7 @@ const Header = ({ children }) => {
                     <span>
                       <i className="ti ti-cards"></i>
                     </span>
-                    <span className="hide-menu">Card</span>
+                    <span className="hide-menu">ATS Friendly Resumes</span>
                   </a>
                 </li>
                 <li className="sidebar-item">
@@ -62,7 +62,7 @@ const Header = ({ children }) => {
                     <span>
                       <i className="ti ti-file-description"></i>
                     </span>
-                    <span className="hide-menu">Forms</span>
+                    <span className="hide-menu">Interview Question </span>
                   </a>
                 </li>
                 <li className="sidebar-item">
@@ -70,20 +70,20 @@ const Header = ({ children }) => {
                     <span>
                       <i className="ti ti-typography"></i>
                     </span>
-                    <span className="hide-menu">Typography</span>
+                    <span className="hide-menu">Job Subscription</span>
                   </a>
-                </li>
-                <li className="nav-small-cap">
-                  <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
-                  <span className="hide-menu">AUTH</span>
                 </li>
                 <li className="sidebar-item">
                   <a className="sidebar-link" href="./authentication-login.html" aria-expanded="false">
                     <span>
                       <i className="ti ti-login"></i>
                     </span>
-                    <span className="hide-menu">Login</span>
+                    <span className="hide-menu">Subscription Bundle</span>
                   </a>
+                </li>
+                <li className="nav-small-cap">
+                  <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
+                  <span className="hide-menu">AUTH</span>
                 </li>
                 <li className="sidebar-item">
                   <a className="sidebar-link" href="./authentication-register.html" aria-expanded="false">
@@ -118,7 +118,7 @@ const Header = ({ children }) => {
                 <div className="d-flex">
                   <div className="unlimited-access-title me-3">
                     <h6 className="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
-                    <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" className="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
+                    <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" className="btn btn-primary fw-semibold lh-sm">Buy Pro</a>
                   </div>
                   <div className="unlimited-access-img">
                     <img src="./assets/images/backgrounds/rocket.png" alt="" className="img-fluid" />
@@ -155,15 +155,15 @@ const Header = ({ children }) => {
                       <div className="message-body">
                         <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-user fs-6"></i>
-                          <p className="mb-0 fs-3">My Profile</p>
+                          <p className="mb-0">My Profile</p>
                         </a>
                         <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-mail fs-6"></i>
-                          <p className="mb-0 fs-3">My Account</p>
+                          <p className="mb-0">My Account</p>
                         </a>
                         <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-list-check fs-6"></i>
-                          <p className="mb-0 fs-3">My Task</p>
+                          <p className="mb-0">My Task</p>
                         </a>
                         <a href="./authentication-login.html" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                       </div>

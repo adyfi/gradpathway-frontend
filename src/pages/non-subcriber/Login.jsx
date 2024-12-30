@@ -6,6 +6,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -13,8 +14,10 @@ const Login = () => {
     console.log(username)
     console.log(password)
     const isAuthenticated = login(username, password);
+    console.log("success", isAuthenticated)
     if (isAuthenticated) {
-      navigate('/dashboard');
+      // navigate('/dashboard');
+      setError('Invalid username or password');
     } else {
       setError('Invalid username or password');
     }
@@ -59,7 +62,7 @@ const Login = () => {
                 </div>
                 <div className="col-12">
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-                  <button type="submit"  onClick={handleLogin} className="btn btn-primary px-5">Login</button>
+                  <button disabled={error} type="submit"  onClick={handleLogin} className="btn btn-primary px-5">Login</button>
                 </div>
               </div>
             </div>
