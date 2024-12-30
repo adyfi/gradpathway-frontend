@@ -27,6 +27,7 @@ const CvCLetterLinkedIn = () => {
                         <h5 className="card-title">CV</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <button type="button" class="btn btn-primary">Download <i class="ti ti-download"></i></button>
                       </div>
                     </div>
                   </div>
@@ -42,6 +43,7 @@ const CvCLetterLinkedIn = () => {
                         <h5 className="card-title">Resume</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <button type="button" class="btn btn-primary">Download <i class="ti ti-download"></i></button>
                       </div>
                     </div>
                   </div>
@@ -69,10 +71,10 @@ const CvCLetterLinkedIn = () => {
                           <h6 className="fw-semibold mb-0">Name</h6>
                         </th>
                         <th className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0">Priority</h6>
+                          <h6 className="fw-semibold mb-0">Type</h6>
                         </th>
                         <th className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0">Budget</h6>
+                          <h6 className="fw-semibold mb-0">Action</h6>
                         </th>
                       </tr>
                     </thead>
@@ -88,11 +90,11 @@ const CvCLetterLinkedIn = () => {
                         </td>
                         <td className="border-bottom-0">
                           <div className="d-flex align-items-center gap-2">
-                            <span className="badge bg-primary rounded-3 fw-semibold">Low</span>
+                            <span className="badge bg-primary rounded-3 fw-semibold">Resume</span>
                           </div>
                         </td>
                         <td className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0 fs-4">$3.9</h6>
+                          <a href="#" className="fs-3"><i class="ti ti-external-link"></i></a>
                         </td>
                       </tr>
                       <tr>
@@ -106,11 +108,11 @@ const CvCLetterLinkedIn = () => {
                         </td>
                         <td className="border-bottom-0">
                           <div className="d-flex align-items-center gap-2">
-                            <span className="badge bg-secondary rounded-3 fw-semibold">Medium</span>
+                            <span className="badge bg-secondary rounded-3 fw-semibold">Cover Letter</span>
                           </div>
                         </td>
                         <td className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0 fs-4">$24.5k</h6>
+                          <a href="#" className="fs-3"><i class="ti ti-external-link"></i></a>
                         </td>
                       </tr>
                       <tr>
@@ -124,11 +126,11 @@ const CvCLetterLinkedIn = () => {
                         </td>
                         <td className="border-bottom-0">
                           <div className="d-flex align-items-center gap-2">
-                            <span className="badge bg-danger rounded-3 fw-semibold">High</span>
+                            <span className="badge bg-danger rounded-3 fw-semibold">CV</span>
                           </div>
                         </td>
                         <td className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0 fs-4">$12.8k</h6>
+                          <a href="#" className="fs-3"><i class="ti ti-external-link"></i></a>
                         </td>
                       </tr>
                       <tr>
@@ -142,11 +144,11 @@ const CvCLetterLinkedIn = () => {
                         </td>
                         <td className="border-bottom-0">
                           <div className="d-flex align-items-center gap-2">
-                            <span className="badge bg-success rounded-3 fw-semibold">Critical</span>
+                            <span className="badge bg-success rounded-3 fw-semibold">Cover Letter</span>
                           </div>
                         </td>
                         <td className="border-bottom-0">
-                          <h6 className="fw-semibold mb-0 fs-4">$2.4k</h6>
+                          <a href="#" className="fs-3"><i class="ti ti-external-link"></i></a>
                         </td>
                       </tr>
                     </tbody>
