@@ -16,7 +16,7 @@ const CountryHeader = () => {
                     <span className="d-flex align-items-center">
                         <img src="/img/grandpathway-logo.svg" alt="grandpathwayLogo" height={"50px"} />
                         <div className="dropdown ms-4">
-                            <button className="btn btn-primary dropdown-toggle px-4 country-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button className="btn btn-primary bg-primary-2 dropdown-toggle px-4 country-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Select Country
                             </button>
                             <ul className="dropdown-menu">
