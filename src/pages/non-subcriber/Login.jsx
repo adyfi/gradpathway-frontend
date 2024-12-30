@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../utils/auth';
 
@@ -6,22 +6,49 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [retryTimer, setRetryTimer] = useState(0);
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    console.log("username"+"password")
-    console.log(username)
-    console.log(password)
-    const isAuthenticated = login(username, password);
-    console.log("success", isAuthenticated)
-    if (isAuthenticated) {
-      // navigate('/dashboard');
-      setError('Invalid username or password');
-    } else {
-      setError('Invalid username or password');
+  const handleLogin = async () => {
+    console.log("username" + "password");
+    console.log(username);
+    console.log(password);
+    setLoading(true); // Prevent duplicate submissions
+    setError(''); // Clear previous errors
+
+    try {
+      const isAuthenticated = await login(username, password); // Await the login response
+      console.log("success", isAuthenticated);
+      if (isAuthenticated) {
+        navigate('/dashboard'); // Navigate to the dashboard upon success
+      } else {
+        setError('Invalid username or password');
+        startRetryTimer();
+      }
+    } catch (error) {
+      setError(error.message || 'Login failed');
+      startRetryTimer();
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
+
+  const startRetryTimer = () => {
+    setRetryTimer(10);
+  };
+
+  // Handle timer countdown
+  useEffect(() => {
+    if (retryTimer > 0) {
+      const interval = setInterval(() => {
+        setRetryTimer((prev) => prev - 1);
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [retryTimer]);
 
   return (
     // <div>
@@ -41,7 +68,7 @@ const Login = () => {
     //   <button onClick={handleLogin}>Login</button>
     //   {error && <p style={{ color: 'red' }}>{error}</p>}
     // </div>
-    <div className="inner-page-wrapper" style={{margin:"20vh 0 5vh 0"}}>
+    <div className="inner-page-wrapper" style={{ margin: "20vh 0 5vh 0" }}>
       <section className="login-wrapper">
         <div className="container">
           <div className="row">
@@ -53,16 +80,23 @@ const Login = () => {
                   <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
                 </div> */}
                 <div className="mb-3">
-                  <label for="formGroupExampleInput2"  className="form-label">Email Id</label>
+                  <label for="formGroupExampleInput2" className="form-label">Email Id</label>
                   <input type="text" className="form-control" onChange={(e) => setUsername(e.target.value)} id="formGroupExampleInput2" placeholder="example@gmail.com" />
                 </div>
                 <div className="mb-3">
-                  <label for="formGroupExampleInput2"  className="form-label">Password</label>
+                  <label for="formGroupExampleInput2" className="form-label">Password</label>
                   <input type="text" className="form-control" onChange={(e) => setPassword(e.target.value)} id="formGroupExampleInput2" placeholder="9876543210" />
                 </div>
                 <div className="col-12">
-                {error && <p style={{ color: 'red' }}>{error}</p>}
-                  <button disabled={error} type="submit"  onClick={handleLogin} className="btn btn-primary px-5">Login</button>
+                  <button disabled={loading} type="submit" onClick={handleLogin} className="btn btn-primary px-5">
+                    {loading ? 'Logging in...' : 'Login'}
+                  </button>
+                  {error && <p className='text-danger mt-3'>{error}</p>}
+                  {retryTimer > 0 && (
+                    <p className='text-warning'>
+                      Please wait {retryTimer} seconds before retrying.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
