@@ -29,6 +29,7 @@ import ServicesBundle from './pages/non-subcriber/ServicesBundle.jsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Dashboard from './pages/subscriber/Dashboard.jsx';
+import CvCLetterLinkedIn from './pages/subscriber/CvCLetterLinkedIn.jsx';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/mentor-registration" element={<UnprotectedLayout><MentorRegistration /></UnprotectedLayout>} />
         <Route path="/recruiter" element={<UnprotectedLayout><Recruiter /></UnprotectedLayout>} />
         <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
+        <Route path="/cvcletterlinkedIn" element={<ProtectedRoute allowedRoles={['admin', 'user']}><ProtectedLayout><CvCLetterLinkedIn /></ProtectedLayout></ProtectedRoute>} />
         {/* <Route path="/dashboard/admin" element={<ProtectedRoute allowedRoles={['admin']}><ProtectedLayout><AdminDashboard /></ProtectedLayout></ProtectedRoute>} /> */}
         <Route path="/dashboard/user" element={<ProtectedRoute allowedRoles={['user']}><ProtectedLayout><UserDashboard /></ProtectedLayout></ProtectedRoute>} />
         <Route path="*" element={<UnprotectedLayout><NotFound /></UnprotectedLayout>} />

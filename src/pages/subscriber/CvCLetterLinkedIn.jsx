@@ -1,165 +1,57 @@
 import React from "react";
+import "./dashboard-pages.scss"
 
-const Dashboard = () => {
+const CvCLetterLinkedIn = () => {
   return (
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-8 d-flex align-items-strech">
-            <div className="card w-100">
-              <div className="card-body">
-                <div className="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                  <div className="mb-3 mb-sm-0">
-                    <h5 className="card-title fw-semibold">Profile Overview</h5>
-                  </div>
-                  <div>
-                    {/* <select className="form-select">
-                      <option value="1">March 2023</option>
-                      <option value="2">April 2023</option>
-                      <option value="3">May 2023</option>
-                      <option value="4">June 2023</option>
-                    </select> */}
+        <h5 className="card-title fw-semibold mb-4">CV, Cover Letter LinkedIn Review</h5>
+          <div className="col-lg-12 d-flex align-items-stretch">
+            <div className="row">
+              {/* <div className="col-12">
+                <div className="card w-100">
+                  <div className="card-body p-4">
+                    <h5 className="card-title fw-semibold mb-4">CV, Cover Letter LinkedIn Review</h5>
                   </div>
                 </div>
-                <div id="chart"></div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 d-flex align-items-stretch">
-            <div className="card w-100">
-              <div className="card-body p-4">
-                <div className="mb-4">
-                  <h5 className="card-title fw-semibold">Recent Activities</h5>
+              </div> */}
+              <div className="col-12">
+                <div className="card mb-3 horizontal-card" >
+                  <div className="row g-0">
+                    <div className="col-md-4">
+                      <img src="./demo-image.webp" className="img-fluid rounded-start" alt="..."/>
+                    </div>
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">CV</h5>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <ul className="timeline-widget mb-0 position-relative mb-n5">
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
-                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
+
+                <div className="card mb-3 horizontal-card" >
+                  <div className="row g-0">
+                    <div className="col-md-4">
+                      <img src="./demo-image.webp" className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="timeline-desc text-dark mt-n1">schedule call by William Carter
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">Resume</h5>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                      </div>
                     </div>
-                  </li>
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">10:00 am</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-info flex-shrink-0 my-8"></span>
-                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div className="timeline-desc text-dark mt-n1">Resume Updated At 04:15
-                    </div>
-                  </li>
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
-                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div className="timeline-desc text-dark mt-n1">Payment was made of $64.95 to Michael</div>
-                  </li>
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
-                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div className="timeline-desc text-dark mt-n1 fw-semibold">New sale recorded <a
-                      href="javascript:void(0)" className="text-primary d-block fw-normal">#ML-3467</a>
-                    </div>
-                  </li>
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-danger flex-shrink-0 my-8"></span>
-                      <span className="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div className="timeline-desc text-dark mt-n1 fw-semibold">New arrival recorded
-                    </div>
-                  </li>
-                  <li className="timeline-item d-flex position-relative overflow-hidden">
-                    <div className="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
-                    <div className="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span className="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
-                    </div>
-                    <div className="timeline-desc text-dark mt-n1">Payment Done</div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="row">
-          
-          <div className="col-lg-4">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="card overflow-hidden">
-                  <div className="card-body p-4">
-                    <h5 className="card-title mb-9 fw-semibold">Active Plan</h5>
-                    <div className="row align-items-center">
-                      <div className="col-8">
-                        <h4 className="fw-semibold mb-3">$36,358</h4>
-                        <div className="d-flex align-items-center mb-3">
-                          <span
-                            className="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
-                            <i className="ti ti-arrow-up-left text-success"></i>
-                          </span>
-                          <p className="text-dark me-1 fs-3 mb-0">+9%</p>
-                          <p className="fs-3 mb-0">last year</p>
-                        </div>
-                        <div className="d-flex align-items-center">
-                          <div className="me-4">
-                            <span className="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
-                            <span className="fs-2">2023</span>
-                          </div>
-                          <div>
-                            <span className="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
-                            <span className="fs-2">2023</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-4">
-                        <div className="d-flex justify-content-center">
-                          <div id="breakup"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="card">
-                  <div className="card-body">
-                    <div className="row alig n-items-start">
-                      <div className="col-8">
-                        <h5 className="card-title mb-9 fw-semibold">ATS Friendly Resume</h5>
-                        <h4 className="fw-semibold mb-3">2 Received</h4>
-                        <div className="d-flex align-items-center pb-1">
-                          <span
-                            className="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
-                            <i className="ti ti-arrow-down-right text-danger"></i>
-                          </span>
-                          <p className="text-dark me-1 fs-3 mb-0">1 Remaining</p>
-                          {/* <p className="fs-3 mb-0">last year</p> */}
-                        </div>
-                      </div>
-                      <div className="col-4">
-                        <div className="d-flex justify-content-end">
-                          <div
-                            className="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                            <i className="ti ti-currency-dollar fs-6"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="earning"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-8 d-flex align-items-stretch">
+          <div className="col-lg-12 d-flex align-items-stretch">
             <div className="card w-100">
               <div className="card-body p-4">
                 <h5 className="card-title fw-semibold mb-4">CV, Cover Letter LinkedIn Review</h5>
@@ -354,4 +246,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default CvCLetterLinkedIn;
