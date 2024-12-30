@@ -10,7 +10,7 @@ const HeroSection = () => {
           // Apply transformations
           const aiJob1 = document.getElementById('ai-job-1');
           const aiJob2 = document.getElementById('ai-job-2');
-          const aiJob3 = documesssnt.getElementById('ai-job-3');
+          const aiJob3 = document.getElementById('ai-job-3');
           const aiJob4 = document.getElementById('ai-job-4');
     
           if (aiJob1) aiJob1.style.transform = `translateY(${scrollY * -0.5}px) rotate(15deg)`;
