@@ -131,7 +131,7 @@ export const sendRecommendationRequest = async (data) => {
   const config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: `${baseURL}/assessments/recommendation_new/`,
+    url: `${baseURL}/assessments/recommendation/`,
     headers: {
       'Content-Type': 'application/json'
     },
