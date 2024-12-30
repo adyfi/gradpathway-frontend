@@ -10,15 +10,15 @@ const Dashboard = () => {
               <div className="card-body">
                 <div className="d-sm-flex d-block align-items-center justify-content-between mb-9">
                   <div className="mb-3 mb-sm-0">
-                    <h5 className="card-title fw-semibold">Sales Overview</h5>
+                    <h5 className="card-title fw-semibold">Profile Overview</h5>
                   </div>
                   <div>
-                    <select className="form-select">
+                    {/* <select className="form-select">
                       <option value="1">March 2023</option>
                       <option value="2">April 2023</option>
                       <option value="3">May 2023</option>
                       <option value="4">June 2023</option>
-                    </select>
+                    </select> */}
                   </div>
                 </div>
                 <div id="chart"></div>
@@ -30,7 +30,7 @@ const Dashboard = () => {
               <div className="col-lg-12">
                 <div className="card overflow-hidden">
                   <div className="card-body p-4">
-                    <h5 className="card-title mb-9 fw-semibold">Yearly Breakup</h5>
+                    <h5 className="card-title mb-9 fw-semibold">Active Plan</h5>
                     <div className="row align-items-center">
                       <div className="col-8">
                         <h4 className="fw-semibold mb-3">$36,358</h4>
@@ -67,15 +67,15 @@ const Dashboard = () => {
                   <div className="card-body">
                     <div className="row alig n-items-start">
                       <div className="col-8">
-                        <h5 className="card-title mb-9 fw-semibold"> Monthly Earnings </h5>
-                        <h4 className="fw-semibold mb-3">$6,820</h4>
+                        <h5 className="card-title mb-9 fw-semibold">ATS Friendly Resume</h5>
+                        <h4 className="fw-semibold mb-3">2 Received</h4>
                         <div className="d-flex align-items-center pb-1">
                           <span
                             className="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
                             <i className="ti ti-arrow-down-right text-danger"></i>
                           </span>
-                          <p className="text-dark me-1 fs-3 mb-0">+9%</p>
-                          <p className="fs-3 mb-0">last year</p>
+                          <p className="text-dark me-1 fs-3 mb-0">1 Remaining</p>
+                          {/* <p className="fs-3 mb-0">last year</p> */}
                         </div>
                       </div>
                       <div className="col-4">
@@ -99,7 +99,7 @@ const Dashboard = () => {
             <div className="card w-100">
               <div className="card-body p-4">
                 <div className="mb-4">
-                  <h5 className="card-title fw-semibold">Recent Transactions</h5>
+                  <h5 className="card-title fw-semibold">Recent Activities</h5>
                 </div>
                 <ul className="timeline-widget mb-0 position-relative mb-n5">
                   <li className="timeline-item d-flex position-relative overflow-hidden">
@@ -161,7 +161,7 @@ const Dashboard = () => {
           <div className="col-lg-8 d-flex align-items-stretch">
             <div className="card w-100">
               <div className="card-body p-4">
-                <h5 className="card-title fw-semibold mb-4">Recent Transactions</h5>
+                <h5 className="card-title fw-semibold mb-4">CV, Cover Letter LinkedIn Review</h5>
                 <div className="table-responsive">
                   <table className="table text-nowrap mb-0 align-middle">
                     <thead className="text-dark fs-4">
