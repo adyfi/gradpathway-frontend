@@ -42,7 +42,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+                  <a className="sidebar-link" href="/ConsultingCalls" aria-expanded="false">
                     <span>
                       <i className="ti ti-alert-circle"></i>
                     </span>
