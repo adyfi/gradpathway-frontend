@@ -24,10 +24,10 @@ const CvCLetterLinkedIn = () => {
                     </div>
                     <div className="col-md-8">
                       <div className="card-body">
-                        <h5 className="card-title">CV</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <button type="button" class="btn btn-primary">Download <i class="ti ti-download"></i></button>
+                        <h5 className="card-title">LinkedIn Profile Review</h5>
+                        <p className="card-text">Enhance your LinkedIn profile with targeted improvements for headlines, summaries, and networking strategies to improve visibility and engagement.</p>
+                        <p className="card-text"><small className="text-body-secondary">Last updated 10 minutes ago</small></p>
+                        <button type="button" class="btn btn-primary">Download LinkedIn Review <i class="ti ti-download"></i></button>
                       </div>
                     </div>
                   </div>
@@ -40,10 +40,10 @@ const CvCLetterLinkedIn = () => {
                     </div>
                     <div className="col-md-8">
                       <div className="card-body">
-                        <h5 className="card-title">Resume</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <button type="button" class="btn btn-primary">Download <i class="ti ti-download"></i></button>
+                        <h5 className="card-title">Cover Letter Service</h5>
+                        <p className="card-text">Craft a personalized, compelling cover letter that highlights your achievements and fits the role you're applying for.</p>
+                        <p className="card-text"><small className="text-body-secondary">Last updated 1 day ago</small></p>
+                        <button type="button" class="btn btn-primary">Download Cover Letter <i class="ti ti-download"></i></button>
                       </div>
                     </div>
                   </div>

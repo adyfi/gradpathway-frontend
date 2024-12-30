@@ -8,7 +8,7 @@ const Header = ({ children }) => {
         <aside className="left-sidebar">
           <div>
             <div className="brand-logo d-flex align-items-center justify-content-between">
-              <a href="./index.html" className="text-nowrap logo-img">
+              <a href="./dashboard" className="text-nowrap logo-img">
                 <img src="./grandpathway-logo.svg" width="180" alt="" />
               </a>
               <div className="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -50,7 +50,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./ui-card.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./ats-friendly-resume" aria-expanded="false">
                     <span>
                       <i className="ti ti-cards"></i>
                     </span>
@@ -58,7 +58,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./ui-forms.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./interview-questions" aria-expanded="false">
                     <span>
                       <i className="ti ti-file-description"></i>
                     </span>
@@ -66,7 +66,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./job-subscription" aria-expanded="false">
                     <span>
                       <i className="ti ti-typography"></i>
                     </span>
@@ -74,7 +74,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./subscription-bundle" aria-expanded="false">
                     <span>
                       <i className="ti ti-login"></i>
                     </span>
@@ -83,34 +83,34 @@ const Header = ({ children }) => {
                 </li>
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
-                  <span className="hide-menu">AUTH</span>
+                  <span className="hide-menu">Setting</span>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                  <a className="sidebar-link" href="./passowrd-change" aria-expanded="false">
                     <span>
                       <i className="ti ti-user-plus"></i>
                     </span>
-                    <span className="hide-menu">Register</span>
+                    <span className="hide-menu">Change Password</span>
                   </a>
                 </li>
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
-                  <span className="hide-menu">EXTRA</span>
+                  <span className="hide-menu">HELP</span>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
+                  <a className="sidebar-link" href="#" aria-expanded="false">
                     <span>
                       <i className="ti ti-mood-happy"></i>
                     </span>
-                    <span className="hide-menu">Icons</span>
+                    <span className="hide-menu">FAQ</span>
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./sample-page.html" aria-expanded="false">
+                  <a className="sidebar-link" href="#" aria-expanded="false">
                     <span>
                       <i className="ti ti-aperture"></i>
                     </span>
-                    <span className="hide-menu">Sample Page</span>
+                    <span className="hide-menu">Contact Us</span>
                   </a>
                 </li>
               </ul>
@@ -161,11 +161,11 @@ const Header = ({ children }) => {
                           <i className="ti ti-mail fs-6"></i>
                           <p className="mb-0">My Account</p>
                         </a>
-                        <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
+                        {/* <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-list-check fs-6"></i>
                           <p className="mb-0">My Task</p>
-                        </a>
-                        <a href="./authentication-login.html" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                        </a> */}
+                        <a href="./logout" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                       </div>
                     </div>
                   </li>
