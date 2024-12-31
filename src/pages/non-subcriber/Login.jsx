@@ -68,42 +68,61 @@ const Login = () => {
     //   <button onClick={handleLogin}>Login</button>
     //   {error && <p style={{ color: 'red' }}>{error}</p>}
     // </div>
-    <div className="inner-page-wrapper" style={{ margin: "20vh 0 5vh 0" }}>
-      <section className="login-wrapper">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5 m-auto login-content shadow-sm p-4 rounded border">
-              <h1 className='text-primary'>User Login</h1>
-              <div className="contact-form">
-                {/* <div className="mb-3">  
-                  <label for="formGroupExampleInput" className="form-label">Full Name</label>
-                  <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Jonh Doe" />
-                </div> */}
-                <div className="mb-3">
-                  <label for="formGroupExampleInput2" className="form-label">Email Id</label>
-                  <input type="text" className="form-control" onChange={(e) => setUsername(e.target.value)} id="formGroupExampleInput2" placeholder="example@gmail.com" />
-                </div>
-                <div className="mb-3">
-                  <label for="formGroupExampleInput2" className="form-label">Password</label>
-                  <input type="text" className="form-control" onChange={(e) => setPassword(e.target.value)} id="formGroupExampleInput2" placeholder="9876543210" />
-                </div>
-                <div className="col-12">
-                  <button disabled={loading} type="submit" onClick={handleLogin} className="btn btn-primary px-5">
-                    {loading ? 'Logging in...' : 'Login'}
-                  </button>
-                  {error && <p className='text-danger mt-3'>{error}</p>}
+    <div className="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+      data-sidebar-position="fixed" data-header-position="fixed">
+      <div
+        className="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+        <div className="d-flex align-items-center justify-content-center w-100">
+          <div className="row justify-content-center w-100">
+            <div className="col-md-8 col-lg-6 col-xxl-3">
+              <div className="card mb-0">
+                <div className="card-body">
+                  <a href="./index.html" className="text-nowrap logo-img text-center d-block py-2 w-100">
+                    <img src="./grandpathway-logo.svg" width="260" alt="" />
+                  </a>
+                  <p className="text-center">Your Job Companion</p>
+                  {error && <p className='text-danger mt-1'>{error}</p>}
                   {retryTimer > 0 && (
                     <p className='text-warning'>
                       Please wait {retryTimer} seconds before retrying.
                     </p>
                   )}
+                  <form>
+                    <div className="mb-3">
+                      <label for="exampleInputEmail1" className="form-label">Username</label>
+                      <input type="email" className="form-control" onChange={(e) => setUsername(e.target.value)} id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    </div>
+                    <div className="mb-4">
+                      <label for="exampleInputPassword1" className="form-label">Password</label>
+                      <input type="password" className="form-control" onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" />
+                    </div>
+                    {/* <a href="./index.html" className="btn btn-primary w-100 py-8 mb-4 rounded-2">{loading ? 'Logging In...' : 'Log In'}</a> */}
+
+                    <button disabled={retryTimer > 0 || loading || !username || !password} className="btn btn-primary w-100 py-8 mb-2 rounded-2" type="submit" onClick={handleLogin} >
+                      {loading ? 'Logging in...' : 'Login'}
+                    </button>
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                      <div className="form-check">
+                        {/* <input className="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label className="form-check-label text-dark small" for="flexCheckChecked">
+                          Remeber this Device
+                        </label> */}
+                      </div>
+                      <a className="text-primary fw-bold small" href="./index.html">Forgot Password ?</a>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-center">
+                      <p className="mb-0 fw-bold small">New to GradPathway?</p>
+                      <a className="text-primary fw-bold ms-2 small" href="./authentication-register.html">Create an account</a>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
+
   );
 };
 

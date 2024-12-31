@@ -13,6 +13,7 @@ export const login = async (email, password) => {
     console.log('token', tokens);
     if (tokens) {
       localStorage.setItem('auth', 'true');
+      localStorage.setItem('gradpathway_email_gsratyhn', response.email);
       localStorage.setItem('role', role || 'user');
       localStorage.setItem('refreshToken', tokens.refresh);
       localStorage.setItem('accessToken', tokens.access);
@@ -30,6 +31,7 @@ export const logout = () => {
   localStorage.removeItem('role'); 
   localStorage.removeItem('refreshToken'); 
   localStorage.removeItem('accessToken'); 
+  localStorage.removeItem('gradpathway_email_gsratyhn'); 
 };
 
 export const isAuthenticated = () => {
@@ -47,3 +49,7 @@ export const getAccessToken = () => {
 export const getRefreshToken = () => {
   return localStorage.getItem('refreshToken');
 };
+
+export const getUserDetails = () =>{
+  return localStorage.getItem('gradpathway_email_gsratyhn');
+}

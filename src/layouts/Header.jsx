@@ -1,6 +1,16 @@
 import React from 'react';
+import { logout } from '../utils/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ children }) => {
+  
+  const navigate = useNavigate();
+
+  const handleLogout= () =>{
+    logout()
+    navigate('/login'); 
+  }
+
   return (
     <>
       <div className="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
@@ -165,7 +175,7 @@ const Header = ({ children }) => {
                           <i className="ti ti-list-check fs-6"></i>
                           <p className="mb-0">My Task</p>
                         </a> */}
-                        <a href="./logout" className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                        <button onClick={handleLogout} className="btn btn-outline-primary mx-3 mt-2 d-block">Logout</button>
                       </div>
                     </div>
                   </li>
