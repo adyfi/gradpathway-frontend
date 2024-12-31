@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import './_homepage.scss';
+import TimelineSection from "../../../components/TimelineSection";
+import { HomeWhyGPSection } from "../../../components/HomeWhyGPSection";
 
 const Homepage = () => {
 
@@ -154,6 +156,11 @@ const Homepage = () => {
 
         </div>
       </div>
+
+      <div className="container-fluid bg-light py-5">
+        <TimelineSection />
+      </div>
+      <HomeWhyGPSection />
     </>
   );
 };

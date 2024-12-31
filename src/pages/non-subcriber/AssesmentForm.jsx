@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { sendRecommendationRequest } from '../../api/api';
 import "./animationForm.css"
 import Loader from '../../components/loader';
+import { AssessmentAnalytics } from './AssessmentAnalytics';
 
 const AssesmentForm = () => {
     const [personalDetails, setPersonalDetails] = useState(null)
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        uk_job_search_started:"Yes",
         phone_number: "+44 1234567890",
         linkedin_profile: "https://www.linkedin.com/",
         current_course: "Master's in Computer Science",

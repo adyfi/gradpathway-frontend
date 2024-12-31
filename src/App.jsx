@@ -8,7 +8,6 @@ import Services from './pages/non-subcriber/Services.jsx';
 import Blogs from './pages/non-subcriber/Blogs.jsx';
 import Country from './pages/non-subcriber/Country.jsx';
 import Faq from './pages/non-subcriber/Faq.jsx';
-import Dashboard from './pages/non-subcriber/Dashboard.jsx';
 import AdminDashboard from './pages/non-subcriber/AdminDashboard.jsx';
 import UserDashboard from './pages/non-subcriber/UserDashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute';
@@ -32,6 +31,7 @@ import CountryPageLayout from './layouts/CountryPageLayout.jsx';
 import ServicesBundle from './pages/non-subcriber/ServicesBundle.jsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Dashboard from './pages/subscriber/Dashboard.jsx';
 
 function App() {
   return (

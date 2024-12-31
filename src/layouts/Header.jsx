@@ -3,7 +3,6 @@ import './admin-dashboard.scss'
 const Header = () => {
   return (
     <>
-      
         <nav className='sidebar-wrapper shadow-border'>
           <div className='admin-logo'>
             <img src='./grandpathway-logo.svg' alt='Grandpathway Admin Logo' />
@@ -34,9 +33,6 @@ const Header = () => {
               
           </div>
         </nav>
-
-        
-      
     </>
 
   );
