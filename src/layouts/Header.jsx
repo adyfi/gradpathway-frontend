@@ -60,7 +60,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./ats-friendly-resume" aria-expanded="false">
+                  <a className="sidebar-link" href="/ats-friendly-resumes" aria-expanded="false">
                     <span>
                       <i className="ti ti-cards"></i>
                     </span>
@@ -68,7 +68,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="./interview-questions" aria-expanded="false">
+                  <a className="sidebar-link" href="/interview-questions" aria-expanded="false">
                     <span>
                       <i className="ti ti-file-description"></i>
                     </span>
@@ -91,24 +91,24 @@ const Header = ({ children }) => {
                     <span className="hide-menu">Subscription Bundle</span>
                   </a>
                 </li>
-                <li className="nav-small-cap">
+                {/* <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
                   <span className="hide-menu">Setting</span>
-                </li>
-                <li className="sidebar-item">
-                  <a className="sidebar-link" href="./passowrd-change" aria-expanded="false">
+                </li> */}
+                {/* <li className="sidebar-item">
+                  <a className="sidebar-link" href="/change-password" aria-expanded="false">
                     <span>
                       <i className="ti ti-user-plus"></i>
                     </span>
                     <span className="hide-menu">Change Password</span>
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4"></i>
                   <span className="hide-menu">HELP</span>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="#" aria-expanded="false">
+                  <a className="sidebar-link" href="/faq" aria-expanded="false">
                     <span>
                       <i className="ti ti-mood-happy"></i>
                     </span>
@@ -116,7 +116,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
                 <li className="sidebar-item">
-                  <a className="sidebar-link" href="#" aria-expanded="false">
+                  <a className="sidebar-link" href="/contactus-dashboard" aria-expanded="false">
                     <span>
                       <i className="ti ti-aperture"></i>
                     </span>
@@ -124,7 +124,7 @@ const Header = ({ children }) => {
                   </a>
                 </li>
               </ul>
-              <div className="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+              {/* <div className="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
                 <div className="d-flex">
                   <div className="unlimited-access-title me-3">
                     <h6 className="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
@@ -134,7 +134,7 @@ const Header = ({ children }) => {
                     <img src="./assets/images/backgrounds/rocket.png" alt="" className="img-fluid" />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </nav>
           </div>
         </aside>
@@ -163,11 +163,11 @@ const Header = ({ children }) => {
                     </a>
                     <div className="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                       <div className="message-body">
-                        <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
+                        <a href="/profile-dashboard" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-user fs-6"></i>
-                          <p className="mb-0">My Profile</p>
+                          <p className="mb-0">My Profile dfg</p>
                         </a>
-                        <a href="javascript:void(0)" className="d-flex align-items-center gap-2 dropdown-item">
+                        <a href="/myaccount-dashboard" className="d-flex align-items-center gap-2 dropdown-item">
                           <i className="ti ti-mail fs-6"></i>
                           <p className="mb-0">My Account</p>
                         </a>

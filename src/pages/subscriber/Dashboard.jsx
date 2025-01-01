@@ -266,7 +266,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row dashboard-page-card">
           <div className="col-12">
             <h5 class="card-title fw-semibold mb-4">Subscription bundle</h5>
           </div>

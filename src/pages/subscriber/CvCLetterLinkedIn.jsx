@@ -19,10 +19,10 @@ const CvCLetterLinkedIn = () => {
               <div className="col-12">
                 <div className="card mb-3 horizontal-card" >
                   <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-md-2">
                       <img src="./demo-image.webp" className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-10">
                       <div className="card-body">
                         <h5 className="card-title">LinkedIn Profile Review</h5>
                         <p className="card-text">Enhance your LinkedIn profile with targeted improvements for headlines, summaries, and networking strategies to improve visibility and engagement.</p>
@@ -35,10 +35,10 @@ const CvCLetterLinkedIn = () => {
 
                 <div className="card mb-3 horizontal-card" >
                   <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-md-2">
                       <img src="./demo-image.webp" className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-10">
                       <div className="card-body">
                         <h5 className="card-title">Cover Letter Service</h5>
                         <p className="card-text">Craft a personalized, compelling cover letter that highlights your achievements and fits the role you're applying for.</p>
